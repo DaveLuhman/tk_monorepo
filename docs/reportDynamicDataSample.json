@@ -1,0 +1,15 @@
+{
+    "week": 34,
+    "weekly": {
+        "totalTimecards": 62,
+        "totalRegHours": 2280,
+        "totalOvertimeHours": 38,
+        "averageHoursPerEmployee": 38
+    },
+    "ytd": {
+        "totalRegHours": 754,
+        "totalOvertimeHours": 118,
+        "overtimeWeeksCount": 21,
+        "averageEmpHoursPerWeek": 37.9
+    }
+}

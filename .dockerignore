@@ -1,0 +1,9 @@
+node_modules
+.env
+/db/*
+.pnpm-*
+dsps.pdf
+cdf.pdf
+pod.pdf
+/tmp/*
+.npmrc

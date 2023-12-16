@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+footer.tk-footer {
+    @apply flex flex-wrap items-center justify-evenly overflow-hidden m-4 p-10 relative z-10;
+  }
+  /* This is for the Twitter - Youtube - Facebook Icons in the footer */
+  svg.fill-current {
+    @apply inline-block;
+  }
+.text-stroke-black {
+  font-family: sans-serif;
+  color: base;
+  text-shadow:
+    1.5px 1.5px 0 #000,
+    -1.5px -1.5px 0 #000,
+    1.5px -1.5px 0 #000,
+    -1.5px 1.5px 0 #000,
+    1.5px 1.5px 0 #000;
+}

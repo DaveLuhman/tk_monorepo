@@ -1,0 +1,19 @@
+<div class="overflow-hidden mb-5">
+    <div class="rounded border = w-11/12 mx-auto mt-4">
+        <!-- Tabs -->
+        <ul id="tabs" class="flex pt-2 px-1 w-full border-b ">
+            {{#each weeklyDayShift}}
+                <li class="flex-grow px-4 md:text-center font-semibold py-2 {{#is "Monday" day}}rounded-t border-t border-r border-l -mb-px {{/is}} "><a id="{{day}}-tab"
+                        href="#{{day}}">{{this.date}}</a></li>
+            {{/each}}
+        </ul>
+        <!-- Tab Contents -->
+        <div id="tab-contents" class="">
+            {{#each weeklyDayShift}}
+                <div id="{{day}}" class="bg-inherit {{#isnt "Monday" day}}hidden{{/isnt}} p-4">
+                    {{> _timeEntry}}
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
