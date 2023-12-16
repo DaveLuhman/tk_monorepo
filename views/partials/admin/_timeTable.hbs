@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <th>Date Submitted</th>
+        <th>Employee</th>
+        <th>Hours</th>
+        <th>Overtime</th>
+        <th>Time Entries</th>
+        <th>View Entry</th>
+    </thead>
+    <tbody>
+        {{#each timeEntries}}
+        <tr>
+            <td>{{formatDate dateSubmitted}}</td>
+            <td>{{empName}}</td>
+            <td>{{hoursCount}}</td>
+            <td>{{overtimeCount}}</td>
+            <td>{{punchCount}}</td>
+            <td>button</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

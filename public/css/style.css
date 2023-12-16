@@ -2603,10 +2603,6 @@ input.tab:checked + .tab-content,
   grid-row-start: 6;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
 .-mx-2 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
@@ -2679,6 +2675,10 @@ input.tab:checked + .tab-content,
 
 .ml-1 {
   margin-left: 0.25rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
 }
 
 .mr-0 {
