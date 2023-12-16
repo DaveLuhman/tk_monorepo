@@ -11,7 +11,7 @@
         <div id="tab-contents" class="">
             {{#each weeklyDayShift}}
                 <div id="{{day}}" class="bg-inherit {{#isnt "Monday" day}}hidden{{/isnt}} p-4">
-                    {{> _timeEntry}}
+                    {{> timeEntry/_timeEntry}}
                 </div>
             {{/each}}
         </div>
