@@ -13,7 +13,7 @@ const connectDB = async () => {
 export default connectDB
 
 async function isUsersCollectionEmpty() {
-    const user = await User.count()
+    const user = await User.countDocuments()
     return user === 0
 }
 
