@@ -1,5 +1,18 @@
 <div name="rootContainer" class="items-center pt-3">
-  {{> _header}}
+  <div class="flex justify-around items-center max-w-screen">
+    <div class="flex flex-col px-4 justify-around items-center">
+      <span display_value="0" class="text-6xl md:text-8xl" id="punchCounter">0</span>
+      <span class="text-xl md:text-2xl ">Punches</span>
+    </div>
+    <img class='md:hidden max-h-28' src="/img/timekeeper-logo-sm.webp">
+    <img class='hidden md:inline-flex max-h-screen' src="/img/timekeeper-logo-lg.webp">
+    <div class="flex flex-col px-4 justify-around items-center ">
+      <div class="px-2 text-3xl md:text-7xl" id="hoursCountWrapper">
+        <span id="hoursCounter">0</span>/<span id="overtimeCounter">0</span>
+      </div>
+      <span class="hoursCountLabelWrapper mt-5 text-xl md:text-2xl">Reg / OT</span>
+    </div>
+  </div>
   <form id="timeEntryForm">
     <div class="rounded border w-11/12 mx-auto mt-4">
       <div class="col-span-2 row-start-2 px-4 py-4 border-1 border-grey rounded relative">
@@ -15,13 +28,14 @@
           type="text" name="empEmail" id="empEmail" validate>
       </div>
     </div>
-    {{> _tabsOfTheWeek}}
-    <div id="validationWarningWrapper" class="flex flex-wrap justify-end items-end pr-14 mb-4"><label id="validationMessage" class="appearance-none border-y-black bg-red-600 text-white"></label></div>
+    {{> timeEntry/_tabsOfTheWeek}}
+    <div id="validationWarningWrapper" class="flex flex-wrap justify-end items-end pr-14 mb-4"><label
+        id="validationMessage" class="appearance-none border-y-black bg-red-600 text-white"></label></div>
     <div class="flex flex-wrap justify-end items-end pr-14">
       <button class="btn btn-warning mr-4" type="reset">Start Over</button>
       <label id="confirmEntries" class="btn btn-primary" for="confirmModal">Submit Timesheet?</label>
     </div>
-    {{> _confirmModal}}
+    {{> timeEntry/_confirmModal}}
   </form>
 </div>
 <span class="hidden" id="defaultDates">{{JSONstringify weeklyDayShift}}</span>
