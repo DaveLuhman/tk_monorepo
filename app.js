@@ -9,7 +9,7 @@ import express from 'express';
 // handlebars depenancies
 import { create } from 'express-handlebars'; // templating engine
 import handlebarsHelpers from 'handlebars-helpers';
-import { getApiUrl } from './helpers/index.js';
+import { getApiUrl, formatDate } from './helpers/index.js';
 // utility depenancies
 import { mw, rateLimiter } from './middleware/util.js';
 // routers
@@ -52,6 +52,7 @@ app.use(passport.session())
 const hbs = create({
   helpers: {
     getApiUrl,
+    formatDate,
     ...handlebarsHelpers()
   },
   extname: '.hbs',

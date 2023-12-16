@@ -10,7 +10,7 @@ auth.checkAuth = function checkAuth(req, res, next) {
         return next()
     }
     res.locals.message = 'You must be logged in to access that page'
-    res.redirect(req.headers.referer + 'auth/login');
+    res.redirect('auth/login');
 }
 auth.registerUser = async function (req, res, next) {
     const { email, password, companyName } = req.body
@@ -28,7 +28,6 @@ auth.registerUser = async function (req, res, next) {
 }
 
 auth.login = async function (req, res, next) {
-    console.log(req.body)
     passport.authenticate('local', {
         successRedirect: '/admin',
         failureMessage: true,

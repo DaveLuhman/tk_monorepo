@@ -18,8 +18,6 @@ const submitBtn = document.querySelector('#submitBtn');
 const punchCounters = document.querySelectorAll('#punchCounter', '.upticker');
 const regHoursCounterEls = document.querySelectorAll('#hoursCounter');
 const overtimeCounterEls = document.querySelectorAll('#overtimeCounter');
-const backendUrl =
-  document.getElementById('backendUrl').innerText;
 const validatedFields = document.querySelectorAll('input[validate]');
 const validationWarning = document.querySelector('#validationWarning');
 
@@ -164,7 +162,7 @@ async function submitForm(e) {
   const submitBtn = document.getElementById('submitBtn');
   submitBtn.disabled = true;
   setTimeout(() => (submitBtn.disabled = false), 2000);
-  const response = await fetch(backendUrl, {
+  const response = await fetch('/api/timeEntry', {
     method: 'POST',
     mode: 'cors',
     headers: {

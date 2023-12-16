@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const content = ['./src/views/**/*.{hbs,js}', './src/public/**/*.{hbs,js}']
+const content = ['./views/**/*.{hbs,js}', './public/**/*.{hbs,js}']
 const mode = 'jit'
 const daisyui = {
   themes: [{

@@ -131,3 +131,4 @@ dist
 # private/secure keys
 private
 *.pem
+./public/css/style.css

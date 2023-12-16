@@ -1,4 +1,4 @@
-<table>
+<table class="table">
     <thead>
         <th>Date Submitted</th>
         <th>Employee</th>
@@ -8,9 +8,9 @@
         <th>View Entry</th>
     </thead>
     <tbody>
-        {{each timeEntries}}
+        {{#each timeEntries}}
         <tr>
-            <td>{{date {{dateSubmitted}} "MM-DD-YYYY"}}</td>
+            <td>{{formatDate dateSubmitted}}</td>
             <td>{{empName}}</td>
             <td>{{hoursCount}}</td>
             <td>{{overtimeCount}}</td>
