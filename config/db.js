@@ -1,19 +1,9 @@
 import { connect } from 'mongoose';
 import User from '../models/user.js'
 
-const connectDB = async () => {
-    try {
-        const conn = await connect(process.env.MONGO_URI);
-        console.info(`MongoDB Connected: ${conn.connection.host}`.cyan.underline.bold)
-    } catch (err) {
-        console.error(err.red);
-        process.exit(1);
-    }
-}
-export default connectDB
 
 async function isUsersCollectionEmpty() {
-    const user = await User.countDocuments()
+    const user = (await User.find()).length
     return user === 0
 }
 
@@ -29,4 +19,15 @@ async function createDefaultUser() {
         console.log(error)
     }
 }
-if (await isUsersCollectionEmpty()) createDefaultUser().catch((err) => {console.log(err)})
+const connectDB = async () => {
+    try {
+        const conn = await connect(process.env.MONGO_URI);
+        console.info(`MongoDB Connected: ${conn.connection.host}`.cyan.underline.bold)
+        if (await isUsersCollectionEmpty()) createDefaultUser().catch((err) => {console.log(err)})
+
+    } catch (err) {
+        console.error(err.red);
+        process.exit(1);
+    }
+}
+export default connectDB
