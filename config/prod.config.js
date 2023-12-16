@@ -25,4 +25,4 @@ const helmetCSP = helmet.contentSecurityPolicy({
 })
 const morganConfig = morgan('dev')
 
-export const prodConfig = { sessionConfig, helmetCSP, morganConfig }
+export const prodConfig =  [sessionConfig, helmetCSP, morganConfig] 
