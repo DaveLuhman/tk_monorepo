@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const content = ['./views/**/*.{hbs,js}', './public/**/*.{hbs,js}']
+const content = ['./views/**/*.{hbs,js}', './public/**/*.{hbs,js}',"./node_modules/flowbite/**/*.js"]
 const mode = 'jit'
 const daisyui = {
   themes: [{
@@ -30,6 +30,6 @@ const theme = {
 }
 const variants = { display: ['responsive', 'dropdown'] }
 
-const plugins = [require('@tailwindcss/typography'), require('@tailwindcss/forms'), require('daisyui')]
+const plugins = [require('@tailwindcss/typography'), require('@tailwindcss/forms'), require('daisyui'), require('flowbite')]
 
 export default { content, daisyui, theme, plugins, variants, mode, darkMode: 'class' }
