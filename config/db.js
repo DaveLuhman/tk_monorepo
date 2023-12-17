@@ -10,17 +10,21 @@ async function isUsersCollectionEmpty() {
 }
 async function isTimeEntryCollectionEmpty() {
     const timeEntries = (await TimeEntry.find()).length
-    console.log(timeEntries)
     return timeEntries === 0
 }
 async function importSampleTimeEntries() {
+    try{
+    console.log('No Time Entries in database, Importing Sample.json'.red)
     let sampleJson = JSON.parse(Buffer.from(readFileSync('./sampleEntries.json', {encoding: 'utf-8'})))
     console.log(sampleJson)
     sampleJson.map((entry) => {
         TimeEntry.create(entry)
-    })
+    })}catch(error){console.error(error)}
 }
 async function createDefaultUser() {
+    console.log('No Users In Database, Createing Default User'.red)
+    console.log('User: admin@timekeeper.site'.cyan)
+    console.log('password: asdfasdf'.cyan)
     try {
         const user = await User.create({
             password: '$2b$10$cDCSqQ17sAbWloBElfevMO9NmjORalQP/1VJ7WY6BwvB7PsuNM./m',
