@@ -6,6 +6,7 @@ const adminController = {}
 export default adminController
 
 adminController.getRoot = async (req, res) => {
+    console.log(req.user)
     const { id } = req.user
     const user = await User.findById(id)
     const userCompany = await Customer.findById(user.company)
