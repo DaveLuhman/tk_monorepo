@@ -2,10 +2,10 @@ import passport from 'passport';
 import User from '../models/user.js';
 import Customer from '../models/customer.js';
 
-const auth = {}
 
-auth.checkAuth = function checkAuth(req, res, next) {
-    if (req.isAuthenticated) {
+
+export function checkAuth(req, res, next) {
+    if (req.isAuthenticated()) {
         res.locals.user = req.user
         return next()
     }
@@ -13,7 +13,7 @@ auth.checkAuth = function checkAuth(req, res, next) {
     console.log('Unauthenticated. Redirecting to login page.')
     res.redirect('auth/login')
 }
-auth.registerUser = async function (req, res, next) {
+export async function registerUser(req, res, next) {
     const { email, password, companyName } = req.body
     const newUser = await User.register(email, password)
     const newCustomer = await Customer.register(companyName, email)
@@ -28,7 +28,7 @@ auth.registerUser = async function (req, res, next) {
     next()
 }
 
-auth.login = async function (req, res, next) {
+export async function login(req, res, next) {
     passport.authenticate('local', {
         successRedirect: '/admin',
         failureMessage: true,
@@ -36,7 +36,7 @@ auth.login = async function (req, res, next) {
     })(req, res, next)
 }
 
-auth.logout = function logout(req, res, next) {
+export function logout(req, res, next) {
     req.logout(function (err) {
         if (err) {
             return next(err)
@@ -44,5 +44,3 @@ auth.logout = function logout(req, res, next) {
         res.redirect(req.headers.hostname + '/')
     })
 }
-
-export default auth

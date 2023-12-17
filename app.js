@@ -13,12 +13,12 @@ import paginate from 'handlebars-paginate';
 import { formatDate } from './helpers/index.js';
 // utility depenancies
 import { mw, rateLimiter } from './middleware/util.js';
-// routers
 import flash from 'express-flash';
 import connectDB from './config/db.js';
 import errorHandler from './middleware/error.js';
-import { prodConfig, httpsServer } from './config/prod.config.js';
+import { prodConfig } from './config/prod.config.js';
 import { adminRouter } from './routes/admin/admin.routes.js';
+import { checkAuth } from './middleware/auth.js';
 import { apiRouter } from './routes/api/api.routes.js';
 import { authRouter } from './routes/auth/auth.routes.js';
 import { indexRouter } from './routes/index.routes.js';
@@ -86,6 +86,7 @@ app.use('/', indexRouter);
 app.use('/api', apiRouter)
 app.use('/auth', authRouter)
 // Routes (User Context)
+app.use(checkAuth)
 app.use('/admin', adminRouter)
 // catch 404 and forward to error handler
 app.use(errorHandler);
