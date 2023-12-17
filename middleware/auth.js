@@ -6,13 +6,13 @@ const auth = {}
 
 auth.checkAuth = function checkAuth(req, res, next) {
     if (req.isAuthenticated) {
-        console.log('Request Authenticated Successfully')
+        console.log('Request Authenticated Successfully for '+ req.user)
         res.locals.user = req.user
         return next()
     }
     res.locals.message = 'You must be logged in to access that page'
     console.log('Unauthenticated. Redirecting to login page.')
-    res.redirect('auth/login');
+    res.redirect('auth/login')
 }
 auth.registerUser = async function (req, res, next) {
     const { email, password, companyName } = req.body
