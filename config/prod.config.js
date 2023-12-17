@@ -1,3 +1,5 @@
+import { readFileSync } from 'fs'
+import https from 'https'
 import helmet from 'helmet'
 import session from 'express-session'
 import morgan from 'morgan'
@@ -15,6 +17,13 @@ const sessionConfig = session({
     cookie: { secure: true, httpOnly: false, maxAge: 1000 * 60 * 60 * 24 },
     store: mongoStore
 })
+export function httpsServer(app) {
+    const server = https.createServer({ key: readFileSync('private/\key.pem'), cert: readFileSync('private/\cert.pem') }, app);
+    server.listen(3001, () => { console.log('SSL host listening at 3001 for development') })
+    console.info(
+        '[INIT]>>>>> Morgan enabled for logging in this development environment\n http://localhost:' + process.env.PORT
+    );
+}
 const helmetCSP = helmet.contentSecurityPolicy({
     directives: {
         'form-action': ["'self'"],
@@ -25,4 +34,4 @@ const helmetCSP = helmet.contentSecurityPolicy({
 })
 const morganConfig = morgan('dev')
 
-export const prodConfig =  [sessionConfig, helmetCSP, morganConfig] 
+export const prodConfig =  [sessionConfig, helmetCSP, morganConfig]

@@ -9,14 +9,14 @@ import express from 'express';
 // handlebars depenancies
 import { create } from 'express-handlebars'; // templating engine
 import handlebarsHelpers from 'handlebars-helpers';
-import { getApiUrl, formatDate } from './helpers/index.js';
+import { formatDate } from './helpers/index.js';
 // utility depenancies
 import { mw, rateLimiter } from './middleware/util.js';
 // routers
 import flash from 'express-flash';
 import connectDB from './config/db.js';
 import errorHandler from './middleware/error.js';
-import { prodConfig } from './config/prod.config.js';
+import { prodConfig, httpsServer } from './config/prod.config.js';
 import { adminRouter } from './routes/admin/admin.routes.js';
 import { apiRouter } from './routes/api/api.routes.js';
 import { authRouter } from './routes/auth/auth.routes.js';
@@ -29,12 +29,14 @@ connectDB()
 scheduledTasks()
 const PORT = process.env.PORT || 3000;
 const app = express(); // Create Express App
+app.use(cookieParser());
 
 /** session config
  * conditional on process.env.NODE_ENV
 **/
 if (process.env.NODE_ENV === 'PRODUCTION') {
   app.use(prodConfig)
+  app.set('trust proxy', 1)
 }
 else {
   app.use(devConfig)
@@ -42,7 +44,6 @@ else {
 // end session config
 // passport config
 app.use(express.urlencoded({ extended: false })); // Parse URL-encoded values
-app.use(cookieParser());
 passportConfig(app)
 app.use(passport.initialize())
 app.use(passport.session())
@@ -51,7 +52,6 @@ app.use(passport.session())
 // Handlebars Setup
 const hbs = create({
   helpers: {
-    getApiUrl,
     formatDate,
     ...handlebarsHelpers()
   },

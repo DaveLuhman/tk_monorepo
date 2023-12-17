@@ -6,9 +6,25 @@ List of Functions in order (* at beginning means exported)
 */
 
 import rateLimit from 'express-rate-limit';
-
 import moment from 'moment';
 
+/**
+ *
+ * @param {array} data
+ * @param {number} targetPage
+ * @param {number} perPage
+ * @returns {object} trimmedData, targetPage, pageCount
+ */
+export function paginate (data, targetPage, perPage) {
+  perPage = perPage || 10
+  targetPage = targetPage || 1
+  const pageCount = Math.ceil(data.length / perPage) // number of pages
+  const trimmedData = data.slice(
+    perPage * targetPage - perPage,
+    perPage * targetPage + 1
+  )
+  return { trimmedData, targetPage, pageCount }
+}
 export const rateLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 25, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
