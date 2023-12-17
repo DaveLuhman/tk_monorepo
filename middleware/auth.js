@@ -6,6 +6,7 @@ const auth = {}
 
 auth.checkAuth = function checkAuth(req, res, next) {
     if (req.isAuthenticated) {
+        console.log('Request Authenticated Successfully')
         res.locals.user = req.user
         return next()
     }
