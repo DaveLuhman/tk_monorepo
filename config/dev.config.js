@@ -18,7 +18,7 @@ const helmetCSP = helmet.contentSecurityPolicy({
     directives: {
         'form-action': ["'self'"],
         'default-src': ["'self'", 'ado.software'],
-        'script-src': ["'self'", 'ajax.googleapis.com', 'cdn.jsdelivr.net'],
+        'script-src': ["'self'", 'ajax.googleapis.com', 'cdn.jsdelivr.net', 'unsafe-inline'],
         'connect-src': ["*.ado.software", "timekeeper.site"],
     }
 })

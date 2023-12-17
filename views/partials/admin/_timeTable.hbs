@@ -1,22 +1,41 @@
-<table class="table">
-    <thead>
-        <th>Date Submitted</th>
-        <th>Employee</th>
-        <th>Hours</th>
-        <th>Overtime</th>
-        <th>Time Entries</th>
-        <th>View Entry</th>
+<table class="">
+    <thead class="rounded-lg">
+        <th>
+            Date Submitted</th>
+        <th>
+            Employee</th>
+        <th class="hidden md:table-cell" id="category">
+            Hours</th>
+        <th class="hidden md:table-cell" id="category">
+            Overtime</th>
+        <th class="hidden md:table-cell" id="category">
+            Time Entries</th>
     </thead>
     <tbody>
         {{#each timeEntries}}
-        <tr>
-            <td>{{formatDate dateSubmitted}}</td>
-            <td>{{empName}}</td>
-            <td>{{hoursCount}}</td>
-            <td>{{overtimeCount}}</td>
-            <td>{{punchCount}}</td>
-            <td>button</td>
-        </tr>
+            <tr class="hover:bg-gray-100 cursor-pointer data-row">
+                <td id="dateSubmitted">{{formatDate dateSubmitted}}</td>
+                <td id="empName">{{empName}}</td>
+                <td class="hidden md:table-cell" id="hours">{{hoursCount}}</td>
+                <td class="hidden md:table-cell" id="overtime">{{overtimeCount}}</td>
+                <td class="hidden md:table-cell" id="punchCount">{{punchCount}}</td>
+            </tr>
+            <div class="hidden-frame transition-height max-h-0">
+            <tr>
+                <td colspan="6" class="px-2 py-2 border-b border-gray-200 bg-blue-300 text-xs">
+                    {{#each timeEntries}}
+                        <table>
+                            <tr>
+                                <td>{{date}}</td>
+                                <td>{{jobName}}</td>
+                                <td>{{jobNum}}</td>
+                                <td>{{hours}}</td>
+                                <td>{{#if overtime}}{{overtime}}{{else}}0{{/if}}</td>
+                            </tr>
+                        </table>
+                    {{/each}}
+                </td>
+            </tr></div>
         {{/each}}
     </tbody>
 </table>

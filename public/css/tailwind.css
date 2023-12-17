@@ -33,29 +33,15 @@ table.table {
   @apply m-5;
 }
 th {
-  @apply text-base-content;
-  @apply font-bold;
-  @apply uppercase;
-  @apply p-2;
-  @apply bg-stone-700;
+  @apply px-5 py-3 border-b-2 border-gray-200 bg-stone-600 text-left text-xs font-semibold text-white uppercase tracking-wider;
 }
-tr {
-  @apply table-row;
-  @apply text-base-content;
-  @apply p-2;
-  @apply border-b;
-  @apply border-base-300;
-  @apply hover:bg-zinc-600;
-  @apply text-center;
-  @apply bg-opacity-5;
+tr.data-row {
+  @apply px-5 py-5 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider;
 }
 td {
-  @apply text-sm;
-  @apply p-2;
-  @apply border-b;
-  @apply border-base-300;
-  @apply text-center;
+  @apply px-2 py-1 border-b border-gray-200 bg-white text-sm;
 }
+
 /* -----------------END TABLE------------------ */
 /* ------------PAGINATION BAR------------------------ */
 .paginate-bar {
