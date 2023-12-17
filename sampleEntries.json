@@ -1,0 +1,5836 @@
+[{
+  "archived": false,
+  "empName": "Lastone",
+  "timeEntries": [
+    {
+      "date": "2023-11-06T06:00:00.000Z",
+      "jobName": "Test Job",
+      "jobNum": "C123",
+      "hours": 1, 
+      "overtime": 1
+
+    },
+    {
+      "date": "2023-12-01T06:00:00.000Z",
+      "jobName": "Futu Job",
+      "jobNum": "C131",
+      "hours": 8,
+      "overtime": null
+
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 1,
+  "overtimeCount": 1,
+  "punchCount": 1,
+  "dateSubmitted": "2023-12-07T00:03:25.476Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Lastone",
+  "timeEntries": [
+    {
+      "date": "2023-11-06T06:00:00.000Z",
+      "jobName": "Test Job",
+      "jobNum": "C123",
+      "hours": 1,
+      "overtime": 1
+
+    },
+    {
+      "date": "2023-12-01T06:00:00.000Z",
+      "jobName": "Futu Job",
+      "jobNum": "C131",
+      "hours": 8,
+      "overtime": null
+
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 1,
+  "overtimeCount": 1,
+  "punchCount": 1,
+  "dateSubmitted": "2023-12-07T00:03:25.476Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Lastone",
+  "timeEntries": [
+    {
+      "date": "2023-11-06T00:00:00.000Z",
+      "jobName": "Test Job",
+      "jobNum": "C123",
+      "hours": 1,
+      "overtime": 1
+
+    },
+    {
+      "date": "2023-12-01T00:00:00.000Z",
+      "jobName": "Futu Job",
+      "jobNum": "C131",
+      "hours": 8,
+      "overtime": null
+
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 1,
+  "overtimeCount": 1,
+  "punchCount": 1,
+  "dateSubmitted": "2023-12-07T00:03:25.476Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Lastone",
+  "timeEntries": [
+    {
+      "date": "2023-11-06T00:00:00.000Z",
+      "jobName": "Test Job",
+      "jobNum": "C123",
+      "hours": 1,
+      "overtime": 1
+
+    },
+    {
+      "date": "2023-12-01T00:00:00.000Z",
+      "jobName": "Futu Job",
+      "jobNum": "C131",
+      "hours": 8,
+      "overtime": null
+
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 1,
+  "overtimeCount": 1,
+  "punchCount": 1,
+  "dateSubmitted": "2023-12-07T00:03:25.476Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Dave",
+  "timeEntries": [
+    {
+      "date": "2023-11-06T00:00:00.000Z",
+      "jobName": "Test Job",
+      "jobNum": "C123",
+      "hours": 1,
+      "overtime": 1
+
+    },
+    {
+      "date": "2023-12-01T00:00:00.000Z",
+      "jobName": "Futu Job",
+      "jobNum": "C131",
+      "hours": 88,
+      "overtime": null
+
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 1,
+  "overtimeCount": 1,
+  "punchCount": 1,
+  "dateSubmitted": "2023-12-07T00:03:25.476Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Johnny",
+  "timeEntries": [
+    {
+      "date": "2023-11-06T00:00:00.000Z",
+      "jobName": "Test Job",
+      "jobNum": "C123",
+      "hours": 1,
+      "overtime": 1
+
+    },
+    {
+      "date": "2023-12-01T00:00:00.000Z",
+      "jobName": "Futu Job",
+      "jobNum": "C131",
+      "hours": 88,
+      "overtime": null
+
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 1,
+  "overtimeCount": 1,
+  "punchCount": 1,
+  "dateSubmitted": "2023-12-07T00:03:25.476Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Johnny",
+  "timeEntries": [
+    {
+      "date": "2023-11-06T00:00:00.000Z",
+      "jobName": "Test Job",
+      "jobNum": "C123",
+      "hours": 1,
+      "overtime": 1
+
+    },
+    {
+      "date": "2023-12-20T00:00:00.000Z",
+      "jobName": "Future Job",
+      "jobNum": "C131",
+      "hours": 88,
+      "overtime": null
+
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 1,
+  "overtimeCount": 1,
+  "punchCount": 1,
+  "dateSubmitted": "2023-12-07T00:03:25.476Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "timeEntries": [],
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "",
+  "timeEntries": [
+    {
+      "date": "2023-12-20T00:00:00.000Z",
+      "jobName": "future job",
+      "jobNum": "c131",
+      "hours": 88,
+      "overtime": null
+
+    },
+    {
+      "date": "2023-11-05T00:00:00.000Z",
+      "jobName": "",
+      "jobNum": "",
+      "hours": null,
+      "overtime": null
+
+    },
+    {
+      "date": "2023-11-06T00:00:00.000Z",
+      "jobName": "test job",
+      "jobNum": "c123",
+      "hours": 1,
+      "overtime": 1
+
+    },
+    {
+      "date": "2023-11-07T00:00:00.000Z",
+      "jobName": "",
+      "jobNum": "",
+      "hours": null,
+      "overtime": null
+
+    },
+    {
+      "date": "2023-11-08T00:00:00.000Z",
+      "jobName": "",
+      "jobNum": "",
+      "hours": null,
+      "overtime": null
+
+    },
+    {
+      "date": "2023-11-09T00:00:00.000Z",
+      "jobName": "",
+      "jobNum": "",
+      "hours": null,
+      "overtime": null
+
+    },
+    {
+      "date": "2023-11-11T00:00:00.000Z",
+      "jobName": "",
+      "jobNum": "",
+      "hours": null,
+      "overtime": null
+
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 1,
+  "overtimeCount": 1,
+  "punchCount": 1,
+  "dateSubmitted": "2023-12-07T00:03:25.476Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "",
+  "timeEntries": [
+    {
+      "date": "2023-12-20T00:00:00.000Z",
+      "jobName": "future job",
+      "jobNum": "c131",
+      "hours": 88,
+      "overtime": null
+
+    },
+    {
+      "date": "2023-11-05T00:00:00.000Z",
+      "jobName": "",
+      "jobNum": "",
+      "hours": null,
+      "overtime": null
+
+    },
+    {
+      "date": "2023-11-06T00:00:00.000Z",
+      "jobName": "test job",
+      "jobNum": "c123",
+      "hours": 1,
+      "overtime": 1
+
+    },
+    {
+      "date": "2023-11-07T00:00:00.000Z",
+      "jobName": "",
+      "jobNum": "",
+      "hours": null,
+      "overtime": null
+
+    },
+    {
+      "date": "2023-11-08T00:00:00.000Z",
+      "jobName": "",
+      "jobNum": "",
+      "hours": null,
+      "overtime": null
+
+    },
+    {
+      "date": "2023-11-09T00:00:00.000Z",
+      "jobName": "",
+      "jobNum": "",
+      "hours": null,
+      "overtime": null
+    },
+    {
+      "date": "2023-11-11T00:00:00.000Z",
+      "jobName": "",
+      "jobNum": "",
+      "hours": null,
+      "overtime": null
+
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 1,
+  "overtimeCount": 1,
+  "punchCount": 1,
+  "dateSubmitted": "2023-12-07T00:03:25.476Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Ryan Goth",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "MATC School",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "Day School"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "UW Engineering Hall",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1923"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "UW Engineering Hall",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1923"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "Engineering Mechanical Lab",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1947"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Engineering Mechanical Lab",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1947"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-15T11:59:21.121Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Broden Miller",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Bachmann ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "23756"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Day School",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "PRI"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "J Henry",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1966"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "J Henry",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1966"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "J Henry",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1966"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-15T01:30:42.109Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Joe mahlik",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Radio hall sub",
+      "hours": 5,
+      "overtime": null,
+
+      "jobNum": "1907"
+    },
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Fluno",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "1982"
+    },
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "UW south campus utilities",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "1959"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Radio hall sub",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1907"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "School",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Radio hall sub",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1907"
+    },
+    {
+      "date": "2023-10-14T00:00:00.000Z",
+      "jobName": "Radio hall sub",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1907"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 7,
+  "dateSubmitted": "2023-10-14T23:56:48.248Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Tyler Packer",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "School",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-14T23:26:22.054Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Jeremy maier ",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Syene road ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Syene road ",
+      "hours": 8,
+      "overtime": 1,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Syene road ",
+      "hours": 8,
+      "overtime": 0.5,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1932"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1932"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 1.5,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-14T22:49:06.630Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Cody Dieckow ",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "00021"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 38,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-14T22:43:25.720Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Hunter Capadona",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "MATC GYM LIGHTS",
+      "hours": 8,
+      "overtime": 1,
+
+      "jobNum": "S23817"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "MATC GYM LIGHTS",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "S23817"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "MATC SCOREBOARD",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "S23692"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "MATC HEBSIM",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "MATC HEBSIM",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "MATC HEBSIM",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "MATC HEBSIM",
+      "hours": 7.5,
+      "overtime": 1,
+
+      "jobNum": "C1846"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "MATC SCOREBOARD",
+      "hours": 0.5,
+      "overtime": null,
+
+      "jobNum": "S23692"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 2,
+  "punchCount": 8,
+  "dateSubmitted": "2023-10-14T22:40:10.861Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "chad burlage",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "wispic",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "23858"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "olbrich ",
+      "hours": 3.5,
+      "overtime": null,
+
+      "jobNum": "23875"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "chavez",
+      "hours": 3.5,
+      "overtime": null,
+
+      "jobNum": "23882"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "elvehjem",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "23878"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "elvehjem",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "23878"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "syene road",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "1916"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "hooper",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "23883"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "ghc",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "23891"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "shop",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "444"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 32,
+  "overtimeCount": 0,
+  "punchCount": 9,
+  "dateSubmitted": "2023-10-14T22:17:53.671Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Donald Jacobson",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "409",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1954"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-14T21:39:18.329Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Erik Bakken",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "1313",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1947"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "CBE",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1923"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "1313",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1947"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "1313",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1947"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "CBE",
+      "hours": 5,
+      "overtime": null,
+
+      "jobNum": "1923"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "1313",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "1947"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 6,
+  "dateSubmitted": "2023-10-14T20:44:36.453Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Chuck Behm",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Truax 506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1932"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Truax 506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1932"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Truax 506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1932"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "Truax 506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1932"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Truax 506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1932"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-14T20:32:44.470Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Scott Pitney",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "VA Elevators",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1933"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "VA Matoc",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "C1930"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "VA Parking Garage",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "C1925"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "VA EHRM",
+      "hours": 0.5,
+      "overtime": null,
+
+      "jobNum": "C1967"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "VA 4B",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1896"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "VA Matoc",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1930"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 32,
+  "overtimeCount": 0,
+  "punchCount": 6,
+  "dateSubmitted": "2023-10-14T19:21:11.708Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Dave Graff ",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-14T19:01:34.975Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Preston Treadway",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Syene rd",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1916"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "School",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "Traux field 510",
+      "hours": 8,
+      "overtime": 0.5,
+
+      "jobNum": "C - 1924"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 30,
+  "overtimeCount": 1,
+  "punchCount": 3,
+  "dateSubmitted": "2023-10-14T18:29:47.524Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Christopher Aaron Ballweg",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Engineering Mechanical Lab",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1947"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Engineering Mechanical Lab",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1947"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Engineering Mechanical Lab",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1947"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "Engineering Mechanical Lab",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1947"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Engineering Mechanical Lab",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1947"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-14T13:31:04.264Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Tom hertzberg ",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "409",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1954"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "409",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1954"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "511",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1965"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "409",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1954"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1924"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-14T12:22:11.276Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Jeremy Gross ",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Elevator upgrade ",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "C-1933"
+    },
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Renovate Radiology ",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "C-1936"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Parking structure ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1925"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "MATOC ",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "C-1930"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "EHRM",
+      "hours": 0.5,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Parking structure ",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "C-1925"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "Renovate Radiology ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1936"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Renovate Radiology ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1936"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 8,
+  "dateSubmitted": "2023-10-14T07:39:59.060Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Casimir Pave",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "MATC hebsim ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Syene Rd ",
+      "hours": 8,
+      "overtime": 1,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Syene Rd",
+      "hours": 8,
+      "overtime": 0.5,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Bell Labs 120v Outlets",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "23885"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Bell Labs Heat Trace",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "23884"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 32,
+  "overtimeCount": 1.5,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-14T00:34:18.294Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Ken Nunes",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1924"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-14T00:17:33.394Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Scott Graff",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-13T21:18:46.229Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Craig Wells",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "JFHQ",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "1979"
+    },
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "MATC Foundation ",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "23892"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "MATC Foundation ",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "23892"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "MDA",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "1973"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "J Henry ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1966"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "J Henry ",
+      "hours": 2.5,
+      "overtime": null,
+
+      "jobNum": "1966"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "Bell labs robot",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "23796"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "Bell labs heat trace",
+      "hours": 4.5,
+      "overtime": null,
+
+      "jobNum": "23884"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Bell labs heat trace ",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "23884"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Bell labs 120v outlets",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "23885"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 10,
+  "dateSubmitted": "2023-10-13T20:28:44.017Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Eric Walsvik ",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Elevators",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1933"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Elevator ",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "C1933"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Ehrm",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "C1967"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Parking ",
+      "hours": 5,
+      "overtime": null,
+
+      "jobNum": "C1925"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Ehrm",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "C1967"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Matco ",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "C1930"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Parking",
+      "hours": 4.5,
+      "overtime": null,
+
+      "jobNum": "C1925"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "4b",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "C1896"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "Radiology ",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "C1936"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "Matco",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "C1930"
+    },
+    {
+      "date": "2023-10-12T00:00:00.000Z",
+      "jobName": "Pharmacy ",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "C1886"
+    },
+    {
+      "date": "2023-10-13T00:00:00.000Z",
+      "jobName": "Matco",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1930"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 12,
+  "dateSubmitted": "2023-10-13T19:01:39.583Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Alex Feldmann",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Matc reedsburg ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1961"
+    },
+    {
+      "date": "2023-10-10T00:00:00.000Z",
+      "jobName": "Matc portage ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1962"
+    },
+    {
+      "date": "2023-10-11T00:00:00.000Z",
+      "jobName": "Matc reedsburg ",
+      "hours": 3.5,
+      "overtime": null,
+
+      "jobNum": "C1961"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 19.5,
+  "overtimeCount": 0,
+  "punchCount": 3,
+  "dateSubmitted": "2023-10-13T18:36:10.665Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Joseph Bourassa",
+  "timeEntries": [
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Nature’s retreat ",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Quartz sign",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "23859"
+    },
+    {
+      "date": "2023-10-09T00:00:00.000Z",
+      "jobName": "Bachmann shed",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "23756"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 7,
+  "overtimeCount": 0,
+  "punchCount": 3,
+  "dateSubmitted": "2023-10-13T15:42:13.033Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Erik Bakken ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "1313",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1947"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "1313",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1947"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "1313",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1947"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "1313",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1947"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "CBE",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1923"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-08T21:52:29.631Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "M Curran ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Microbial ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Microbial ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Microbial",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Microbial ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Microbial ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    }
+  ],
+  "sourceURL": "time.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-08T19:10:03.259Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "R Curran ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Microbial ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1924"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1924"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1924"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1924"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-08T19:08:09.079Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "D’andre Howard ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "School ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "School "
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Reedsburg ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1961"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Portage ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1962"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Portage ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1962"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Portage ",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "C1962"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Reedsburg ",
+      "hours": 5,
+      "overtime": null,
+
+      "jobNum": "C1961"
+    }
+  ],
+  "sourceURL": "timekeeper.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 6,
+  "dateSubmitted": "2023-10-08T18:55:56.953Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Scott Pitney",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "VA Parking Garage",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "C1925"
+    },
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "VA 4B",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "C1896"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "VA 4B",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1896"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "VA 4B",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1896"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "VA 4B",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1896"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "VA 4B",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1896"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 6,
+  "dateSubmitted": "2023-10-08T17:03:31.492Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Austin keller ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Syene ",
+      "hours": 8,
+      "overtime": 1,
+
+      "jobNum": "1916"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Syene ",
+      "hours": 8,
+      "overtime": 3,
+
+      "jobNum": "1916"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Syene ",
+      "hours": 8,
+      "overtime": 2,
+
+      "jobNum": "1916"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Syene ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1916"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Syene ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1916"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 6,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-08T16:59:59.039Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Steve Tweed",
+  "timeEntries": [
+    {
+      "date": "2023-08-29T00:00:00.000Z",
+      "jobName": "Office ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-08-30T00:00:00.000Z",
+      "jobName": "Syene ",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "1916"
+    },
+    {
+      "date": "2023-08-30T00:00:00.000Z",
+      "jobName": "Office ",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-08-31T00:00:00.000Z",
+      "jobName": "UW Wham",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "1937"
+    },
+    {
+      "date": "2023-08-31T00:00:00.000Z",
+      "jobName": "Office ",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-09-01T00:00:00.000Z",
+      "jobName": "UW Wham",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "1937"
+    },
+    {
+      "date": "2023-09-01T00:00:00.000Z",
+      "jobName": "Office ",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Office ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 8,
+  "dateSubmitted": "2023-10-08T16:59:42.451Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Connor Hosking",
+  "timeEntries": [
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "400-Hangar",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "400-Hangar",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "400-Hangar",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "400-Hangar",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 32,
+  "overtimeCount": 0,
+  "punchCount": 4,
+  "dateSubmitted": "2023-10-08T15:55:13.336Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Craig Wells",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Milton",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "23860"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Trachte",
+      "hours": 3.5,
+      "overtime": null,
+
+      "jobNum": "23866"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "JFHQ",
+      "hours": 4.5,
+      "overtime": null,
+
+      "jobNum": "1979"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Matc Watertown ",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "1948"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "JFHQ",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "1979"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Arlington ",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "1950"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Auxiant",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "1972"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Milton",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "23860"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Matc Watertown ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1958"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 9,
+  "dateSubmitted": "2023-10-08T15:54:29.830Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Chuck Behm",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Truax 506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1932"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Truax 506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1932"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Truax 506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1932"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Truax 506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1932"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Truax 510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1924"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-08T14:44:59.710Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Ryan Goth",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "UW Microbial",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1951"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "UW Microbial",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1951"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "UW Microbial",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1951"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "UW Microbial",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1951"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "WAM",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1937"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-08T14:12:58.371Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Hunter Capadona",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "matc theater gym lights",
+      "hours": 8,
+      "overtime": 3,
+
+      "jobNum": "S23817"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "matc theater gym lights",
+      "hours": 3,
+      "overtime": 1,
+
+      "jobNum": "S23817"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "matc scoreboards",
+      "hours": 5,
+      "overtime": null,
+
+      "jobNum": "S23692"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "matc hebsim",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "matc hebsim",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "matc scoreboards",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "S23692"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "matc hebsim",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 4,
+  "punchCount": 7,
+  "dateSubmitted": "2023-10-08T14:05:22.805Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Joseph Bourassa",
+  "timeEntries": [
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Quartz conf",
+      "hours": 5,
+      "overtime": null,
+
+      "jobNum": "23863"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Quartz ",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "23785"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Bachmann shed",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "23756"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Bachmann sander",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "23757"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Hooper lights ",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "23800"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Quartz sign",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "23859"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Quartz sign ",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "23859"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Bachmann shed",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "24756"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Hooper plasma cutter ",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": ""
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 27,
+  "overtimeCount": 0,
+  "punchCount": 9,
+  "dateSubmitted": "2023-10-08T14:01:40.657Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Carson Lund",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Milton West Elementary ",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "23860"
+    },
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "School",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Watertown matc",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1948"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 6,
+  "dateSubmitted": "2023-10-08T12:44:18.681Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Everardo Zuniga",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "MATC gym lights",
+      "hours": 8,
+      "overtime": 3,
+
+      "jobNum": "S23817"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "MATC gym lights",
+      "hours": 4,
+      "overtime": 1,
+
+      "jobNum": "S23817"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "MATC scoreboards",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "S23692"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "MATC hebsim",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "MATC hebsim",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "MATC Ingenuity",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "C1867"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "MATC hebsim",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 4,
+  "punchCount": 7,
+  "dateSubmitted": "2023-10-08T11:59:10.246Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Brandon Brereton",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Windsor fireman’s park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Windsor fireman’s park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Windsor fireman’s park ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Windsor firemans park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Windsor fireman’s park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    }
+  ],
+  "sourceURL": "timekeeper.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-08T10:25:34.035Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Jeremy maier ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Syene road",
+      "hours": 8,
+      "overtime": 1,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Syene road ",
+      "hours": 8,
+      "overtime": 2,
+
+      "jobNum": "C1916 "
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Syene road ",
+      "hours": 8,
+      "overtime": 1.5,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Syene road ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Syene road ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1916"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 4.5,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-08T02:25:53.603Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Tyler packer",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "School",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-08T01:46:13.718Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Max Palzkill",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Three Bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Three Bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Three Bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Three Bay",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Simulator ",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "1876"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Three Bay",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Simulator ",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "1876"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 7,
+  "dateSubmitted": "2023-10-07T23:55:23.302Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Broden Miller",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Wispic ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "23858"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Wispic",
+      "hours": 5,
+      "overtime": null,
+
+      "jobNum": "23858"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Quartz",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "23785"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Bachmann Belt Sander",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "23757"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Bachmann Shed",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "23756"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Bachmann Shed",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "23756"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 6,
+  "dateSubmitted": "2023-10-07T22:31:43.823Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Alexander Dickert ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Airforce base",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1954"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Airforce base ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1954"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Airforce base ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1954"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Airforce base ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1954"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Airforce base ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1924"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-07T20:41:35.284Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Cody Dieckow ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 32,
+  "overtimeCount": 0,
+  "punchCount": 4,
+  "dateSubmitted": "2023-10-07T20:13:19.236Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Joe mahlik",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Radio hall substation",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1907"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Radio hall substation",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1907"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Radio hall station",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1907"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Radio hall substation",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1907"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Radio hall substation",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1907"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-07T18:43:17.249Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Casimir Pave",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "MATC hebsim",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "MATC hebsim",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "MATC hebsim",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "MATC hebsim",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "MATC hebsim",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "MATC scoreboards",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "S23692"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 6,
+  "dateSubmitted": "2023-10-07T16:36:34.460Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Tom hertzberg ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "409",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1954"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "409",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1954"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "409",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1954"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "409",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1954"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1924"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-07T15:53:37.435Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Ken Graff",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1922"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1922"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1922"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1922"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1922"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-07T14:44:39.551Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "jason greener",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "parking ramp",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "c-1925"
+    },
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "4b",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1896"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "parking ramp",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1925"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "pharmacy",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "c-1886"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "ct radiology",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "c-1936"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "elevator",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "c-1933"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "4b",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1896"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "EV study",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "s????"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "parking c-1925",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1925"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "matoc",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "c-1930"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "4b",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1896"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "colin hrs",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "s1234"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "EHRM",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1967"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "ct radiology",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "c-1936"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "elevators",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1933"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "4b",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1896"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "4b",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "c-1896"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "ct radiology",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "c-1936"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "EHRM",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1967"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 19,
+  "dateSubmitted": "2023-10-07T13:58:06.381Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Nathanael Brooks",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Sick",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "3 Bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "3 Bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1935"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1935"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "3 bay ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1935"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-07T13:15:40.515Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Nicholas Rodriguez ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Microbial ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Microbial",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Microbial",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Microbial",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Microbial ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-07T12:59:29.938Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Alex Feldmann",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Matc portage",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1962"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Matc reedsburg",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1961"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Matc portage",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1962"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Matc portage",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1962"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Matc portage",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "C1962"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Matc reedsburg ",
+      "hours": 5,
+      "overtime": null,
+
+      "jobNum": "C1961"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 6,
+  "dateSubmitted": "2023-10-07T12:02:05.536Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Donald jacobson",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-07T11:28:01.973Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Jeremy Gross ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Parking structure ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1925"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Renovate radiology",
+      "hours": 6.5,
+      "overtime": null,
+
+      "jobNum": "C-1936"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Improvement MATOC ",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "C-1930"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Renovate radiology",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1936"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Renovate radiology",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1936"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Renovate radiology",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "C-1936"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Elevator upgrade ",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "C-1933"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 7,
+  "dateSubmitted": "2023-10-07T01:55:26.868Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Nicholas bozacki ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Windsor",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Windsor",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Windsor",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Windsor",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Wam",
+      "hours": 8,
+      "overtime": 0.5,
+
+      "jobNum": "C-1937"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0.5,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-07T00:57:32.749Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Brian Held",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Windsor park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1952"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Windsor park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1952"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Windsor park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1952"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Windsor park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1952"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Windsor park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1952"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-07T00:45:23.715Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "chad burlage",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "school",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "wispic",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "23858"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "olbrich",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "23875"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "midvale",
+      "hours": 8,
+      "overtime": 1.5,
+
+      "jobNum": "23851"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "midvale",
+      "hours": 8,
+      "overtime": 1,
+
+      "jobNum": "23851"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "hooper",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "23876"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "matc",
+      "hours": 5,
+      "overtime": null,
+
+      "jobNum": "23692"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 2.5,
+  "punchCount": 7,
+  "dateSubmitted": "2023-10-06T23:59:32.467Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Dave Graff ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1924"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-06T22:43:42.752Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Scott Graff",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1924"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-06T21:44:23.764Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Ken Nunes",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1922"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1922"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1922"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1922"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1922"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-06T21:40:22.397Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Robert Bahr ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Truax",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1922 "
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Truax ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1922 "
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Truax ",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "C1922 "
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Truax",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1922  Sick time"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 31,
+  "overtimeCount": 0,
+  "punchCount": 4,
+  "dateSubmitted": "2023-10-06T20:50:19.175Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Preston Treadway",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Syene rd",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "School",
+      "hours": null,
+      "overtime": null,
+
+      "jobNum": "8"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Syene rd",
+      "hours": 8,
+      "overtime": 1,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Syene rd",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Syene rd",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1916"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 32,
+  "overtimeCount": 1,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-06T20:33:53.540Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Kyle Wallisch ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Matc",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1946"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Matc",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1946"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Matc",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1946"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Matc",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "1946 "
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Matc",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "1867"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Matc",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1867"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 6,
+  "dateSubmitted": "2023-10-06T19:30:08.203Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Christopher Aaron Ballweg ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Engineering Mech Lab",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1947"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Engineering Mech Lab",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1947"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Engineering Mech Lab",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1947"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Engineering CBE",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1923"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Engineering Mech Lab",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "C1947"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Engineering CBE",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "C1923"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 6,
+  "dateSubmitted": "2023-10-06T19:15:45.817Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Eric Walsvik ",
+  "timeEntries": [
+    {
+      "date": "2023-10-02T00:00:00.000Z",
+      "jobName": "Parking",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1925"
+    },
+    {
+      "date": "2023-10-03T00:00:00.000Z",
+      "jobName": "Matco",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1930"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Matco",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "C1930"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Parking ",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "C1925"
+    },
+    {
+      "date": "2023-10-04T00:00:00.000Z",
+      "jobName": "Radiology ",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "C1936"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Collin hrs",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "S1234"
+    },
+    {
+      "date": "2023-10-05T00:00:00.000Z",
+      "jobName": "Radiology ",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "C1936"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Radiology ",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "C1936"
+    },
+    {
+      "date": "2023-10-06T00:00:00.000Z",
+      "jobName": "Elevator ",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "C1933"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 9,
+  "dateSubmitted": "2023-10-06T19:02:55.742Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "M Curran ",
+  "timeEntries": [
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Matc 3rd flr main",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1941"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Matc camera",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "1887"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Matc 2b sound masking ",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "1941"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Microbial ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-09-30T00:00:00.000Z",
+      "jobName": "Matc 2b sound masking ",
+      "hours": 10,
+      "overtime": null,
+
+      "jobNum": "1941"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 34,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-02T00:26:33.809Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "R Curran ",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Microbial ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Matc 3rd flr main",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "1941"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "1924"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Matc camera",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "1887"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "1924"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Microbial ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1951"
+    },
+    {
+      "date": "2023-09-30T00:00:00.000Z",
+      "jobName": "Matc sounds masking",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "1941"
+    },
+    {
+      "date": "2023-09-30T00:00:00.000Z",
+      "jobName": "510",
+      "hours": 6,
+      "overtime": 2,
+
+      "jobNum": "1924"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 2,
+  "punchCount": 8,
+  "dateSubmitted": "2023-10-02T00:18:48.427Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Nicholas bozacki ",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Windsor",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Windsor",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Windsor",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "Windsor",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Windsor",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-01T23:20:58.552Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Donald jacobson",
+  "timeEntries": [
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Hangar 400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Hangar 400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "3 bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 32,
+  "overtimeCount": 0,
+  "punchCount": 4,
+  "dateSubmitted": "2023-10-01T17:25:10.914Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Preston Treadway",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Syene rd",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C - 1916"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "School",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "Syene rd",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C - 1916"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Syene rd",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C - 1916"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 32,
+  "overtimeCount": 0,
+  "punchCount": 4,
+  "dateSubmitted": "2023-10-01T17:08:41.951Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "D’andre Howard ",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "School ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "School "
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Reedsburg ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1961"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "Reedsburg ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1961"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Portage ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1962"
+    }
+  ],
+  "sourceURL": "timekeeper.ado.software",
+  "hoursCount": 32,
+  "overtimeCount": 0,
+  "punchCount": 4,
+  "dateSubmitted": "2023-10-01T16:08:16.382Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Carson Lund",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "School ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Shop ",
+      "hours": 6.5,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Radio Hall Sub",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "1907"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Watertown Matc",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "1948"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Shop",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "00021"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 41,
+  "overtimeCount": 0,
+  "punchCount": 7,
+  "dateSubmitted": "2023-10-01T14:56:11.841Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Connor Hosking",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "SunShade",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1969"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "400-hangar",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "400-hangar",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "400-hangar",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "400-hangar",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1922"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-01T14:31:02.519Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Joseph Bourassa",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Quartz ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "23785"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Quartz ",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "23785"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Quartz ",
+      "hours": 0.5,
+      "overtime": null,
+
+      "jobNum": "23875"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Amtelco",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "23870"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Quartz ",
+      "hours": 6.5,
+      "overtime": null,
+
+      "jobNum": "23785"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "Quartz ",
+      "hours": 3.5,
+      "overtime": null,
+
+      "jobNum": "23785"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "Ahuska ",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "23868"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Rogans",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "23776"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 32.5,
+  "overtimeCount": 0,
+  "punchCount": 8,
+  "dateSubmitted": "2023-10-01T14:07:48.012Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Austin Keller ",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Syene ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1916"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Matc ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1941 "
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Matc ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1941"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "Syene",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1916"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Syene ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1916"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-01T14:04:00.601Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Alexander Dickert",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Airforce base ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1954"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Airforce base",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1954"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Airforce base ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1954"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "School ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "School"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Airforce base ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1954"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-01T13:33:57.048Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Steve Tweed",
+  "timeEntries": [
+    {
+      "date": "2023-08-28T00:00:00.000Z",
+      "jobName": "UW OCP",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "1907"
+    },
+    {
+      "date": "2023-08-28T00:00:00.000Z",
+      "jobName": "Office ",
+      "hours": 5,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-08-29T00:00:00.000Z",
+      "jobName": "Office ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-08-30T00:00:00.000Z",
+      "jobName": "Office ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-08-31T00:00:00.000Z",
+      "jobName": "Office ",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-08-31T00:00:00.000Z",
+      "jobName": "Truax 400",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "1922"
+    },
+    {
+      "date": "2023-09-01T00:00:00.000Z",
+      "jobName": "Office ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 7,
+  "dateSubmitted": "2023-10-01T13:19:09.475Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "jason greener",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "EHRM",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "c-1967"
+    },
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "matoc",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "c-1930"
+    },
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "4b",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1896"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "4b",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "c-1896"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "ct reno",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "c-1936"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "colin hrs",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "s1234"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "4b",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "c-1896"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "parkinr ramp",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "c-1925"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "ct reno",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "c-1936"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "4b",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "c-1896"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "EHRM",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1967"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "ct reno",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "c-1936"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "elevator",
+      "hours": 1,
+      "overtime": null,
+
+      "jobNum": "c-1933"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "4b",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "c-1896"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "elevator",
+      "hours": 4,
+      "overtime": null,
+
+      "jobNum": "c-1933"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 15,
+  "dateSubmitted": "2023-10-01T11:28:50.163Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Jeremy maier ",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Syene road ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Windsor Shelter ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1952"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "UW Engineering ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "Syene road ",
+      "hours": 7,
+      "overtime": null,
+
+      "jobNum": "C1916"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Syene road ",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1916"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 39,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-01T03:18:54.822Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Tyler Packer",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "School",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": ""
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Three bay",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1934"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-01T02:48:09.534Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Broden Miller",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Quartz",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "23785"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Day School",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "PRI"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Quartz",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "23785"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "ENGINEERING HALL EXPERIMENTAL MECHANICS LAB",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1947"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "ENGINEERING HALL EXPERIMENTAL MECHANICS LAB",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1947"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-01T02:26:41.243Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Ken Graff",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1922"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1922"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1922"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "400",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "C1922"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 30,
+  "overtimeCount": 0,
+  "punchCount": 4,
+  "dateSubmitted": "2023-10-01T02:03:29.814Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Dave Graff ",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "1932"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-01T01:11:36.815Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "chad burlage",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "ghc",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "23857"
+    },
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "springharbor ",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "23856"
+    },
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "toki",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "23855"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "toki",
+      "hours": 3.5,
+      "overtime": null,
+
+      "jobNum": "23855"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "corrections",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "444"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "county material",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "444"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "springharbor",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "23856"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "demco",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "23869"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "placon",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "23867"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "placon",
+      "hours": 3,
+      "overtime": null,
+
+      "jobNum": "23867"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "sherman",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "1978"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "county material",
+      "hours": 1.5,
+      "overtime": null,
+
+      "jobNum": "444"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "reynolds",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "23842"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "reynolds",
+      "hours": 2,
+      "overtime": null,
+
+      "jobNum": "23842"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "demco",
+      "hours": 6,
+      "overtime": null,
+
+      "jobNum": "23828"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 15,
+  "dateSubmitted": "2023-10-01T00:14:34.613Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Brandon Brereton",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Windsor fireman’s park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Windsor fireman’s park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Windsor fireman’s park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "Windsor fireman’s park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Windsor fireman’s park",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1952"
+    }
+  ],
+  "sourceURL": "timekeeper.ado.software",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-10-01T00:11:38.549Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Everardo Zuniga",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "MATC gym theater lights",
+      "hours": 8,
+      "overtime": 2,
+
+      "jobNum": "S23817"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "MATC gym theater lights",
+      "hours": 8,
+      "overtime": 2,
+
+      "jobNum": "S23817"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "MATC hebsim",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "MATC hebsim",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "MATC hebsim",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 4,
+  "punchCount": 5,
+  "dateSubmitted": "2023-09-30T23:46:00.828Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Hunter Capadona",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "MATC GYM THEATER LIGHTS",
+      "hours": 8,
+      "overtime": 2,
+
+      "jobNum": "S23817"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "MATC GYM THEATER LIGHTS",
+      "hours": 8,
+      "overtime": 2,
+
+      "jobNum": "S23817"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "MATC HEALTH",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "MATC HEALTH",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "MATC HEALTH",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C1946"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 4,
+  "punchCount": 5,
+  "dateSubmitted": "2023-09-30T23:32:56.644Z",
+
+  "__v": 0
+},
+{
+  "archived": false,
+  "empName": "Chuck Behm corrected",
+  "timeEntries": [
+    {
+      "date": "2023-09-25T00:00:00.000Z",
+      "jobName": "Truax 510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1924"
+    },
+    {
+      "date": "2023-09-26T00:00:00.000Z",
+      "jobName": "Truax 510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1924"
+    },
+    {
+      "date": "2023-09-27T00:00:00.000Z",
+      "jobName": "Truax 510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1924"
+    },
+    {
+      "date": "2023-09-28T00:00:00.000Z",
+      "jobName": "Truax 510",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1924"
+    },
+    {
+      "date": "2023-09-29T00:00:00.000Z",
+      "jobName": "Truax 506",
+      "hours": 8,
+      "overtime": null,
+
+      "jobNum": "C-1932"
+    }
+  ],
+  "sourceURL": "time.timekeeper.site",
+  "hoursCount": 40,
+  "overtimeCount": 0,
+  "punchCount": 5,
+  "dateSubmitted": "2023-09-30T23:32:16.492Z",
+
+  "__v": 0
+}]
