@@ -5,11 +5,12 @@ import Customer from '../models/customer.js';
 const auth = {}
 
 auth.checkAuth = function checkAuth(req, res, next) {
-    if (req.user) {
+    if (req.isAuthenticated) {
         res.locals.user = req.user
         return next()
     }
     res.locals.message = 'You must be logged in to access that page'
+    console.log('Unauthenticated. Redirecting to login page.')
     res.redirect('auth/login');
 }
 auth.registerUser = async function (req, res, next) {
