@@ -8,13 +8,14 @@
             <!-- Logout Button -->
             <div class="flex flex-wrap items-center justify-end order-3 mr-0 columns-2 md:mr-4" id="authButtons">
                 <div class="flex items-center order-2 w-full md:w-full">
-                    <a href="/auth/logout"><button
-                            class="p-2 mr-4 bg-transparent border border-gray-300 rounded text-white-50 hover:bg-gray-100 hover:text-gray-700">Logout</button></a>
+                    <form method="POST" action="/auth/logout"><a><button id="logout" type="submit"
+                                class="p-2 mr-4 bg-transparent border border-gray-300 rounded text-white-50 hover:bg-gray-100 hover:text-gray-700">Logout</button></a>
+                    </form>
                 </div>
             </div>
         </div>
     </nav>
-    {{else}}
+{{else}}
     <nav id="header">
         <div class="flex items-center justify-between w-full px-6 py-2 mt-0">
             <a href="/">
@@ -43,4 +44,4 @@
         </div>
     </nav>
 
-    {{/if}}
+{{/if}}

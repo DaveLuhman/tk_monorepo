@@ -14,3 +14,9 @@ authRouter.get('/register', authController.getRegisterPage)
 authRouter.post('/register', auth.registerUser, (req, res) => {
     res.redirect('/admin/')
 })
+authRouter.post('/logout', function (req, res, next) {
+    req.logout(function (err) {
+        if (err) { return next(err); }
+        res.redirect('/');
+    });
+});

@@ -69,7 +69,7 @@ app.set('views', './views');
 // end hbs config
 
 // Express Middleware
-app.use(express.static('./public')); // Serve Static Files
+app.use('/', express.static('./public')); // Serve Static Files
 app.use(express.json()); // JSON Body Parser
 app.use(rateLimiter);
 app.use(flash())
