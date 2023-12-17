@@ -9,7 +9,7 @@ import express from 'express';
 // handlebars depenancies
 import { create } from 'express-handlebars'; // templating engine
 import handlebarsHelpers from 'handlebars-helpers';
-import handlebarsPaginate from 'handlebars-paginate';
+import paginate from 'handlebars-paginate';
 import { formatDate } from './helpers/index.js';
 // utility depenancies
 import { mw, rateLimiter } from './middleware/util.js';
@@ -54,7 +54,7 @@ app.use(passport.session())
 const hbs = create({
   helpers: {
     formatDate,
-    handlebarsPaginate,
+    paginate,
     ...handlebarsHelpers()
   },
   extname: '.hbs',
