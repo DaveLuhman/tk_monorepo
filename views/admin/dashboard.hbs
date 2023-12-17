@@ -1,6 +1,14 @@
-{{> admin/_header}}
-{{> admin/_views}}
-<div class="ml-10">
-
-{{> admin/_pagination}}
+<div class="grid grid-cols-12 w-9/12 max-h-fit">
+    <div class="row-start-1 col-start-1 col-span-12 py-5">
+        {{> admin/_header}}
+    </div>
+    <div class="row-start-2 col-start-1 col-span-2">
+        {{> admin/_views}}
+    </div>
+    <div class="row-start-2 col-start-3 col-span-6">
+        {{> admin/_timeTable}}
+    </div>
+    <div class="row-start-3 col-start-3 col-span-6">
+        {{> admin/_pagination}}
+    </div>
 </div>
