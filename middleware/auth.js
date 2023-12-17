@@ -5,7 +5,6 @@ import Customer from '../models/customer.js';
 const auth = {}
 
 auth.checkAuth = function checkAuth(req, res, next) {
-    console.log(req.isAuthenticated)
     if (req.isAuthenticated) {
         res.locals.user = req.user
         return next()
