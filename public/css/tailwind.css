@@ -57,3 +57,17 @@ td {
   @apply text-center;
 }
 /* -----------------END TABLE------------------ */
+/* ------------PAGINATION BAR------------------------ */
+.paginate-bar {
+  @apply flex;
+  @apply flex-wrap;
+  @apply items-center;
+  @apply md:mr-4;
+  @apply mr-0;
+  @apply justify-evenly;
+  @apply overflow-hidden;
+  @apply mb-4;
+}
+.btn-paginate {
+  @apply btn;
+}
