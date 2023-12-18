@@ -5,7 +5,7 @@ import Customer from '../models/customer.js';
 
 
 export function checkAuth(req, res, next) {
-    if (req.user) {
+    if (req.isAuthenticated()) {
         console.log('bypassing ')
         res.locals.user = req.user
         return next()
