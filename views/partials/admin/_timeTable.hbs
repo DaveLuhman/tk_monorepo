@@ -20,22 +20,21 @@
                 <td class="hidden md:table-cell" id="overtime">{{overtimeCount}}</td>
                 <td class="hidden md:table-cell" id="punchCount">{{punchCount}}</td>
             </tr>
-            <div class="hidden-frame transition-height max-h-0">
-            <tr>
-                <td colspan="6" class="px-2 py-2 border-b border-gray-200 bg-blue-300 text-xs">
+            <tr class="hidden-frame hidden">
+                <td colspan="6" class="px-2 py-2 border-b border-gray-400 text-xs">
                     {{#each timeEntries}}
-                        <table>
+                        <table class="w-full">
                             <tr>
-                                <td>{{date}}</td>
-                                <td>{{jobName}}</td>
-                                <td>{{jobNum}}</td>
-                                <td>{{hours}}</td>
-                                <td>{{#if overtime}}{{overtime}}{{else}}0{{/if}}</td>
+                                <td class="border-y-cyan-900">{{date}}</td>
+                                <td class="border-y-cyan-900">{{jobName}}</td>
+                                <td class="border-y-cyan-900">{{#if jobNum}}{{jobNum}}{{else}}N/A{{/if}}</td>
+                                <td class="border-y-cyan-900">{{hours}}</td>
+                                <td class="border-y-cyan-900">{{#if overtime}}{{overtime}}{{else}}0{{/if}}</td>
                             </tr>
                         </table>
                     {{/each}}
                 </td>
-            </tr></div>
+            </tr>
         {{/each}}
     </tbody>
 </table>

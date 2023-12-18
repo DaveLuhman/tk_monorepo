@@ -9,7 +9,6 @@ export function checkAuth(req, res, next) {
         res.locals.user = req.user
         return next()
     }
-    res.locals.message = 'You must be logged in to access that page'
     console.log('Unauthenticated. Redirecting to login page.')
     res.redirect('auth/login')
 }
@@ -41,6 +40,6 @@ export function logout(req, res, next) {
         if (err) {
             return next(err)
         }
-        res.redirect(req.headers.hostname + '/')
+        res.redirect('/')
     })
 }

@@ -1,8 +1,8 @@
 function toggleFrame(row) {
     const nextRow = row.nextElementSibling;
     if (nextRow && nextRow.classList.contains('hidden-frame')) {
-        nextRow.classList.toggle('max-h-0');
-        nextRow.classList.toggle('max-h-10 '); // Ensure this matches the custom utility
+        nextRow.classList.toggle('hidden');
+        nextRow.classList.toggle('table-row'); // Ensure this matches the custom utility
     }
 }
 

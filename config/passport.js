@@ -22,6 +22,7 @@ const passportConfig = (app) => {
         if (isMatch) {
           return done(null, user)
         } else {
+          console.log('bad password')
           return done(null, false, { message: 'Password incorrect' })
         }
       })
