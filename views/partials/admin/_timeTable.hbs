@@ -1,40 +1,58 @@
-<table>
-    <thead class="rounded-lg">
-        <th>
-            Date Submitted</th>
-        <th>
-            Employee</th>
-        <th class="hidden md:table-cell" id="category">
-            Hours</th>
-        <th class="hidden md:table-cell" id="category">
-            Overtime</th>
-        <th class="hidden md:table-cell" id="category">
-            Time Entries</th>
-    </thead>
-    <tbody>
-        {{#each timeEntries}}
-            <tr class="hover:bg-gray-100 cursor-pointer data-row" data-accordion="collapse">
-                <td id="dateSubmitted">{{formatDate dateSubmitted}}</td>
-                <td id="empName">{{empName}}</td>
-                <td class="hidden md:table-cell" id="hours">{{hoursCount}}</td>
-                <td class="hidden md:table-cell" id="overtime">{{overtimeCount}}</td>
-                <td class="hidden md:table-cell" id="punchCount">{{punchCount}}</td>
-            </tr>
-            <tr class="hidden-frame hidden">
-                <td colspan="6" class="px-2 py-2 border-b border-gray-400 text-xs">
+<!-- Component Start -->
+<div class="flex flex-col ">
+    <button class="group border-t border-r border-l border-black focus:outline-none">
+        <div class="flex items-center justify-between h-12 px-3 font-semibold hover:bg-gray-200">
+            <span class="truncate">Date Submitted</span>
+            <span class="truncate">Employee Name</span>
+            <span class="truncate">Hours</span>
+            <span class="truncate">Overtime</span>
+        </div>
+    </button>
+</div>
+{{#each timeEntries}}
+    <div class="flex-none">
+        <div class="flex flex-col ">
+            <button class="group border-t border-r border-l border-black focus:outline-none">
+                <div class="flex items-center justify-between h-12 px-3 font-semibold hover:bg-gray-200">
+                    <span class="truncate">{{date dateSubmitted 'MM-DD-YYYY'}}</span>
+                    <span class="truncate">{{empName}}</span>
+                    <span class="truncate">{{hours}}</span>
+                    <span class="truncate">{{overtime}}</span>
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="max-h-0 overflow-hidden duration-300 group-focus:max-h-40">
+                    <div
+                        class="flex justify-evenly items-center h-8 px-2 text-sm uppercase border-black hover:bg-gray-200">
+                        <div class="flex-row mx-5 px-3">Date</div>
+                        <div class="flex-row mx-5 px-3">Job Name</div>
+                        <div class="flex-row mx-5 px-3">Job Number</div>
+                        <div class="flex-row mx-5 px-3">Hours</div>
+                        <div class="flex-row mx-5 px-3">Overtime</div>
+                    </div>
                     {{#each timeEntries}}
-                        <table class="w-full">
-                            <tr class="border-stone-950">
-                                <td class="border-stone-950">{{date}}</td>
-                                <td class="border-stone-950">{{jobName}}</td>
-                                <td class="border-stone-950">{{#if jobNum}}{{jobNum}}{{else}}N/A{{/if}}</td>
-                                <td class="border-stone-950">{{hours}}</td>
-                                <td class="border-stone-950">{{#if overtime}}{{overtime}}{{else}}0{{/if}}</td>
-                            </tr>
-                        </table>
+                        <div class="flex justify-evenly items-center h-8 px-4 text-sm hover:bg-gray-200">
+                            <div class="flex-row mx-5 px-3">{{date}}</div>
+                            <div class="flex-row mx-5 px-3">{{jobName}}</div>
+                            <div class="flex-row mx-5 px-3">{{jobNum}}</div>
+                            <div class="flex-row mx-5 px-3">{{hours}}</div>
+                            <div class="flex-row mx-5 px-3">{{#if overtime}}{{overtime}}{{else}}0{{/if}}</div>
+                        </div>
                     {{/each}}
-                </td>
-            </tr>
-        {{/each}}
-    </tbody>
-</table>
+                </div>
+            </button>
+        </div>
+    </div>
+{{/each}}
+<style>
+    .max-h-0 {
+        max-height: 0;
+    }
+
+    .group:focus .group-focus\:max-h-40 {
+        max-height: 10rem;
+    }
+</style>
