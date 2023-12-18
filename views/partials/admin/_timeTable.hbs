@@ -34,10 +34,10 @@
                         <div class="flex-row mx-5 px-3">Overtime</div>
                     </div>
                     {{#each timeEntries}}
-                        <div class="flex justify-evenly items-center h-8 px-4 text-sm hover:bg-gray-200">
-                            <div class="flex-row mx-5 px-3">{{date}}</div>
+                        <div class="flex justify-between items-center h-8 px-2 text-sm hover:bg-gray-200">
+                            <div class="flex-row mx-5 px-3">{{date date 'MM-DD-YYYY'}}</div>
                             <div class="flex-row mx-5 px-3">{{jobName}}</div>
-                            <div class="flex-row mx-5 px-3">{{jobNum}}</div>
+                            <div class="flex-row mx-5 px-3">{{#if jobNum}}{{jobNum}}{{else}}N/A{{/if}}</div>
                             <div class="flex-row mx-5 px-3">{{hours}}</div>
                             <div class="flex-row mx-5 px-3">{{#if overtime}}{{overtime}}{{else}}0{{/if}}</div>
                         </div>
