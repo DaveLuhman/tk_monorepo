@@ -16,7 +16,6 @@ async function importSampleTimeEntries() {
     try{
     console.log('No Time Entries in database, Importing Sample.json'.red)
     let sampleJson = JSON.parse(Buffer.from(readFileSync('./sampleEntries.json', {encoding: 'utf-8'})))
-    console.log(sampleJson)
     sampleJson.map((entry) => {
         TimeEntry.create(entry)
     })}catch(error){console.error(error)}
