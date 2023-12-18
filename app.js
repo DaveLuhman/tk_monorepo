@@ -38,9 +38,11 @@ app.use(cookieParser());
 if (process.env.NODE_ENV === 'PRODUCTION') {
   app.use(prodConfig)
   app.set('trust proxy', 1)
+  console.log('Running in production'.green.bgBlack)
 }
 else {
   app.use(devConfig)
+  console.log('Running in development mode'.blue.bgYellow)
 }
 // end session config
 // passport config

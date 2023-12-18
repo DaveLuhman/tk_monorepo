@@ -20,6 +20,7 @@ const passportConfig = (app) => {
       compare(password, user.password, (err, isMatch) => {
         if (err) throw err;
         if (isMatch) {
+          console.log('User Authenticated Successfully')
           return done(null, user)
         } else {
           console.log('bad password')
