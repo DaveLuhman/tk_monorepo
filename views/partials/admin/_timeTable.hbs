@@ -1,4 +1,4 @@
-<table class="">
+<table>
     <thead class="rounded-lg">
         <th>
             Date Submitted</th>
@@ -13,7 +13,7 @@
     </thead>
     <tbody>
         {{#each timeEntries}}
-            <tr class="hover:bg-gray-100 cursor-pointer data-row">
+            <tr class="hover:bg-gray-100 cursor-pointer data-row" data-accordion="collapse">
                 <td id="dateSubmitted">{{formatDate dateSubmitted}}</td>
                 <td id="empName">{{empName}}</td>
                 <td class="hidden md:table-cell" id="hours">{{hoursCount}}</td>
@@ -24,12 +24,12 @@
                 <td colspan="6" class="px-2 py-2 border-b border-gray-400 text-xs">
                     {{#each timeEntries}}
                         <table class="w-full">
-                            <tr>
-                                <td class="border-y-cyan-900">{{date}}</td>
-                                <td class="border-y-cyan-900">{{jobName}}</td>
-                                <td class="border-y-cyan-900">{{#if jobNum}}{{jobNum}}{{else}}N/A{{/if}}</td>
-                                <td class="border-y-cyan-900">{{hours}}</td>
-                                <td class="border-y-cyan-900">{{#if overtime}}{{overtime}}{{else}}0{{/if}}</td>
+                            <tr class="border-stone-950">
+                                <td class="border-stone-950">{{date}}</td>
+                                <td class="border-stone-950">{{jobName}}</td>
+                                <td class="border-stone-950">{{#if jobNum}}{{jobNum}}{{else}}N/A{{/if}}</td>
+                                <td class="border-stone-950">{{hours}}</td>
+                                <td class="border-stone-950">{{#if overtime}}{{overtime}}{{else}}0{{/if}}</td>
                             </tr>
                         </table>
                     {{/each}}
