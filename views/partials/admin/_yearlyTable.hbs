@@ -1,49 +1,24 @@
 {{#each yearlyTimeEntries}}
-    Date: {{date this.[0].[0].timeEntries.[0].date 'YYYY'}}
+    Date: {{date this.[0].timeEntries.[0].date 'YYYY'}}
     {{#each this as | week |}}
         {{#if this.entries}}
             <div class="flex flex-col ">
                 <button class="group/week border-t border-r border-l border-black focus:outline-none">
                     <div class="flex items-center justify-between h-12 px-3 font-semibold">
-                        {{this.week}}
+                        Week: {{this.week}}
                         <div class="flex-none max-h-0 overflow-hidden duration-300 group-focus/week:max-h-40">
-                            {{#each entries}}
-                                <div id="timecard" class="flex flex-col ">
-                                    <button
-                                        class="group/entry border-t border-r border-l border-black focus:outline-none">
-                                        <div class="flex items-center justify-between h-12 px-3 font-semibold">
-                                            <span class="truncate">{{date dateSubmitted 'MM-DD-YYYY'}}</span>
-                                            <span class="truncate">{{empName}}</span>
-                                            <span class="truncate">{{hoursCount}}</span>
-                                            <span class="truncate">{{overtimeCount }}</span>
-                                            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                                fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <div class="max-h-0 overflow-hidden duration-300 group-focus/entry:max-h-40">
-                                            <div
-                                                class="flex justify-evenly items-center h-8 px-2 text-sm border-black over:bg-gray-200">
-                                                <div class="flex-row mx-5 px-3">Date</div>
-                                                <div class="flex-row mx-5 px-3">Job Name</div>
-                                                <div class="flex-row mx-5 px-3">Job Number</div>
-                                                <div class="flex-row mx-5 px-3">Hours</div>
-                                                <div class="flex-row mx-5 px-3">Overtime</div>
-                                            </div>
-                                            {{#each timeEntries}}
-                                                <div id="entryOnTimecard" class="flex justify-between items-center h-8 px-2 text-sm hover:bg-gray-200">
-                                                    <div class="flex-row mx-5 px-3">{{date date 'MM-DD-YYYY'}}</div>
-                                                    <div class="flex-row mx-5 px-3">{{jobName}}</div>
-                                                    <div class="flex-row mx-5 px-3">{{#if jobNum}}{{jobNum}}{{else}}N/A{{/if}}</div>
-                                                    <div class="flex-row mx-5 px-3">{{hours}}</div>
-                                                    <div class="flex-row mx-5 px-3">{{#if overtime}}{{overtime}}{{else}}0{{/if}}</div>
-                                                </div>
-                                            {{/each}}
-                                        </div>
-                                    </button>
-                                </div>
+                            <div class="flex flex-col ">
+                                <button class="group border-t border-r border-l border-black focus:outline-none">
+                                    <div class="flex items-center justify-between h-12 px-3 font-bold">
+                                        <span class="truncate">Date Submitted</span>
+                                        <span class="truncate">Employee Name</span>
+                                        <span class="truncate">Hours</span>
+                                        <span class="truncate">Overtime</span>
+                                    </div>
+                                </button>
+                            </div>
+                            {{#each entries as | timeEntries |}}
+                                {{> admin/_timeTable}}
                             {{/each}}
                         </div>
                     </div>
