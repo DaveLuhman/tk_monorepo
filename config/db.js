@@ -2,7 +2,6 @@ import { connect } from 'mongoose';
 import User from '../models/user.js'
 import TimeEntry from '../models/timeEntry.js';
 import { readFileSync } from 'fs'
-import { isUtf8 } from 'buffer';
 
 async function isUsersCollectionEmpty() {
     const user = (await User.find()).length

@@ -1,41 +1,35 @@
 <div class="block">
-    <div class="flex-row grow ">
-        <div class="flex-row ">
+    <div class="flex-row grow">
+        <div id="navBar" class="flex-row">
             {{> admin/_header}}
         </div>
-        <div class="flex flex-row gap-10 ">
-            <div>
+        <div id="bodyRoot" class="flex flex-row gap-10 ">
+            <div id="viewsMenu">
                 {{> admin/_views}}
             </div>
-            <div>
+            <div id="entryRoot">
+                {{#if timeEntries}}
                 {{> admin/_timeTable}}
-            </div>
+                {{/if}}
+                {{#if yearlyTimeEntries}}
+                {{> admin/_yearlyTable}}
+                {{/if}}
+            </div> {{!- entryRootExit --}}
         </div>
-        <div class="flex flex-row justify-evenly">
+        <div id="pagination" class="flex flex-row justify-evenly">
+            {{#if pagination}}
             {{> admin/_pagination}}
+            {{/if}}
         </div>
     </div>
 </div>
-<div class="ml-5">
-    <ul>
-        {{#each yearlyTimeEntries}}
-            <div class="ml-5">
-                {{date this.[0].[0].timeEntries.[0].date 'YYYY'}}
-                {{#each this}}
-                    <div class="ml-5">
-                        {{#if this.[0].week}}
-                        <li> week: {{this.[0].week}}
-                            <ul>
-                                {{#each this}}
-                                    <div class="ml-5">
-                                        <li class="">{{date timeEntries.[0].date 'MM_DD-YYYY'}}</li>
-                                    </div>
-                                {{/each}}
-                            </ul>
-                    </div>
-                    </li>{{/if}}
-                {{/each}}
-            </div>
-    </ul>
-    {{/each}}
-</div>
+
+<style>
+    .max-h-0 {
+        max-height: 0;
+    }
+
+    .group:focus .group-focus\:max-h-40 {
+        max-height: 10rem;
+    }
+</style>
