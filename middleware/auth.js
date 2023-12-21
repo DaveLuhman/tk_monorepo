@@ -11,7 +11,7 @@ export function checkAuth(req, res, next) {
         return next()
     }
     console.log('Unauthenticated. Redirecting to login page.')
-    res.redirect('auth/login')
+    res.redirect('/auth/login')
 }
 export async function registerUser(req, res, next) {
     const { email, password, companyName } = req.body

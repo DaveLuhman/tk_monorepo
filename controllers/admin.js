@@ -2,6 +2,7 @@ import TimeEntry from '../models/timeEntry.js'
 import User from '../models/user.js'
 import Customer from '../models/customer.js'
 import { paginate } from '../middleware/util.js'
+import moment from 'moment'
 
 const adminController = {}
 export default adminController
@@ -13,10 +14,10 @@ adminController.getRoot = async (req, res) => {
     res.locals.timeEntries = timeEntries
     res.render('admin/dashboard')
 }
-adminController.getWeeklyGroupView = function (req, res) {
-    const entries = getUserScopedEntries(req.user)
+adminController.getWeeklyGroupView = async function (req, res) {
+    const entries = await getUserScopedEntries(req.user)
     const yearlySortedEntries = groupByYear(entries)
-    let weeklySortedEntries
+    let weeklySortedEntries = []
     yearlySortedEntries.forEach(function(year) {weeklySortedEntries.push(groupByWeek(year))})
     res.send(weeklySortedEntries)
 }
@@ -32,7 +33,7 @@ async function getUserScopedEntries(userId) {
     return rawTimeEntries
 }
 
-function getYears([entries]) {
+function getYears(entries) {
     const yearsCollection = new Set()
     entries.forEach((entry) => {
         yearsCollection.add(moment(entry.dateSubmitted).year())
@@ -50,7 +51,7 @@ function groupByYear(entries) {
 }
 function groupByWeek(entries) {
     const sortedArray = []
-    for (i = 0; i < 52; i++) { // create 52 empty child arrays
+    for (let i = 0; i < 52; i++) { // create 52 empty child arrays
         sortedArray.push([])
     }
     entries.map(entry => {

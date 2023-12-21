@@ -42,7 +42,7 @@ const timeEntrySchema = new Schema(
   timeEntrySchema.plugin(mongooseAutoPopulate)
 
   timeEntrySchema.virtual('week').get(function () {
-    return moment(this.timeEntries.date).week()
+    return moment(this.timeEntries[0].date).get('week')
 })
 
 timeEntrySchema.static('getTodaysEntries', async function () {
