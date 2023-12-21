@@ -1,25 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-const content = ['./views/**/*.{hbs,js}', './public/**/*.{hbs,js}', "./node_modules/flowbite/**/*.js"]
+const content = ['./views/**/*.{hbs,js}', './public/**/*.{hbs,js}',"./node_modules/flowbite/**/*.js"]
 const mode = 'jit'
 const daisyui = {
   themes: [{
     mytheme: {
-      /* Primary color for brand */
-      'primary': '#005f73',
-      /* Secondary color for accents */
-      'secondary': '#94d2bd',
-      /* Neutral colors for backgrounds and text */
-      'neutral': '#e0e0e0',
-      'base-100': '#ffffff',
-      'base-200': '#f0f0f0',
-      'base-300': '#d9d9d9',
-      /* Fonts should be professional and readable */
-      'font-base': '"Segoe UI", Arial, sans-serif',
-      /* Other color customizations */
-      'info': '#3ABFF8',
-      'success': '#36D399',
-      'warning': '#FBBD23',
-      'error': '#F87272',
+      primary: '#69eac1',
+      secondary: '#b4d356',
+      accent: '#2d25c4',
+      neutral: '#22242f',
+      'base-100': '#40474f',
+      info: '#5bbff1',
+      success: '#176d5c',
+      warning: '#edb721',
+      error: '#e77a65'
     }
   }, 'light', 'dark', 'business']
 }
@@ -33,22 +26,7 @@ const theme = {
     md: '960px',
     lg: '1440px'
   },
-  extend: {
-    maxHeight: {
-      '0': '0',
-      '500': '500px', // Adjust as per your content's needs
-    },
-    transitionProperty: {
-      'height': 'max-height',
-    },
-    transitionDuration: {
-      '500': '500ms',
-    },
-    transitionTimingFunction: {
-      'in': 'ease-in',
-      'out': 'ease-out',
-    }
-  }
+  extend: {}
 }
 const variants = { display: ['responsive', 'dropdown'] }
 
