@@ -18,10 +18,11 @@ adminController.getRoot = async (req, res) => {
 }
 adminController.getWeeklyGroupView = async function (req, res) {
     const timecards = await getUserScopedEntries(req.user)
-    const yearlySortedEntries = groupByYear(timecards)
-    let yearlyWeeklySortedEntries = []
-    yearlySortedEntries.forEach(function (year) { yearlyWeeklySortedEntries.push(groupByWeek(year)) })
-    res.locals.yearlyTimecards = yearlyWeeklySortedEntries
+    const yearOrLessOldTimecards = timecards.filter((timecard) => {
+        return moment(timecard.dateSubmitted).unix() <= moment().days(365).unix()
+    })
+    const weeklySortedEntries = groupByWeek(yearOrLessOldTimecards)
+    res.locals.weeklyTimecards = weeklySortedEntries
     res.render('admin/dashboard')
 }
 
@@ -36,31 +37,13 @@ async function getUserScopedEntries(userId) {
     return rawTimecards
 }
 
-function getYears(timecards) {
-    const yearsCollection = new Set()
-    timecards.forEach((timecard) => {
-        yearsCollection.add(moment(timecard.timeEntries[0].date).year())
-    })
-    return yearsCollection
-}
-function groupByYear(timecards) {
-    const sortedArray = []
-    getYears(timecards).forEach(year => {
-        sortedArray.push(timecards.filter(function (timecard) {
-            return moment(timecard.timeEntries[0].date).year() === year
-        }))
-    })
-    return sortedArray
-}
+
 function groupByWeek(timecards) {
     let sortedArray = []
-    for (let i = 0; i < 55; i++) { // create 52 empty child arrays
-        sortedArray.push({ week: i, timecards: [] })
+    for (let i = 1; i < 53; i++) { // create 52 empty child arrays
+        sortedArray.push({ week: i, timecards: timecards.filter(timecard => timecard.week === i) })
     }
-    timecards.map(timecard => {
-        sortedArray[timecard.week].timecards.push(timecard)
-        console.log(sortedArray[timecard.week].week);
-    })
-    sortedArray = sortedArray.filter((week) => { return week.length !== 0 })
+
+    sortedArray = sortedArray.filter((week) => { return week.timecards.length !== 0 })
     return sortedArray
 }

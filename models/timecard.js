@@ -52,7 +52,7 @@ timecardSchema.static('getTodaysEntries', async function () {
   return todaysTimecards
 })
 timecardSchema.static('getThisWeeksEntries', async function () {
-  const thisWeek = moment().week()
+  const thisWeek = moment().locale('US').week()
   const thisYearsTimecards = await model('Timecard').find()
   const thisWeeksTimecards = []
   thisYearsTimecards.map((document) => {
@@ -61,7 +61,7 @@ timecardSchema.static('getThisWeeksEntries', async function () {
   return thisWeeksTimecards
 })
 timecardSchema.static('getLastWeeksEntries', async function () {
-  const thisWeek = moment().week()
+  const thisWeek = moment().locale('US').week()
   const thisYearsTimecards = await model('Timecard').find()
   const lastWeeksTimecards = []
   thisYearsTimecards.map((document) => {
