@@ -1,6 +1,5 @@
 import sanitizer from './sanitizer.js'
 import createMongoDocument from './mongo.js'
-import sendEmail from './sendgrid.js'
 
 const controller = {}
 

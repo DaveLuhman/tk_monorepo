@@ -1,4 +1,4 @@
-{{#each yearlyTimeEntries}}
+{{#each yearlyTimecards}}
     Date: {{date this.[0].timeEntries.[0].date 'YYYY'}}
     {{#each this as | week |}}
         {{#if this.entries}}
@@ -27,3 +27,4 @@
         {{/if}}
     {{/each}}
 {{/each}}
+{{yearlyTimecards}}

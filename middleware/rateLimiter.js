@@ -1,5 +1,5 @@
 import Customer from '../models/customer.js'
-import TimeEntry from '../models/timeEntry.js'
+import Timecard from '../models/timecard.js'
 
 function getRootDomain(url) {
     return String(url.substring(5))
@@ -14,7 +14,7 @@ function confirmTimeSubdomain(hostname) {
 }
 async function getThisMonthsEntriesBySourceURL(hostname) {  // gets this months entries and filters them by the hostname
     try {
-        const entries = await TimeEntry.getThisMonthsEntries()
+        const entries = await Timecard.getThisMonthsEntries()
         entries.filter((entry) => { entry.sourceURL != hostname })
         return entries
     } catch (err) {

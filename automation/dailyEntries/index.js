@@ -1,6 +1,6 @@
 import  sgMail from  '@sendgrid/mail'
 sgMail.setApiKey(process.env.SG_API_KEY)
-import TimeEntry from '../../models/timeEntry.js'
+import Timecard from '../../models/timecard.js'
 import { stringify } from 'csv-stringify/sync'
 import { readFileSync, unlinkSync, writeFileSync } from 'node:fs'
 import moment from 'moment'
@@ -16,7 +16,7 @@ function compareWeeklyEmpLists(lastWeek, thisWeek) {
 }
 async function collectDataForTimecardCSV() {
   const nestedArray = []
-  const timecards = await TimeEntry.getThisWeeksEntries()
+  const timecards = await Timecard.getThisWeeksEntries()
   timecards.forEach((timecard) => {
     const {
       empName,
@@ -55,14 +55,14 @@ function createCSVReport(arrayData) {
  */
 async function collectDataForDigest() {
   // remove test entries before working with data
-  await TimeEntry.deleteTestEntries()
-  const thisWeeksTimecards = await TimeEntry.getThisWeeksEntries()
+  await Timecard.deleteTestEntries()
+  const thisWeeksTimecards = await Timecard.getThisWeeksEntries()
   const thisWeeksEmpList = []
   thisWeeksTimecards.forEach((entry) => {
     thisWeeksEmpList.push(entry.empName)
   })
   const lastWeeksEmpList = []
-  const lastWeeksTimecards = await TimeEntry.getLastWeeksEntries()
+  const lastWeeksTimecards = await Timecard.getLastWeeksEntries()
   lastWeeksTimecards.map((entry) => {
     lastWeeksEmpList.push(entry.empName)
   })

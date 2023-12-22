@@ -1,4 +1,3 @@
-import adminController from "./admin.js"
 
 const authController = {}
 export default authController

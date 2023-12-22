@@ -1,4 +1,4 @@
-import TimeEntry from '../../models/timeEntry.js'
+import Timecard from '../../models/timecard.js'
 
 /**
  *  creates a document in the database using the submitted doc from the frontend
@@ -7,7 +7,7 @@ import TimeEntry from '../../models/timeEntry.js'
  */
 export default async function submitMongo(doc) {
     try {
-        const document = await TimeEntry.create(doc)
+        const document = await Timecard.create(doc)
         console.info('Time Entry Document added to database :' + document)
         return document
     } catch (err) {

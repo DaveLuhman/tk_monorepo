@@ -1,8 +1,8 @@
 import calculateWeeklyData from './weeklyData.js'
 import calculateYtdData from './ytdData.js'
-import TimeEntry from '../../models/timeEntry.js'
 import utilities from './util.js'
 import moment from 'moment'
+import Timecard from '../../models/timecard.js'
 
 /**
  *
@@ -11,7 +11,7 @@ import moment from 'moment'
  */
 async function ytdDocuments() {
   const startDate = moment().startOf('year').toISOString()
-  return await TimeEntry.find({ createdAt: { $gte: startDate } })
+  return await Timecard.find({ createdAt: { $gte: startDate } })
 }
 
 /**

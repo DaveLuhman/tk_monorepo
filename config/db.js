@@ -1,22 +1,22 @@
 import { connect } from 'mongoose';
 import User from '../models/user.js'
-import TimeEntry from '../models/timeEntry.js';
+import Timecard from '../models/timecard.js';
 import { readFileSync } from 'fs'
 
 async function isUsersCollectionEmpty() {
     const user = (await User.find()).length
     return user === 0
 }
-async function isTimeEntryCollectionEmpty() {
-    const timeEntries = (await TimeEntry.find()).length
+async function isTimecardCollectionEmpty() {
+    const timeEntries = (await Timecard.find()).length
     return timeEntries === 0
 }
 async function importSampleTimeEntries() {
     try{
-    console.log('No Time Entries in database, Importing Sample.json'.red)
+    console.log('No Timecards in database, Importing Sample.json'.red)
     let sampleJson = JSON.parse(Buffer.from(readFileSync('./sampleEntries.json', {encoding: 'utf-8'})))
     sampleJson.map((entry) => {
-        TimeEntry.create(entry)
+        Timecard.create(entry)
     })}catch(error){console.error(error)}
 }
 async function createDefaultUser() {
@@ -39,7 +39,7 @@ const connectDB = async () => {
         const conn = await connect(process.env.MONGO_URI);
         console.info(`MongoDB Connected: ${conn.connection.host}`.cyan.underline.bold)
         if (await isUsersCollectionEmpty()) createDefaultUser().catch((err) => {console.log(err)})
-        if (await isTimeEntryCollectionEmpty()) importSampleTimeEntries().catch((err) => {console.log(err)})
+        if (await isTimecardCollectionEmpty()) importSampleTimeEntries().catch((err) => {console.log(err)})
 
     } catch (err) {
         console.error(err.red);
