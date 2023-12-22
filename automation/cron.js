@@ -1,27 +1,27 @@
 import cron from 'node-cron'
 import automation from './index.js'
 
-const weeklyReportJob = cron.schedule(
-    '00 23 * * 0',
-    function () {
-        automation.aggregateReport()
-    },
-    { scheduled: false, timezone: 'America/Chicago' }
-)
-const sundayNoonDigestJob = cron.schedule(
-    '00 12 * * 0',
-    function () {
-        automation.dailyEntries()
-    },
-    { scheduled: false, timezone: 'America/Chicago' }
-)
-const sundayOneAmDigestJob = cron.schedule(
-    '00 01 * * 0',
-    function () {
-        automation.dailyEntries()
-    },
-    { scheduled: false, timezone: 'America/Chicago' }
-)
+// const weeklyReportJob = cron.schedule(
+//     '00 23 * * 0',
+//     function () {
+//         automation.aggregateReport()
+//     },
+//     { scheduled: false, timezone: 'America/Chicago' }
+// )
+// const sundayNoonDigestJob = cron.schedule(
+//     '00 12 * * 0',
+//     function () {
+//         automation.dailyEntries()
+//     },
+//     { scheduled: false, timezone: 'America/Chicago' }
+// )
+// const sundayOneAmDigestJob = cron.schedule(
+//     '00 01 * * 0',
+//     function () {
+//         automation.dailyEntries()
+//     },
+//     { scheduled: false, timezone: 'America/Chicago' }
+// )
 
 const weeklyTestEmailNotificationJob = cron.schedule(
     '00 08 * * 5',
