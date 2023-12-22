@@ -1,0 +1,6 @@
+<div class="flex flex-wrap"
+{{#each roster as | employee | }}
+<div class="flex-row items-center justify-between h-12 px-3 font-bold">
+    <a href="/admin/search?empName={{employee.id}}"
+    {{employee.empName}}</div>
+{{/each}}

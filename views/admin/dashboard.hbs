@@ -11,10 +11,10 @@
                 {{#if timecards}}
                 {{> admin/_timeTable}}
                 {{/if}}
-                {{#if weeklyTimecards}}
-                {{> admin/_weeklyTable}}
+                {{#if roster}}
+                {{> admin/_roster}}
                 {{/if}}
-            </div> {{!- entryRootExit --}}
+            </div>
         </div>
         <div id="pagination" class="flex flex-row justify-evenly">
             {{#if pagination}}

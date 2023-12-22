@@ -8,24 +8,13 @@ const adminController = {}
 export default adminController
 
 adminController.getRoot = async (req, res) => {
+    const targetOrThisWeek = req.query.p || moment().locale('US').week() - 1
     const rawTimecards = await getUserScopedEntries(req.user)
-    rawTimecards.map(function (timecard) {
-    })
-    const { trimmedData: timecards, targetPage: page, pageCount } = paginate(rawTimecards, req.query.p || 1, 10)
-    res.locals.pagination = { page, pageCount }
-    res.locals.timecards = timecards
+    let filteredTimecards = rawTimecards.filter(timecard => { return timecard.week === targetOrThisWeek })
+    res.locals.week = targetOrThisWeek
+    res.locals.timecards = filteredTimecards
     res.render('admin/dashboard')
 }
-adminController.getWeeklyGroupView = async function (req, res) {
-    const timecards = await getUserScopedEntries(req.user)
-    const yearOrLessOldTimecards = timecards.filter((timecard) => {
-        return moment(timecard.dateSubmitted).unix() <= moment().days(365).unix()
-    })
-    const weeklySortedEntries = groupByWeek(yearOrLessOldTimecards)
-    res.locals.weeklyTimecards = weeklySortedEntries
-    res.render('admin/dashboard')
-}
-
 async function getUserScopedEntries(userId) {
     const user = await User.findById(userId)
     let rawTimecards = []
@@ -36,14 +25,14 @@ async function getUserScopedEntries(userId) {
     }
     return rawTimecards
 }
-
-
-function groupByWeek(timecards) {
-    let sortedArray = []
-    for (let i = 1; i < 53; i++) { // create 52 empty child arrays
-        sortedArray.push({ week: i, timecards: timecards.filter(timecard => timecard.week === i) })
-    }
-
-    sortedArray = sortedArray.filter((week) => { return week.timecards.length !== 0 })
-    return sortedArray
+adminController.getRoster = async function (req, res) {
+    const user = await User.findById(req.user)
+    const userCompany = await Customer.findById(user.company)
+    const timecards = await Timecard.find({ $and: [{ sourceURL: { $eq: 'time.' + userCompany.rootDomain } }, { dateSubmitted: { $gte: moment().day(-365) } }] }).select(['id', 'empName'])
+    const roster = new Set()
+    timecards.forEach(timecard => {
+        roster.add(timecard.empName)
+    })
+    res.locals.roster = roster
+    res.render('admin/dashboard')
 }
