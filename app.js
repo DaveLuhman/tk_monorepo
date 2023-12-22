@@ -1,6 +1,6 @@
 // dev depenancies
 // eslint-disable-next-line no-unused-vars
-import 'colors'
+import colors from 'colors'
 import 'dotenv/config'
 import { scheduledTasks } from './automation/cron.js';
 // express depenancies
