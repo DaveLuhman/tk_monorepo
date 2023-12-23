@@ -1,6 +1,7 @@
 import { Schema, model } from 'mongoose'
 import mongooseAutoPopulate from 'mongoose-autopopulate'
 import moment from 'moment'
+import User from './user.js'
 
 const timecardSchema = new Schema(
   {
@@ -45,13 +46,13 @@ const timecardSchema = new Schema(
     return moment(this.timeEntries[0].date).locale('US').week()
 })
 
-timecardSchema.static('getTodaysEntries', async function () {
+timecardSchema.static('getTodays', async function () {
   const todaysTimecards = await model('Timecard')
     .find({ createdAt: { $gte: moment().startOf('day') } })
     .sort('empName')
   return todaysTimecards
 })
-timecardSchema.static('getThisWeeksEntries', async function () {
+timecardSchema.static('getThisWeeks', async function () {
   const thisWeek = moment().locale('US').week()
   const thisYearsTimecards = await model('Timecard').find()
   const thisWeeksTimecards = []
@@ -60,7 +61,7 @@ timecardSchema.static('getThisWeeksEntries', async function () {
   })
   return thisWeeksTimecards
 })
-timecardSchema.static('getLastWeeksEntries', async function () {
+timecardSchema.static('getLastWeeks', async function () {
   const thisWeek = moment().locale('US').week()
   const thisYearsTimecards = await model('Timecard').find()
   const lastWeeksTimecards = []
@@ -70,17 +71,25 @@ timecardSchema.static('getLastWeeksEntries', async function () {
   return lastWeeksTimecards
 })
 
-timecardSchema.static('getThisMonthsEntries', async function () {
+timecardSchema.static('getThisMonths', async function () {
   const timecards = await model('Timecard')
     .find({ createdAt: { $gte: moment().startOf('month') } })
     .sort('empName')
   return timecards
 })
-timecardSchema.static('getThisYearsEntries', async function () {
+timecardSchema.static('getThisYears', async function (userId) {
+  const user = await User.findById(userId)
+  if(user.role === 'Admin'){
   const timecards = await model('Timecard')
     .find({ createdAt: { $gte: moment().startOf('year') } })
     .sort('empName')
-  return timecards
+  return timecards}
+  else{
+    const timecards = await model('Timecard')
+      .find({ createdAt: { $gte: moment().startOf('year') } })
+      .where('sourceURL').equals(`time.${rootDomain}`)
+      .sort('empName')
+    return timecards}
 })
 timecardSchema.static('deleteTestEntries', async function() {
   await model('Timecard').deleteMany({empName: {$regex: /test/, $options: 'i'}})

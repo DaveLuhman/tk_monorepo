@@ -47,6 +47,10 @@ const UserSchema = new Schema(
 UserSchema.static('register',  async function(email, password) {
   return await model('User').create({email, password: await hash(password, 10)})
 })
-
+UserSchema.static('getRootDomain',  async function(userId) {
+ const user = await model('User').findById(userId)
+ console.log(user)
+ return await model('Customer').findById(user.company).rootDomain
+})
 const User = model('User', UserSchema, 'users')
 export default User
