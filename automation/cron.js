@@ -31,7 +31,7 @@ const weeklyTestEmailNotificationJob = cron.schedule(
     { scheduled: false, timezone: 'America/Chicago'}
 )
 
-const allJobs = [weeklyReportJob, weeklyTestEmailNotificationJob, sundayNoonDigestJob, sundayOneAmDigestJob]
+const allJobs = [ weeklyTestEmailNotificationJob]
 export const scheduledTasks = () => {
     console.info(`A total of ${allJobs.length} jobs are running automatically.`.blue.bold)
     allJobs.forEach((job) => {
