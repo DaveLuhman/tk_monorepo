@@ -22,6 +22,7 @@ adminController.getRoster = async function (req, res) {
         const filteredTimecards = timecards.filter(timecard => {
             return titleCaseAndTrim(timecard.empName) === req.query.empName
         })
+        res.locals.empName = req.query.empName
         res.locals.timecards = filteredTimecards
     }
     const roster = new Set()

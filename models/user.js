@@ -1,5 +1,7 @@
 import { Schema, model } from 'mongoose'
 import { hash } from 'bcrypt'
+import mongooseAutoPopulate from 'mongoose-autopopulate'
+
   // This code creates a new schema that is used to define the User model
 // The schema contains the fields for a user, as well as the timestamps
 // that are automatically added when the user is created and updated
@@ -11,7 +13,7 @@ const UserSchema = new Schema(
     },
     company: {
       type: Schema.Types.ObjectId,
-      ref: 'customer',
+      ref: 'Customer',
       autopopulate: true
     },
     email: {
@@ -43,14 +45,10 @@ const UserSchema = new Schema(
     timestamps: true
   }
 )
-
+UserSchema.plugin(mongooseAutoPopulate)
 UserSchema.static('register',  async function(email, password) {
   return await model('User').create({email, password: await hash(password, 10)})
 })
-UserSchema.static('getRootDomain',  async function(userId) {
- const user = await model('User').findById(userId)
- console.log(user)
- return await model('Customer').findById(user.company).rootDomain
-})
+
 const User = model('User', UserSchema, 'users')
 export default User

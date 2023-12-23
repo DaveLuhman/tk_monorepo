@@ -77,8 +77,7 @@ timecardSchema.static('getThisMonths', async function () {
     .sort('empName')
   return timecards
 })
-timecardSchema.static('getThisYears', async function (userId) {
-  const user = await User.findById(userId)
+timecardSchema.static('getThisYears', async function (user) {
   if(user.role === 'Admin'){
   const timecards = await model('Timecard')
     .find({ createdAt: { $gte: moment().startOf('year') } })
@@ -87,7 +86,7 @@ timecardSchema.static('getThisYears', async function (userId) {
   else{
     const timecards = await model('Timecard')
       .find({ createdAt: { $gte: moment().startOf('year') } })
-      .where('sourceURL').equals(`time.${user.getRootDomain}`)
+      .where('sourceURL').equals(`time.${user.company.rootDomain}`)
       .sort('empName')
     return timecards}
 })
