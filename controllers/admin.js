@@ -9,7 +9,7 @@ export default adminController
 
 adminController.getRoot = async (req, res) => {
     const targetOrThisWeek = req.query.p || moment().locale('US').week() - 1
-    const timecards = Timecard.getThisYears(req.user)
+    const timecards = await Timecard.getThisYears(req.user)
     let filteredTimecards = timecards.filter(timecard => { return timecard.week === targetOrThisWeek })
     res.locals.week = targetOrThisWeek
     res.locals.timecards = filteredTimecards
