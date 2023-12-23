@@ -7,7 +7,7 @@
             <div id="viewsMenu">
                 {{> admin/_views}}
             </div>
-            <div class="grow gap-4" id="entryRoot">
+            <div class="grow mx-4" id="entryRoot">
                 {{#or week timecards}}
                     <div class="mb-10 rounded-lg border-2">
                         {{> admin/_timeTable}}
@@ -17,11 +17,6 @@
                     {{> admin/_roster}}
                 {{/if}}
             </div>
-        </div>
-        <div id="pagination" class="flex flex-row justify-evenly">
-            {{#if pagination}}
-                {{> admin/_pagination}}
-            {{/if}}
         </div>
     </div>
 </div>

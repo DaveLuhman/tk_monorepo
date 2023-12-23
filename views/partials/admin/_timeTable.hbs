@@ -3,17 +3,22 @@
 <div class="flex flex-col">
     <button class="group border-e rounded-lg border-black focus:outline-none">
         {{#if week}}
+            <a class="px-2 mx-1" href="/admin/?week={{minus week 1}}">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
             Week: {{week}}
+            <a class="px-2 mx-1" href="/admin/?week={{add week 1}}">
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
         {{/if}}
         {{#if empName}}
             Employee: {{empName}}
         {{/if}}
-        <div class="flex items-center justify-between justify-items-center h-12 px-3 font-bold">
+        <div class="grid grid-cols-5 items-center justify-between justify-items-center h-12 px-3 font-bold">
             <span class="truncate">Date Submitted</span>
             <span class="truncate">Employee Name</span>
             <span class="truncate">Hours</span>
             <span class="truncate">Overtime</span>
-            <span></span>
         </div>
     </button>
 </div>
@@ -28,7 +33,7 @@
     <div class="flex flex-col ">
         <button class="group border-t border-r border-l border-black focus:outline-none">
             <div
-                class="flex grow items-center justify-between justify-items-center h-12 px-3 font-semibold hover:bg-gray-200">
+                class="grid grid-cols-5 items-center justify-between justify-items-center h-8 px-3 font-light hover:bg-gray-200">
                 <span class="truncate">{{date this.timeEntries.[0].date 'MM-DD-YYYY'}}</span>
                 <span class="truncate pl-3">{{empName}}</span>
                 <span class="truncate">{{hoursCount}}</span>
@@ -50,7 +55,7 @@
                 </div>
                 {{#each this.timeEntries}}
                     <div
-                        class="grid grid-cols-5 items-center justify-between justify-items-center h-auto px-2 text-sm">
+                        class="grid grid-cols-5 border-t  items-center justify-between justify-items-center h-auto px-2 text-sm">
                         <div class="">{{date date 'MM-DD-YYYY'}}</div>
                         <div class="">{{jobName}}</div>
                         <div class="">{{#if jobNum}}{{jobNum}}{{else}}N/A{{/if}}</div>
@@ -62,3 +67,25 @@
         </button>
     </div>
 {{/each}}
+<div id="pagination" class="flex flex-row justify-evenly">
+    {{#gt pagination.pageCount 1}}
+        <ul class="flex flex-wrap items-center md:mr-4 mr-0 justify-evenly overflow-hidden  gap-3 mb-4">
+            {{#gt pagination.page 1}}
+                {{#paginate pagination type="previous"}}
+                    <div class="col-auto"><a href="?week={{@root.week}}&p={{n}}"><button
+                                class="btn"><i class="fa-solid fa-arrow-left"></i></button></a></div>
+                {{/paginate}}
+            {{/gt}}
+            {{#paginate pagination type="middle" limit="3"}}
+                <div class="{{#if active}}active{{/if}} col"><a href="?week={{@root.week}}&p={{n}}"><button
+                            class="btn">{{n}}</button></a>
+                </div>
+            {{/paginate}}
+            {{#lt pagination.page pagination.pageCount}}
+            {{#paginate pagination type="next"}}
+                <div class="col-auto"><a href="?week={{@root.week}}&p={{n}}"><button class="btn"><i class="fa-solid fa-arrow-right"></i></button></a></div>
+            {{/paginate}}
+            {{/lt}}
+        </ul>
+    {{/gt}}
+</div>

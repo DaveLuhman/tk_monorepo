@@ -8,11 +8,13 @@ const adminController = {}
 export default adminController
 
 adminController.getRoot = async (req, res) => {
-    const targetOrThisWeek = req.query.p || moment().locale('US').week() - 1
+    const targetOrThisWeek = req.query.week || moment().locale('US').week() - 1
     const timecards = await Timecard.getThisYears(req.user)
-    let filteredTimecards = timecards.filter(timecard => { return timecard.week === targetOrThisWeek })
+    let filteredTimecards = timecards.filter(timecard => { return timecard.week == targetOrThisWeek })
+    const { trimmedData:finalTimecards, targetPage:page, pageCount } = paginate(filteredTimecards, req.query.p || 1, 10)
+    res.locals.pagination = {page, pageCount}
     res.locals.week = targetOrThisWeek
-    res.locals.timecards = filteredTimecards
+    res.locals.timecards = finalTimecards
     res.render('admin/dashboard')
 }
 
