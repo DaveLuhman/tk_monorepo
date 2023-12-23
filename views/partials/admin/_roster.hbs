@@ -1,8 +1,9 @@
-<div class="flex flex-wrap">
+<div class="mx-10 flex flex-wrap w-9/12 border-2 p-3 bg-base-200 shadow-lg">
 {{#each roster }}
-<div class="flex-row items-center justify-between h-12 px-3 font-semibold text-black">
-    <a href="/admin/roster?empName={{encodeURI this}}">{{this}}</a>
+{{#if this}}
+<div class="flex-row items-center justify-between h-12 px-3 font-semibold ">
+    <div class="card border-2 p-1 px-2 bg-base-100"><a href="/admin/roster?empName={{encodeURI this}}">{{this}}</a></div>
     </div>
+    {{/if}}
 {{/each}}
 </div>
-{{@root}}

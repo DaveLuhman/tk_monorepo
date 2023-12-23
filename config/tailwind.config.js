@@ -9,6 +9,7 @@ const daisyui = {
       accent: '#2d25c4',
       neutral: '#22242f',
       'base-100': '#40474f',
+      'base-200': '#65707D',
       info: '#5bbff1',
       success: '#176d5c',
       warning: '#edb721',
