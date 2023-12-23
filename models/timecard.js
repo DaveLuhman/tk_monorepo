@@ -87,7 +87,7 @@ timecardSchema.static('getThisYears', async function (userId) {
   else{
     const timecards = await model('Timecard')
       .find({ createdAt: { $gte: moment().startOf('year') } })
-      .where('sourceURL').equals(`time.${rootDomain}`)
+      .where('sourceURL').equals(`time.${user.getRootDomain}`)
       .sort('empName')
     return timecards}
 })
