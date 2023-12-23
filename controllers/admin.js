@@ -3,6 +3,7 @@ import User from '../models/user.js'
 import Customer from '../models/customer.js'
 import { paginate } from '../middleware/util.js'
 import moment from 'moment'
+import { titleCaseAndTrim } from './api/sanitizer.js'
 
 const adminController = {}
 export default adminController
@@ -18,20 +19,23 @@ adminController.getRoot = async (req, res) => {
 async function getUserScopedEntries(userId) {
     const user = await User.findById(userId)
     let rawTimecards = []
-    if (user.role === 'Admin') { rawTimecards = await Timecard.find() }
+    if (user.role === 'Admin') { rawTimecards = await Timecard.getThisYears(userId) }
     else {
-        const userCompany = await Customer.findById(user.company)
-        rawTimecards = await Timecard.find({ sourceURL: { $eq: 'time.' + userCompany.rootDomain } }).sort({ dateSubmitted: -1 })
+        rawTimecards = await Timecard.getThisYears(userId).sort({ dateSubmitted: -1 })
     }
     return rawTimecards
 }
 adminController.getRoster = async function (req, res) {
-    const user = await User.findById(req.user)
-    const userCompany = await Customer.findById(user.company)
-    const timecards = await Timecard.find({ $and: [{ sourceURL: { $eq: 'time.' + userCompany.rootDomain } }, { dateSubmitted: { $gte: moment().day(-365) } }] }).select(['id', 'empName'])
+    const timecards = await Timecard.getThisYears(req.user)
+    if (req.query.empName) {
+        const filteredTimecards = timecards.filter(timecard => {
+            return titleCaseAndTrim(timecard.empName) === req.query.empName
+        })
+        res.locals.timecards = filteredTimecards
+    }
     const roster = new Set()
     timecards.forEach(timecard => {
-        roster.add(timecard.empName)
+        roster.add(titleCaseAndTrim(timecard.empName))
     })
     res.locals.roster = roster
     res.render('admin/dashboard')
