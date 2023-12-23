@@ -4,7 +4,7 @@ import moment from 'moment';
  * @param {string} str
  * @returns
  */
-function titleCaseAndTrim(str) {
+export function titleCaseAndTrim(str) {
     return str.toLowerCase().split(' ').map(function (word) {
         return (word.charAt(0).toUpperCase() + word.slice(1));
     }).join(' ').trim();
