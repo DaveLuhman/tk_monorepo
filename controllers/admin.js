@@ -26,7 +26,7 @@ adminController.getRoster = async function (req, res) {
     }
     const roster = new Set()
     timecards.forEach(timecard => {
-        roster.add(titleCaseAndTrim(timecard))
+        roster.add(titleCaseAndTrim(timecard.empName))
     })
     res.locals.roster = roster
     res.render('admin/dashboard')
