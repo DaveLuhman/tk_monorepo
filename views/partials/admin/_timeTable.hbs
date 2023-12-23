@@ -39,8 +39,9 @@
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <div class="max-h-0 overflow-hidden duration-300 group-focus:max-h-96">
-                <div class="flex items-center justify-between justify-items-center h-8 px-2 text-sm uppercase border-black">
+            <div class="max-h-0 overflow-hidden duration-300 group-focus:bg-zinc-500 group-focus:max-h-96">
+                <div
+                    class="grid grid-cols-5 items-center justify-between justify-items-center h-8 px-2 text-sm uppercase border-black">
                     <div class="flex-row mx-5 px-3">Date</div>
                     <div class="flex-row mx-5 px-3">Job Name</div>
                     <div class="flex-row mx-5 px-3">Job Number</div>
@@ -48,12 +49,13 @@
                     <div class="flex-row mx-5 px-3">Overtime</div>
                 </div>
                 {{#each this.timeEntries}}
-                    <div class="flex items-center justify-between justify-items-center h-8 px-2 text-sm hover:bg-gray-200">
-                        <div class="truncate">{{date date 'MM-DD-YYYY'}}</div>
-                        <div class="truncate">{{jobName}}</div>
-                        <div class="truncate">{{#if jobNum}}{{jobNum}}{{else}}N/A{{/if}}</div>
-                        <div class="truncate">{{hours}}</div>
-                        <div class="truncate">{{#if overtime}}{{overtime}}{{else}}0{{/if}}</div>
+                    <div
+                        class="grid grid-cols-5 items-center justify-between justify-items-center h-auto px-2 text-sm">
+                        <div class="">{{date date 'MM-DD-YYYY'}}</div>
+                        <div class="">{{jobName}}</div>
+                        <div class="">{{#if jobNum}}{{jobNum}}{{else}}N/A{{/if}}</div>
+                        <div class="">{{hours}}</div>
+                        <div>{{#if overtime}}{{overtime}}{{else}}0{{/if}}</div>
                     </div>
                 {{/each}}
             </div>
