@@ -3,13 +3,25 @@
 <div class="flex flex-col">
     <button class="group border-e rounded-lg border-black focus:outline-none">
         {{#if week}}
+            {{#eq week "1"}}
+                <a class="px-2 mx-1" href="/admin/?week=52">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+        {{else}}
             <a class="px-2 mx-1" href="/admin/?week={{minus week 1}}">
                 <i class="fa-solid fa-arrow-left"></i>
             </a>
+            {{/eq}}
             Week: {{week}}
+            {{#eq week "52"}}
+                <a class="px-2 mx-1" href="/admin/?week=1">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+        {{else}}
             <a class="px-2 mx-1" href="/admin/?week={{add week 1}}">
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
+            {{/eq}}
         {{/if}}
         {{#if empName}}
             Employee: {{empName}}
@@ -72,8 +84,8 @@
         <ul class="flex flex-wrap items-center md:mr-4 mr-0 justify-evenly overflow-hidden  gap-3 mb-4">
             {{#gt pagination.page 1}}
                 {{#paginate pagination type="previous"}}
-                    <div class="col-auto"><a href="?week={{@root.week}}&p={{n}}"><button
-                                class="btn"><i class="fa-solid fa-arrow-left"></i></button></a></div>
+                    <div class="col-auto"><a href="?week={{@root.week}}&p={{n}}"><button class="btn"><i
+                                    class="fa-solid fa-arrow-left"></i></button></a></div>
                 {{/paginate}}
             {{/gt}}
             {{#paginate pagination type="middle" limit="3"}}
@@ -82,9 +94,10 @@
                 </div>
             {{/paginate}}
             {{#lt pagination.page pagination.pageCount}}
-            {{#paginate pagination type="next"}}
-                <div class="col-auto"><a href="?week={{@root.week}}&p={{n}}"><button class="btn"><i class="fa-solid fa-arrow-right"></i></button></a></div>
-            {{/paginate}}
+                {{#paginate pagination type="next"}}
+                    <div class="col-auto"><a href="?week={{@root.week}}&p={{n}}"><button class="btn"><i
+                                    class="fa-solid fa-arrow-right"></i></button></a></div>
+                {{/paginate}}
             {{/lt}}
         </ul>
     {{/gt}}
