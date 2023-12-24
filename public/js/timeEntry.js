@@ -356,7 +356,6 @@ confirmEntriesBtn.addEventListener('click', function (e) {
 // event listener to submit the post request and redirect on success
 submitBtn.addEventListener('click', function (e) {
   e.preventDefault();  // prevents default event behavior
-  callOutNameInLog()  // logs the empName field to local console before attempting to submit the form
   submitForm(e); // submits the form
   updateCounters(); // resets the counters now that the form has been cleared
   document.getElementById('confirmModal').checked = false;  //closes the confirm modal
