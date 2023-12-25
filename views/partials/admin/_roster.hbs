@@ -2,7 +2,7 @@
 {{#each roster }}
 {{#if this}}
 <div class="flex-row items-center justify-between h-12 px-3 font-semibold ">
-    <div class="card border-2 p-1 px-2 bg-base-100"><a href="/admin/roster?empName={{encodeURI this}}">{{this}}</a></div>
+    <div class="card border-2 p-1 px-2 bg-base-100 tk-link"><a href="/admin/roster?empName={{encodeURI this}}">{{this}}</a></div>
     </div>
     {{/if}}
 {{/each}}

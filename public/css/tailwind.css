@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* -----------------END TABLE------------------ */
-/* ------------PAGINATION BAR------------------------ */
-
+.tk-link {
+    @apply hover:underline hover:text-blue-300;
+    }
