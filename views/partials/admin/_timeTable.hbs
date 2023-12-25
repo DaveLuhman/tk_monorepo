@@ -12,7 +12,17 @@
                 <i class="fa-solid fa-arrow-left"></i>
             </a>
             {{/eq}}
-            Week: {{week}}
+            Week:<details class="dropdown bg-inherit ">
+                <summary class="btn-sm">{{week}}</summary>
+                <ul
+                    class="border-e max-h-[300px] p-2 w-max shadow-xl menu dropdown-content z-[1] rounded-box bg-base-200">
+                    {{#each weeks}}
+                        <li class="border-e m-0.5 border-stone-600 border-collapse bg-base-100 rounded-btn">
+                            <a href="/admin/?week={{this}}">{{this}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </details>
             {{#eq week "52"}}
                 <a class="px-2 mx-1" href="/admin/?week=1">
                     <i class="fa-solid fa-arrow-right"></i>
@@ -26,11 +36,13 @@
         {{#if empName}}
             Employee: {{empName}}
         {{/if}}
-        <div class="grid grid-cols-5 items-center justify-between justify-items-center h-12 px-3 font-bold">
+        <div
+            class="grid grid-cols-2 md:grid-cols-5 items-center justify-between justify-items-center h-12 px-3 font-bold  ">
             <span class="truncate">Date Submitted</span>
             <span class="truncate">Employee Name</span>
-            <span class="truncate">Hours</span>
-            <span class="truncate">Overtime</span>
+            <span class="hidden md:inline-grid truncate">Hours</span>
+            <span class="hidden md:inline-grid truncate">Overtime</span>
+            <span class="hidden md:inline-grid"></span>
         </div>
     </button>
 </div>
@@ -45,12 +57,13 @@
     <div class="flex flex-col ">
         <button class="group border-t border-r border-l border-black focus:outline-none">
             <div
-                class="grid grid-cols-5 items-center justify-between justify-items-center h-8 px-3 font-light hover:bg-gray-200">
+                class="grid grid-cols-2 md:grid-cols-5 items-center justify-between justify-items-center h-8 px-3 font-light hover:bg-gray-200">
                 <span class="truncate">{{date this.timeEntries.[0].date 'MM-DD-YYYY'}}</span>
-                <span class="truncate pl-3">{{empName}}</span>
-                <span class="truncate">{{hoursCount}}</span>
-                <span class="truncate">{{overtimeCount}}</span>
-                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <span class="truncate ">{{empName}}</span>
+                <span class="hidden md:inline-grid truncate">{{hoursCount}}</span>
+                <span class="hidden md:inline-grid truncate">{{overtimeCount}}</span>
+                <svg class="hidden md:inline-grid h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor">
                     <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />

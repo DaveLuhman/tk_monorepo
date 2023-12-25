@@ -7,17 +7,32 @@ import { titleCaseAndTrim } from './api/sanitizer.js'
 const adminController = {}
 export default adminController
 
+function getPopulatedWeeks(timecards) {
+    const weeks = new Set()
+    timecards.map((timecard) => {
+        weeks.add(timecard.week)
+    })
+    const sortedWeeks = Array.from(weeks)
+    return sortedWeeks.sort((a, b) => {return a - b; })
+}
+function simulateAllWeeks () {
+    const weeks = []
+    for(let i=1; i<53; i++){
+        weeks.push(i)
+    }
+    return weeks
+}
 adminController.getRoot = async (req, res) => {
     const targetOrThisWeek = req.query.week || moment().locale('US').week() - 1
     const timecards = await Timecard.getThisYears(req.user)
     let filteredTimecards = timecards.filter(timecard => { return timecard.week == targetOrThisWeek })
-    const { trimmedData:finalTimecards, targetPage:page, pageCount } = paginate(filteredTimecards, req.query.p || 1, 10)
-    res.locals.pagination = {page, pageCount}
+    const { trimmedData: finalTimecards, targetPage: page, pageCount } = paginate(filteredTimecards, req.query.p || 1, 10)
+    res.locals.pagination = { page, pageCount }
     res.locals.week = targetOrThisWeek
+    res.locals.weeks = getPopulatedWeeks(timecards)
     res.locals.timecards = finalTimecards
     res.render('admin/dashboard')
 }
-
 adminController.getRoster = async function (req, res) {
     const timecards = await Timecard.getThisYears(req.user)
     if (req.query.empName) {
