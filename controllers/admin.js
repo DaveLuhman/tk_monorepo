@@ -22,7 +22,7 @@ function simulateAllWeeks () {
     }
     return weeks
 }
-adminController.getRoot = async (req, res) => {
+export async function GET_admin (req, res) {
     const targetOrThisWeek = req.query.week || moment().locale('US').week() - 1
     const timecards = await Timecard.getThisYears(req.user)
     let filteredTimecards = timecards.filter(timecard => { return timecard.week == targetOrThisWeek })
@@ -33,7 +33,7 @@ adminController.getRoot = async (req, res) => {
     res.locals.timecards = finalTimecards
     res.render('admin/dashboard')
 }
-adminController.getRoster = async function (req, res) {
+export async function GET_roster (req, res) {
     const timecards = await Timecard.getThisYears(req.user)
     if (req.query.empName) {
         const filteredTimecards = timecards.filter(timecard => {

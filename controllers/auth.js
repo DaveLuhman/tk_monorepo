@@ -1,16 +1,12 @@
-
-const authController = {}
-export default authController
-
-authController.getLoginPage = (req, res) => {
+export async function GET_authLogin (req, res) {
     req.flash('error', "")
     res.render('auth/login.hbs', { layout: 'main' })
 }
 
-authController.getRegisterPage = (req, res) => {
+export async function GET_authRegister (req, res) {
     res.render('auth/register.hbs', { layout: 'main', user: req.user, message: req.flash('error')})
 }
 
-authController.submitLogout = (req, res) => {
+export async function POST_authLogout (req, res) {
     res.redirect('/auth/logout')
 }

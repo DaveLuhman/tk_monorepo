@@ -46,6 +46,12 @@ const UserSchema = new Schema(
   }
 )
 UserSchema.plugin(mongooseAutoPopulate)
+
+// This code creates a static method on the UserSchema called register
+// that is used to register a new user in the database
+// The method takes an email and a password as its arguments
+// and creates a new user with the hashed password
+// The method is used in the register controller
 UserSchema.static('register',  async function(email, password) {
   return await model('User').create({email, password: await hash(password, 10)})
 })

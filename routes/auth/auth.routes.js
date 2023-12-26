@@ -1,17 +1,17 @@
-import authController from '../../controllers/auth.js'
+import  { GET_authLogin, GET_authRegister, POST_authLogout } from '../../controllers/auth.js'
 import { Router } from 'express'
-import {login, registerUser, logout} from '../../middleware/auth.js'
+import {login, registerUser} from '../../middleware/auth.js'
 
 export const authRouter = Router()
-authRouter.get('/login', authController.getLoginPage)
+authRouter.get('/login', GET_authLogin)
 
 authRouter.post('/login', login, (req, res) => {
     res.redirect('/admin/')
 })
 
-authRouter.get('/register', authController.getRegisterPage)
+authRouter.get('/register', GET_authRegister)
 
-authRouter.post('/register', registerUser, (req, res) => {
+authRouter.post('/register', registerUser, login, (_req, res) => {
     res.redirect('/admin/')
 })
-authRouter.post('/logout', logout);
+authRouter.post('/logout', POST_authLogout);
