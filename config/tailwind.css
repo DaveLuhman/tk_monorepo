@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tk-link {
+  @apply hover:underline hover:text-blue-300;
+}
+.update-input {
+  @apply bg-base-200 rounded-lg px-2 outline-none border-none focus:outline ;
+}
+.counter {
+@apply justify-self-end font-bold hover:cursor-not-allowed;
+}
+.update-button {
+  @apply  py-2 px-5 bg-base-200 drop-shadow-lg rounded-xl font-extrabold hover:bg-base-100 hover:border;
+}

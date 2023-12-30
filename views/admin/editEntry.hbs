@@ -1,0 +1,19 @@
+<div class="block">
+    <div class="flex-col md:flex-row grow">
+        <div id="navBar" class="flex-col md:flex-row">
+            {{> admin/_header}}
+        </div>
+        <div id="bodyRoot" class="flex flex-col md:flex-row gap-10 ">
+            <div id="viewsMenu">
+                {{> admin/_views}}
+            </div>
+            <div class="grow mx-4" id="entryRoot">
+                {{#if timecard}}
+                    <div class="mb-10 rounded-lg border-2">
+                        {{> admin/_entryForm}}
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>

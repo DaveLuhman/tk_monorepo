@@ -8,8 +8,8 @@
   "scripts": {
     "dev": "nodemon app.js",
     "start": " node app.js",
-    "build:css": "npx tailwindcss -c ./config/tailwind.config.js --postcss ./config/postcss.config.cjs  -i ./public/css/tailwind.css -o ./public/css/style.css --minify",
-    "watch:css": "npx tailwindcss -c ./config/tailwind.config.js --postcss ./config/postcss.config.cjs  -i ./public/css/tailwind.css -o ./public/css/style.css -w"
+    "build:css": "npx tailwindcss -c ./config/tailwind.config.js --postcss ./config/postcss.config.cjs  -i ./config/tailwind.css -o ./public/css/style.css --minify",
+    "watch:css": "npx tailwindcss -c ./config/tailwind.config.js --postcss ./config/postcss.config.cjs  -i ./config/tailwind.css -o ./public/css/style.css -w"
   },
   "keywords": [],
   "author": "Dave Luhman",

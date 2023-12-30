@@ -1,0 +1,71 @@
+<form id="timecardForm">
+    <div class="flex flex-col mb-5">
+        {{#if timecard}}
+            <div id="rootObjects"
+                class="max-h-min grid grid-cols-3 md:grid-cols-6 grid-rows-2  items-center font-bold p-2 mx-3">
+                <label class="justify-self-center" for="empName">Employee:</label>
+                <label class="justify-self-center col-span-2 ml-2" for="empEmail">Employee Email:</label>
+                <label class="counter" for="hours-counter">Hours</label>
+                <label class="counter" for="overtime-counter">OT Hours</label>
+                <label class="counter" for="punch-counter">Total Entries:</label>
+                <input class="font-light update-input" type="text" name="empName"
+                    {{#if timecard.empName}}value="{{timecard.empName}}" {{/if}} />
+                <input class="font-light justify-self-center col-span-2 w-11/12 update-input" type="email" name="empEmail"
+                    {{#if timecard.empEmail}}value="{{timecard.empEmail}}" {{/if}} />
+                <div class="counter" name="hours-counter">
+                    {{#if timecard.hoursCount}}{{timecard.hoursCount}}{{else}}0{{/if}}
+                </div>
+                <div class="counter" name="overtime-counter">
+                    {{#if timecard.overtimeCount}}{{timecard.overtimeCount}}{{else}}0{{/if}}
+                </div>
+                <div class="counter" name="punch-counter">
+                    {{#if timecard.punchCount}}{{timecard.punchCount}}{{else}}0{{/if}}
+                </div>
+            </div>
+            <div id="timeEntries">
+                <div class="grid grid-cols-3 md:grid-cols-5 items-center justify-between justify-items-center h-8 px-3 font-light"
+                    id="timeEntryHeaders">
+                    <div>Date: </div>
+                    <div>Job Name:</div>
+                    <div>Job Number:</div>
+                    <div class="">Hours:</div>
+                    <div>Overtime:</div>
+                </div>
+                {{#each timecard.timeEntries}}
+                    <div class="grid grid-cols-3 md:grid-cols-5 items-center justify-between justify-items-center h-8 px-2 my-3 font-light"
+                        id="te-{{@index}}">
+                        <input class="update-input" type="date" name="te-date-{{@index}}"
+                            {{#if this.date}}value="{{moment this.date "yyyy-MM-DD"}}" {{/if}} />
+                        <input class="update-input" type="text" name="te-jobName-{{@index}}"
+                            {{#if this.jobName}}value="{{this.jobName}}" {{/if}} />
+                        <input class="update-input" type="text" name="te-jobNum-{{@index}}"
+                            {{#if this.jobNum}}value="{{this.jobNum}}" {{/if}} />
+                        <input class="update-input" type="number" step=".25" name="te-hours-{{@index}}"
+                            {{#if this.hours}}value="{{this.hours}}" {{/if}} />
+                        <input class="update-input" type="number" step=".25" name="te-overtime-{{@index}}"
+                            {{#if this.overtime}}value="{{this.overtime}}" {{/if}} />
+                    </div>
+                {{/each}}
+                <div class="grid grid-cols-3 md:grid-cols-5 items-center justify-between justify-items-center h-8 px-2 font-light"
+                    id="timeEntry">
+                    <input class="update-input" type="date" name="te-date" />
+                    <input class="update-input" type="text" name="te-jobName" />
+                    <input class="update-input" type="text" name="te-jobNum" />
+                    <input class="update-input" type="number" step=".25" name="te-hours" />
+                    <input class="update-input" type="number" step=".25" name="te-overtime" />
+                </div>
+                <div class="grid grid-cols-3 md:grid-cols-5 items-center justify-between justify-items-end h-8 m-3">
+                    <div class="col-start-3 md:col-start-5 update-button">+</div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-5 justify-items-center">
+                    <div class="col-start-1 md:col-start-2 update-button">Submit</div>
+                    <div class="col-start-2 md:col-start-4 update-button">Cancel</div>
+                </div>
+            </div>
+    </div>
+</form>
+{{else}}
+    <div>No timecard found with that ID</div>
+    <div class="card border-2 p-1 px-2 bg-base-100 tk-link"><a href="back">Back</a></div>
+    {{/if}}
+    </div>

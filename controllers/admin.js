@@ -49,3 +49,21 @@ export async function GET_roster (req, res) {
     res.locals.roster = roster
     res.render('admin/dashboard')
 }
+
+export async function  GET_updateTimecard (req, res, next) {
+    try {
+        const timecard = await Timecard.findById(req.params.id).exec()
+        res.locals.timecard = timecard
+        res.render('admin/editEntry')
+    } catch (error) {
+        if(error) next(error)
+    }
+}
+export async function  POST_updateTimecard (req, res, next) {
+    try {
+        const timecard = req.body
+
+    } catch (error) {
+        if(error) next(error)
+    }
+}
