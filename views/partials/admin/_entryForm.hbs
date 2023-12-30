@@ -1,71 +1,79 @@
-<form id="timecardForm">
-    <div class="flex flex-col mb-5">
-        {{#if timecard}}
+{{#if timecard}}
+    <form id="timecardForm">
+        <input type="hidden" name="id" id="_id" value="{{_id}}">
+        <div class="flex flex-col mb-5">
             <div id="rootObjects"
                 class="max-h-min grid grid-cols-3 md:grid-cols-6 grid-rows-2  items-center font-bold p-2 mx-3">
                 <label class="justify-self-center" for="empName">Employee:</label>
                 <label class="justify-self-center col-span-2 ml-2" for="empEmail">Employee Email:</label>
-                <label class="counter" for="hours-counter">Hours</label>
-                <label class="counter" for="overtime-counter">OT Hours</label>
-                <label class="counter" for="punch-counter">Total Entries:</label>
-                <input class="font-light update-input" type="text" name="empName"
-                    {{#if timecard.empName}}value="{{timecard.empName}}" {{/if}} />
-                <input class="font-light justify-self-center col-span-2 w-11/12 update-input" type="email" name="empEmail"
-                    {{#if timecard.empEmail}}value="{{timecard.empEmail}}" {{/if}} />
-                <div class="counter" name="hours-counter">
+                <div class="counter">Hours</div>
+                <div class="counter">OT Hours</div>
+                <div class="counter">Total Entries:</div>
+                <input class="font-light bg-base-200 rounded-lg px-2 outline-none border-none focus:outline" type="text" name="empName" id="empName"
+                    {{#if timecard.empName}}value="{{timecard.empName}}" {{/if}} validate />
+                <input class="font-light justify-self-center col-span-2 w-11/12 bg-base-200 rounded-lg px-2 outline-none border-none focus:outline" type="email" id="empEmail"
+                    name="empEmail" {{#if timecard.empEmail}}value="{{timecard.empEmail}}" {{/if}} validate />
+                <div class="counter" id="hours-counter">
                     {{#if timecard.hoursCount}}{{timecard.hoursCount}}{{else}}0{{/if}}
                 </div>
-                <div class="counter" name="overtime-counter">
+                <div class="counter" id="overtime-counter">
                     {{#if timecard.overtimeCount}}{{timecard.overtimeCount}}{{else}}0{{/if}}
                 </div>
-                <div class="counter" name="punch-counter">
+                <div class="counter" id="punch-counter">
                     {{#if timecard.punchCount}}{{timecard.punchCount}}{{else}}0{{/if}}
                 </div>
             </div>
             <div id="timeEntries">
-                <div class="grid grid-cols-3 md:grid-cols-5 items-center justify-between justify-items-center h-8 px-3 font-light"
-                    id="timeEntryHeaders">
-                    <div>Date: </div>
-                    <div>Job Name:</div>
-                    <div>Job Number:</div>
-                    <div class="">Hours:</div>
-                    <div>Overtime:</div>
+                <div class="grid grid-cols-12">
+                    <div class="col-start-1 col-span-11 grid grid-cols-5 items-center justify-between justify-items-center h-8 px-3 font-light"
+                        id="timeEntryHeaders">
+                        <div>Date: </div>
+                        <div>Job Name:</div>
+                        <div>Job Number:</div>
+                        <div>Hours:</div>
+                        <div>Overtime:</div>
+                    </div>
                 </div>
                 {{#each timecard.timeEntries}}
-                    <div class="grid grid-cols-3 md:grid-cols-5 items-center justify-between justify-items-center h-8 px-2 my-3 font-light"
-                        id="te-{{@index}}">
-                        <input class="update-input" type="date" name="te-date-{{@index}}"
-                            {{#if this.date}}value="{{moment this.date "yyyy-MM-DD"}}" {{/if}} />
-                        <input class="update-input" type="text" name="te-jobName-{{@index}}"
-                            {{#if this.jobName}}value="{{this.jobName}}" {{/if}} />
-                        <input class="update-input" type="text" name="te-jobNum-{{@index}}"
-                            {{#if this.jobNum}}value="{{this.jobNum}}" {{/if}} />
-                        <input class="update-input" type="number" step=".25" name="te-hours-{{@index}}"
-                            {{#if this.hours}}value="{{this.hours}}" {{/if}} />
-                        <input class="update-input" type="number" step=".25" name="te-overtime-{{@index}}"
-                            {{#if this.overtime}}value="{{this.overtime}}" {{/if}} />
+                    <div class="grid grid-cols-12">
+                        <div class="col-start-1 col-span-11 grid grid-cols-5 items-center justify-between justify-items-center h-8 px-2 my-1 font-light"
+                            id="te-{{@index}}">
+                            <input class="update-input" type="date" id="te-date-{{@index}}"
+                                {{#if this.date}}value="{{moment this.date "yyyy-MM-DD"}}" {{/if}} />
+                            <input class="update-input" type="text" id="te-jobName-{{@index}}"
+                                {{#if this.jobName}}value="{{this.jobName}}" {{/if}} validate />
+                            <input class="update-input" type="text" id="te-jobNum-{{@index}}"
+                                {{#if this.jobNum}}value="{{this.jobNum}}" {{/if}} />
+                            <input class="update-input" type="number" step=".25" id="te-hours-{{@index}}"
+                                {{#if this.hours}}value="{{this.hours}}" {{/if}} />
+                            <input class="update-input" type="number" step=".25" id="te-overtime-{{@index}}"
+                                {{#if this.overtime}}value="{{this.overtime}}" {{/if}} />
+                        </div>
+                        <div id="minus-button" class="justify-self-center col-start-12 w-1/3 minus-button my-1">
+                            <i class="justify-self-center fa-solid fa-minus"></i>
+                        </div>
                     </div>
                 {{/each}}
-                <div class="grid grid-cols-3 md:grid-cols-5 items-center justify-between justify-items-center h-8 px-2 font-light"
-                    id="timeEntry">
-                    <input class="update-input" type="date" name="te-date" />
-                    <input class="update-input" type="text" name="te-jobName" />
-                    <input class="update-input" type="text" name="te-jobNum" />
-                    <input class="update-input" type="number" step=".25" name="te-hours" />
-                    <input class="update-input" type="number" step=".25" name="te-overtime" />
-                </div>
-                <div class="grid grid-cols-3 md:grid-cols-5 items-center justify-between justify-items-end h-8 m-3">
-                    <div class="col-start-3 md:col-start-5 update-button">+</div>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-5 justify-items-center">
-                    <div class="col-start-1 md:col-start-2 update-button">Submit</div>
-                    <div class="col-start-2 md:col-start-4 update-button">Cancel</div>
+
+            </div>
+            <div class="grid grid-cols-12 justify-items-center">
+                <div id="validation-warning" class="col-start-2 col-span-8 text-red-400 justify-self-center align-center"></div>
+                <div id="plus-button" class="justify-self-center align-center col-start-12 w-1/3 plus-button my-1">
+                    <i class="justify-self-center fa-solid fa-plus"></i>
                 </div>
             </div>
-    </div>
-</form>
+            <div class="grid grid-cols-2 md:grid-cols-5 mt-3 justify-items-center">
+                <div id="submit-button" class="col-start-1 md:col-start-2  py-2 pr-7 pl-4 bg-base-200 drop-shadow-lg border-2 border-transparent rounded-xl font-extrabold hover:bg-base-100 hover:border-white">Submit</div>
+
+                <div id="back-button" class="col-start-2 md:col-start-4 update-button"><a id="back-link">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </form>
 {{else}}
     <div>No timecard found with that ID</div>
-    <div class="card border-2 p-1 px-2 bg-base-100 tk-link"><a href="back">Back</a></div>
-    {{/if}}
-    </div>
+    <div class="card border-2 p-1 px-2 bg-base-100 tk-link"><a href="javascript:history.back()">Back</a></div>
+{{/if}}
+</div>
+
+<script src="/js/updateTimecard.js"></script>

@@ -12,5 +12,11 @@
 @apply justify-self-end font-bold hover:cursor-not-allowed;
 }
 .update-button {
-  @apply  py-2 px-5 bg-base-200 drop-shadow-lg rounded-xl font-extrabold hover:bg-base-100 hover:border;
+  @apply  py-2 pr-7 pl-4 bg-base-200 drop-shadow-lg border-2 border-transparent rounded-xl font-extrabold hover:bg-base-100 hover:border-white;
+}
+.minus-button {
+  @apply  py-2 pr-7 pl-4 bg-red-400 drop-shadow-lg rounded-xl font-extrabold hover:bg-red-600;
+}
+.plus-button {
+  @apply  py-2 pr-7 pl-4 bg-green-400 drop-shadow-lg rounded-xl font-extrabold hover:bg-green-600;
 }
