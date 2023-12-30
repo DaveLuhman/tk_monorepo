@@ -64,13 +64,13 @@
                 <span class="truncate ">{{empName}}</span>
                 <span class="hidden md:inline-grid truncate">{{hoursCount}}</span>
                 <span class="hidden md:inline-grid truncate">{{overtimeCount}}</span>
-                <span class="truncate ">
-                        <a class="mx-4" href="/admin/edit/{{this.id}}">
-                            <i class="fa-solid fa-pencil"></i>
-                        </a>
-                        <a class="mx-2" href="/admin/archive/{{this.id}}">
-                            <i class="fa-solid fa-trash"></i>
-                        </a>
+                <span class="truncate grid grid-cols-2 gap-1">
+                    <a class="mx-4" href="/admin/edit/{{this.id}}">
+                        <i class="fa-solid fa-pencil"></i>
+                    </a>
+                    <label for="delete-timecard-{{@index}}" class="mx-2" id="open-delete-timecard-modal" data-id="{{this.id}}">
+                        <i class="fa-solid fa-trash"></i>
+                        </>
                 </span>
             </div>
             <div class="max-h-0 overflow-hidden duration-300 group-focus:bg-zinc-500 group-focus:max-h-96">
@@ -119,3 +119,18 @@
         </ul>
     {{/gt}}
 </div>
+{{#each timecards}}
+    <input type="checkbox" id="delete-timecard-{{@index}}" class="modal-toggle" />
+    <div class="modal" role="dialog">
+        <div class="modal-box">
+            <h3 class="text-lg font-bold">Are you sure?</h3>
+            <p class="py-4">Are you sure you want to delete this timecard?</p>
+            <div id="test-element"></div>
+            <form id="delete-timecard-form" action="/admin/delete/{{this.id}}" method="POST">
+                <button class="btn btn-primary">Delete</button>
+            </form>
+            <p class="mt-4"><label class="btn btn-secondary" for="delete-timecard-{{@index}}">Cancel</label></p>
+        </div>
+        <label class="modal-backdrop" for="delete-timecard-{{@index}}">Close</label>
+    </div>
+{{/each}}

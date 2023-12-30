@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     let hourInputs = document.querySelectorAll('[id^="te-hours"]');
-    const hoursCounter = document.getElementById('hours-counter');
+    let hoursCounters = document.querySelectorAll('[id^="hours-counter"]');
     let overtimeInputs = document.querySelectorAll('[id^="te-overtime"]');
-    const overtimeCounter = document.getElementById('overtime-counter');
+    let overtimeCounters = document.querySelectorAll('[id^="overtime-counter"]');
     let jobNameInputs = document.querySelectorAll('[id^="te-jobName"]');
-    const punchCounter = document.getElementById('punch-counter');
+    let punchCounters = document.querySelectorAll('[id^="punch-counter"]');
     const plusButton = document.getElementById('plus-button')
     let minusButtons = document.querySelectorAll('.minus-button');
     const submitBtn = document.getElementById('submit-button')
@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const empNameField = document.getElementById('empName')
     const empEmailField = document.getElementById('empEmail')
     const validationWarning = document.getElementById('validation-warning')
-    let timeEntries = document.getElementById('timeEntries')
 
+    let timecardForm = document.forms['timecardForm']
 
     // FUNCTION DECLARATIONS
     function updateFieldNodelists() {
@@ -28,26 +28,33 @@ document.addEventListener('DOMContentLoaded', function () {
         hourInputs.forEach(function (input) {
             totalHours += Number(input.value);
         });
-        hoursCounter.textContent = totalHours;
+        hoursCounters.forEach(element => {
+            element.textContent = totalHours;
+            element.value = totalHours
+        })
     }
     function punchCountPlusOne() {
-        return new Number(punchCounter.textContent) + 1
+        return new Number(punchCounters[0].textContent) + 1
     }
     function updateOvertimeHours() {
         let overtimeHours = 0;
         overtimeInputs.forEach(function (input) {
             overtimeHours += Number(input.value);
         });
-        overtimeCounter.textContent = overtimeHours;
+        overtimeCounters.forEach(element => {
+            element.textContent = overtimeHours;
+            element.value = overtimeHours
+        })
     }
-
     function updatePunchCount() {
         let punchCount = 0
         jobNameInputs.forEach(() => {
             punchCount++
         })
-        punchCounter.textContent = punchCount
-    }
+        punchCounters.forEach(element => {
+            element.textContent = punchCount;
+            element.value = punchCount
+        })    }
     function updateAllCounters() {
         updateTotalHours();
         updateOvertimeHours();
@@ -59,13 +66,13 @@ document.addEventListener('DOMContentLoaded', function () {
         newTeRow.innerHTML = `
         <div id='te-${punchCountPlusOne()}'
         class="col-start-1 col-span-11 grid grid-cols-5 items-center justify-between justify-items-center h-8 px-2 my-1 font-light">
-            <input class="update-input" type="date" id="te-date-${punchCountPlusOne()}" />
-            <input class="update-input" type="text" id="te-jobName-${punchCountPlusOne()}" validate/>
-            <input class="update-input" type="text" id="te-jobNum-${punchCountPlusOne()}" />
+            <input class="update-input" type="date" id="te-date-${punchCountPlusOne()}" name="te-date-${punchCountPlusOne()}" />
+            <input class="update-input" type="text" id="te-jobName-${punchCountPlusOne()}" name="te-jobName-${punchCountPlusOne()}" validate/>
+            <input class="update-input" type="text" id="te-jobNum-${punchCountPlusOne()}" name="te-jobNum-${punchCountPlusOne()}" />
             <input class="update-input" type="number" step=".25"
-            id="te-hours-${punchCountPlusOne()}" />
+            id="te-hours-${punchCountPlusOne()}" name="te-hours-${punchCountPlusOne()}" />
             <input class="update-input" type="number" step=".25"
-            id="te-overtime-${punchCountPlusOne()}" />
+            id="te-overtime-${punchCountPlusOne()}" name="te-overtime-${punchCountPlusOne()}" />
         </div>
         <div class="justify-self-center col-start-12 w-1/3 minus-button my-1">
             <i class="justify-self-center fa-solid fa-minus"></i>
@@ -81,27 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
         thisRow.remove()
         updateFieldNodelists()
         updateAllCounters()
-    }
-
-    function saveTimecard() {
-        let timecard = {
-            punchCount: punchCounter.textContent,
-            hours: hoursCounter.textContent,
-            overtime: overtimeCounter.textContent,
-            entries: []
-        }
-        jobNameInputs.forEach(function (input) {
-            let entry = {
-                date: input.parentElement.children[0].value,
-                jobName: input.value,
-                jobNum: input.parentElement.children[2].value,
-                hours: input.parentElement.children[3].value,
-                overtime: input.parentElement.children[4].value
-            }
-            timecard.entries.push(entry)
-        })
-        console.log(timecard)
-        localStorage.setItem('timecard', JSON.stringify(timecard))
     }
 
     // EVENT LISTENER APPLICATION //
@@ -128,6 +114,11 @@ document.addEventListener('DOMContentLoaded', function () {
         element.addEventListener('focusout', (e) => validateUserInput(e));
     }
 
+    submitBtn.onclick = function () {
+        updateAllCounters()
+        timecardForm.submit()
+        return false;
+    }
     // global validation object
     const validation = {
         empName: true,  // default state
@@ -164,10 +155,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
         }
         if (!validation.status()) {
-            submitBtn.classList.remove('btn-disabled' ,'border-red-400' ,'border-2');
+            submitBtn.classList.remove('btn-disabled', 'border-red-400', 'border-2');
             validationWarning.innerText = `${validation.status()}`;
         } else {
-            submitBtn.classList.add('btn-disabled', 'border-red-400','border-2');
+            submitBtn.classList.add('btn-disabled', 'border-red-400', 'border-2');
             validationWarning.innerText = `${validation.status()}`;
         }
     }
@@ -187,10 +178,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function validateJobName() {
-        let array =  Array.from(jobNameInputs)
+        let array = Array.from(jobNameInputs)
         array.some(input => input.value.trim() !== '')
-        let result =  Array.from(jobNameInputs).some(input => input.value.trim() !== '');
-        validation.jobNames =  Array.from(jobNameInputs).every(input => input.value.trim() !== '');
+        let result = Array.from(jobNameInputs).some(input => input.value.trim() !== '');
+        validation.jobNames = Array.from(jobNameInputs).every(input => input.value.trim() !== '');
     }
 
     //INIT FUNCTION CALLS
