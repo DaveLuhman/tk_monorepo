@@ -90,6 +90,19 @@ timecardSchema.static('getThisYears', async function (user) {
       .sort('empName')
     return timecards}
 })
+timecardSchema.static('getLast12Mo', async function (user) {
+  if(user.role === 'Admin'){
+  const timecards = await model('Timecard')
+    .find({ createdAt: { $gte: moment().subtract('1','year') } })
+    .sort('empName')
+  return timecards}
+  else{
+    const timecards = await model('Timecard')
+      .find({ createdAt: { $gte: moment().subtract('1','year') } })
+      .where('sourceURL').equals(`time.${user.company.rootDomain}`)
+      .sort('empName')
+    return timecards}
+})
 timecardSchema.static('deleteTestEntries', async function() {
   await model('Timecard').deleteMany({empName: {$regex: /test/, $options: 'i'}})
 })

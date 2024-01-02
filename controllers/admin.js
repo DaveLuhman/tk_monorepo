@@ -22,9 +22,18 @@ function simulateAllWeeks() {
     }
     return weeks
 }
+function determineWeekNumber(week) {
+    if (week === undefined) {
+        week = moment().locale('US').week()
+        if (week === 1) return 52
+        else { return week - 1 }
+    }
+    else if (week === 1) return 52
+    else return week
+}
 export async function GET_admin(req, res) {
-    const targetOrThisWeek = req.query.week || moment().locale('US').week() - 1
-    const timecards = await Timecard.getThisYears(req.user)
+    const targetOrThisWeek = determineWeekNumber(req.query.week)
+    const timecards = await Timecard.getLast12Mo(req.user)
     let filteredTimecards = timecards.filter(timecard => { return timecard.week == targetOrThisWeek })
     const { trimmedData: finalTimecards, targetPage: page, pageCount } = paginate(filteredTimecards, req.query.p || 1, 10)
     res.locals.pagination = { page, pageCount }
@@ -34,7 +43,7 @@ export async function GET_admin(req, res) {
     res.render('admin/dashboard')
 }
 export async function GET_roster(req, res) {
-    const timecards = await Timecard.getThisYears(req.user)
+    const timecards = await Timecard.getLast12Mo(req.user)
     if (req.query.empName) {
         const filteredTimecards = timecards.filter(timecard => {
             return titleCaseAndTrim(timecard.empName) === req.query.empName
@@ -61,9 +70,9 @@ export async function GET_updateTimecard(req, res, next) {
 }
 export async function POST_updateTimecard(req, res, next) {
     try {
-        const {punchCount, hoursCount, overtimeCount, empName, empEmail } = req.body
+        const { punchCount, hoursCount, overtimeCount, empName, empEmail } = req.body
         const timeEntries = []
-        for(let i = 0; i < punchCount; i++){
+        for (let i = 0; i < punchCount; i++) {
             timeEntries.push({
                 date: req.body[`te-date-${i}`],
                 jobName: req.body[`te-jobName-${i}`],
