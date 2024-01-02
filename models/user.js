@@ -38,6 +38,8 @@ const UserSchema = new Schema(
     last: {
       type: Date
     },
+    token: String,
+    tokenExpiry: Number
   },
   {
     toObject: { virtuals: true },
@@ -54,6 +56,12 @@ UserSchema.plugin(mongooseAutoPopulate)
 // The method is used in the register controller
 UserSchema.static('register',  async function(email, password) {
   return await model('User').create({email, password: await hash(password, 10)})
+})
+UserSchema.static('findByEmail', async function(email) {
+  return await model('User').findOne({email: {$eq: email}}) || false
+})
+UserSchema.static('findByToken', async function(token) {
+  return await model('User').findOne({token: {$eq: token}}) || false
 })
 
 const User = model('User', UserSchema, 'users')

@@ -12,4 +12,4 @@ indexRouter.get('/login', (_req, res) => { res.redirect('/auth/login') })
 
 indexRouter.get('/register', (_req, res) => { res.redirect('/auth/register') })
 
-indexRouter.post('/lgout', (_req, res) => { res.redirect('/auth/logout') })
+indexRouter.post('/logout', (_req, res) => { res.redirect('/auth/logout') })

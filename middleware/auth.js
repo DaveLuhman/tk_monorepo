@@ -1,7 +1,8 @@
 import passport from 'passport';
 import User from '../models/user.js';
 import Customer from '../models/customer.js';
-
+import sgMail from '@sendgrid/mail'
+sgMail.setApiKey(process.env.SG_API_KEY)
 
 
 export function checkAuth(req, res, next) {
@@ -43,4 +44,56 @@ export function logout(req, res, next) {
         }
         res.redirect('/')
     })
+}
+
+export async function submitResetPasswordRequest(req, res, next) {
+    const { email } = req.body
+    const user = await User.findByEmail(email)
+    if (!user) { req.flash('No user is registered with that email'); res.redirect('/auth/login') }
+    user.token = createToken()
+    user.tokenExpiry = Date.now() + 3600000;
+    user.save()
+    await sendResetPwEmail(user.email, user.token)
+    req.flash('info', `An e-mail has been sent to ${user.email} with further instructions.`);
+    res.redirect('/auth/login')
+}
+
+function createToken() {
+    return Math.random().toString(36).slice(-8)
+}
+
+async function sendResetPwEmail(email, token) {
+    const resetEmail = {
+        to: email,
+        from: 'no-reply@timekeeper.site',
+        subject: 'Timekeeper Password Reset',
+        text: `
+            Please click on the following link, or paste this into your browser to complete the password reset:
+            http://${req.headers.host}/auth/reset/${token}
+            If you did not request this, please ignore this email and your password will remain unchanged.
+            This link is valid for 24 hours and will expire after that.
+        `,
+    };
+
+    await sgMail.send(resetEmail);
+}
+export async function verifyResetPasswordRequest(req, res, next) {
+    const token = req.params.token
+    const user = await User.findByToken(token)
+    if (!user || user.tokenExpiry > Date.now()) { req.flash('error', 'Password reset token is invalid or has expired.'); res.redirect('/auth/login') }
+    res.locals.token = token
+    res.render('auth/forgotPassword')
+}
+export async function executeResetPasswordRequest(req, res, next) {
+    const token = req.params.token
+    const user = await User.findByToken(token)
+    if (!user || user.tokenExpiry > Date.now()) { req.flash('error', 'Password reset token is invalid or has expired.'); res.redirect('/auth/login') }
+    const { password, confirmPassword } = req.body
+    if (password !== confirmPassword) { req.flash('error', 'Passwords do not match'); res.redirect(`/auth/forgotPassword/${token}`) }
+    user.password = password
+    user.token = undefined
+    user.tokenExpiry = undefined
+    user.save()
+    req.flash('success', 'Your password has been successfully reset. Please log in with your new password.')
+    res.redirect('/auth/login')
 }
