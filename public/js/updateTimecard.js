@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
         punchCounters.forEach(element => {
             element.textContent = punchCount;
             element.value = punchCount
-        })    }
+        })
+    }
     function updateAllCounters() {
         updateTotalHours();
         updateOvertimeHours();
@@ -62,19 +63,47 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function addNewEntryRow() {
         let newTeRow = document.createElement('div')
-        newTeRow.classList.add('grid', 'grid-cols-12')
+        newTeRow.classList.add('grid', 'grid-cols-12', 'grid-rows-3', 'md:grid-rows-1')
+        if (Number(punchCounters[0].textContent) % 2 == 0) {
+            newTeRow.classList.add('bg-base-200')
+        }
+        else {
+            newTeRow.classList.add('bg-base-100')
+        }
         newTeRow.innerHTML = `
         <div id='te-${punchCountPlusOne()}'
-        class="col-start-1 col-span-11 grid grid-cols-5 items-center justify-between justify-items-center h-8 px-2 my-1 font-light">
-            <input class="update-input" type="date" id="te-date-${punchCountPlusOne()}" name="te-date-${punchCountPlusOne()}" />
+        class="col-start-1 col-span-11 grid grid-cols-3 md:grid-cols-5 items-center justify-between  justify-items-stretch md:justify-items-center h-8 px-2 my-3 font-light">
+        <div class="row-start-2 md:row-start-1">
+        <label for="te-date-${punchCountPlusOne()}"
+            class="md:hidden absolute -my-4 -mx-2 bg-white px-2 text-gray-500 rounded-md drop-shadow-xl">Date</label>
+        <input class="update-input" type="date" id="te-date-${punchCountPlusOne()}" name="te-date-${punchCountPlusOne()}" />
+        </div>
+        <div class="row-start-1 col-start-2 md:row-start-1">
+        <label for="te-jobName-${punchCountPlusOne()}"
+            class="md:hidden absolute -my-4 -mx-2 bg-white px-2 text-gray-500 rounded-md drop-shadow-xl">Job
+            Name</label>
             <input class="update-input" type="text" id="te-jobName-${punchCountPlusOne()}" name="te-jobName-${punchCountPlusOne()}" validate/>
+            </div>
+            <div class="row-start-1 col-start-3 md:row-start-1">
+            <label for="te-jobNum-${punchCountPlusOne()}"
+                class="md:hidden absolute -my-4 -mx-2 bg-white px-2 text-gray-500 rounded-md drop-shadow-xl">Job
+                Num</label>
             <input class="update-input" type="text" id="te-jobNum-${punchCountPlusOne()}" name="te-jobNum-${punchCountPlusOne()}" />
+            </div>
+            <div class="row-start-3 col-start-2 md:row-start-1">
+            <label for="te-hours-${punchCountPlusOne()}"
+                class="md:hidden absolute -my-4 -mx-2 bg-white px-2 text-gray-500 rounded-md drop-shadow-xl">Hours</label>
             <input class="update-input" type="number" step=".25"
             id="te-hours-${punchCountPlusOne()}" name="te-hours-${punchCountPlusOne()}" />
+            </div>
+            <div class="row-start-3 col-start-3 md:row-start-1">
+            <label for="te-overtime-${punchCountPlusOne()}"
+                class="md:hidden absolute -my-4 -mx-2 bg-white px-2 text-gray-500 rounded-md drop-shadow-xl">Overtime</label>
             <input class="update-input" type="number" step=".25"
             id="te-overtime-${punchCountPlusOne()}" name="te-overtime-${punchCountPlusOne()}" />
+            </div>
         </div>
-        <div class="justify-self-center col-start-12 w-1/3 minus-button my-1">
+        <div id="minus-button" class="row-start-2 md:row-start-1 justify-self-center col-start-12 w-1/3 minus-button my-1">
             <i class="justify-self-center fa-solid fa-minus"></i>
         </div>`
         timeEntries.append(newTeRow)

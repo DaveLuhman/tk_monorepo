@@ -23,7 +23,7 @@ const theme = {
     serif: ['Merriweather', 'serif']
   },
   screens: {
-    sm: '576px',
+    sm: '550px',
     md: '960px',
     lg: '1440px'
   },

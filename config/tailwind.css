@@ -6,7 +6,7 @@
   @apply hover:underline hover:text-blue-300;
 }
 .update-input {
-  @apply bg-base-200 rounded-lg px-2 outline-none border-none focus:outline ;
+  @apply justify-self-center rounded-lg px-2 outline-none border-none focus:outline ;
 }
 .counter {
 @apply justify-self-stretch md:justify-self-end font-bold hover:cursor-not-allowed;
