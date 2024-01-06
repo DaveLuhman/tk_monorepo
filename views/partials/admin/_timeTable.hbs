@@ -101,18 +101,18 @@
         <ul class="flex flex-wrap items-center md:mr-4 mr-0 justify-evenly overflow-hidden  gap-3 mb-4">
             {{#gt pagination.page 1}}
                 {{#paginate pagination type="previous"}}
-                    <div class="col-auto"><a href="?week={{@root.week}}&p={{n}}"><button class="btn"><i
+                    <div class="col-auto"><a href="{{#if @root.empName}}?empName={{@root.empName}}{{/if}}{{#if @root.week}}?week={{@root.week}}{{/if}}&p={{n}}"><button class="btn"><i
                                     class="fa-solid fa-arrow-left"></i></button></a></div>
                 {{/paginate}}
             {{/gt}}
             {{#paginate pagination type="middle" limit="3"}}
-                <div class="{{#if active}}active{{/if}} col"><a href="?week={{@root.week}}&p={{n}}"><button
+                <div class="{{#if active}}active{{/if}} col"><a href="{{#if @root.empName}}?empName={{@root.empName}}{{/if}}{{#if @root.week}}?week={{@root.week}}{{/if}}&p={{n}}"><button
                             class="btn">{{n}}</button></a>
                 </div>
             {{/paginate}}
             {{#lt pagination.page pagination.pageCount}}
                 {{#paginate pagination type="next"}}
-                    <div class="col-auto"><a href="?week={{@root.week}}&p={{n}}"><button class="btn"><i
+                    <div class="col-auto"><a href="{{#if @root.empName}}?empName={{@root.empName}}{{/if}}{{#if @root.week}}?week={{@root.week}}{{/if}}&p={{n}}"><button class="btn"><i
                                     class="fa-solid fa-arrow-right"></i></button></a></div>
                 {{/paginate}}
             {{/lt}}

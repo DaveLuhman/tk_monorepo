@@ -54,8 +54,10 @@ export async function GET_roster(req, res) {
         const filteredTimecards = timecards.filter(timecard => {
             return titleCaseAndTrim(timecard.empName) === req.query.empName
         })
+        const { trimmedData: finalTimecards, targetPage: page, pageCount } = paginate(filteredTimecards, req.query.p || 1, 10)
+        res.locals.pagination = { page, pageCount }
         res.locals.empName = req.query.empName
-        res.locals.timecards = filteredTimecards
+        res.locals.timecards = finalTimecards
     }
     const roster = new Set()
     timecards.forEach(timecard => {
