@@ -3,6 +3,7 @@ import User from '../models/user.js'
 import { paginate } from '../middleware/util.js'
 import moment from 'moment'
 import sanitizeSubmission, { titleCaseAndTrim } from './api/sanitizer.js'
+import {writeFile, writeFileSync} from 'node:fs'
 
 const adminController = {}
 export default adminController
@@ -29,7 +30,7 @@ function determineWeekNumber(week) {
         else { return week - 1 }
     }
     else if (week === 1) return 52
-    else return week
+    else return Number(week)
 }
 export async function GET_admin(req, res) {
     const targetOrThisWeek = determineWeekNumber(req.query.week)
@@ -40,6 +41,11 @@ export async function GET_admin(req, res) {
     res.locals.week = targetOrThisWeek
     res.locals.weeks = getPopulatedWeeks(timecards)
     res.locals.timecards = finalTimecards
+    if(process.env.NODE_ENV == 'DEVELOPMENT'){
+        writeFile('./private/locals.log ', JSON.stringify(res.locals), (err) => {
+            if(err) throw new Error(err)
+        })
+    }
     res.render('admin/dashboard')
 }
 export async function GET_roster(req, res) {

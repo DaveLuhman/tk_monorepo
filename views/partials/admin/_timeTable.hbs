@@ -4,7 +4,7 @@
     <button class="group rounded-lg  focus:outline-none">
         {{#if week}}
             <div class="flex justify-center justify-items-center pt-3">
-                {{#eq week "1"}}
+                {{#eq week 1}}
                     <a class="px-2 mx-1" href="/admin/?week=52">
                         <i class="fa-solid fa-arrow-left"></i>
                     </a>
@@ -24,7 +24,7 @@
                         {{/each}}
                     </ul>
                 </details>
-                {{#eq week "52"}}
+                {{#eq week 52}}
                     <a class="px-2 mx-1" href="/admin/?week=1">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
