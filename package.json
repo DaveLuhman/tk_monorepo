@@ -6,7 +6,7 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "nodemon --ignore ./private app.js",
     "start": " node app.js",
     "build:css": "npx tailwindcss -c ./config/tailwind.config.js --postcss ./config/postcss.config.cjs  -i ./config/tailwind.css -o ./public/css/style.css --minify",
     "watch:css": "npx tailwindcss -c ./config/tailwind.config.js --postcss ./config/postcss.config.cjs  -i ./config/tailwind.css -o ./public/css/style.css -w"
