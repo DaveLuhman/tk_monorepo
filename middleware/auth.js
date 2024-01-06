@@ -24,7 +24,7 @@ export async function registerUser(req, res, next) {
     console.log(`User ${email} has been successfully registered for ${companyName}`);
 
     req.login(newUser, (user, err) => {
-        if (err) { req.flash(err.message); return next(); }
+        if (err) { req.flash('error', err.message); return next(); }
         res.user = user;
     })
     next()
@@ -34,6 +34,7 @@ export async function login(req, res, next) {
     passport.authenticate('local', {
         successRedirect: '/admin',
         failureMessage: true,
+        failureFlash: true,
         failureRedirect: '/login'
     })(req, res, next)
 }
@@ -50,13 +51,15 @@ export function logout(req, res, next) {
 export async function submitResetPasswordRequest(req, res, next) {
     const { email } = req.body
     const user = await User.findByEmail(email)
-    if (!user) { req.flash('No user is registered with that email'); res.redirect('/auth/login') }
-    user.token = createToken()
-    user.tokenExpiry = Date.now() + 3600000;
-    user.save()
-    await sendResetPwEmail(user.email, user.token)
-    req.flash('info', `An e-mail has been sent to ${user.email} with further instructions.`);
-    res.redirect('/auth/login')
+    if (!user) { req.flash('error','No user is registered with that email'); res.redirect('/auth/login'); res.end() }
+    else {
+        user.token = createToken()
+        user.tokenExpiry = Date.now() + 3600000;
+        user.save()
+        await sendResetPwEmail(user.email, user.token)
+        req.flash('info', `An e-mail has been sent to ${user.email} with further instructions.`);
+        res.redirect('/auth/login')
+    }
 }
 
 function createToken() {
