@@ -9,7 +9,7 @@
   @apply bg-base-200 rounded-lg px-2 outline-none border-none focus:outline ;
 }
 .counter {
-@apply justify-self-end font-bold hover:cursor-not-allowed;
+@apply justify-self-stretch md:justify-self-end font-bold hover:cursor-not-allowed;
 }
 .update-button {
   @apply  py-2 pr-7 pl-4 bg-base-200 drop-shadow-lg border-2 border-transparent rounded-xl font-extrabold hover:bg-base-100 hover:border-white;
