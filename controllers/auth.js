@@ -1,6 +1,6 @@
 export async function GET_authLogin(req, res) {
     res.locals.message = req.flash('error')
-    res.render('auth/login.hbs', { layout: 'main' })
+    res.render('auth/login.hbs', { layout: 'main', message: req.flash('error')  })
 }
 
 export async function GET_authRegister(req, res) {

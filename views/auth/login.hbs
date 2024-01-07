@@ -4,9 +4,7 @@
         <img src="\img\timekeeper-logo-sm.webp" class="shadow-lg h-50 mx-auto pb-5">
         <div class=" bg-base-300 shadow-2xl  rounded-lg divide-y">
             <div class="px-5 py-7">
-                {{#if message}}
-                    <h1>{{stringify message}}
-                {{/if}}
+               <p class="text-red-700">{{message}}</p>
                 </h1>
                 <form action="/auth/login" method="POST">
                     <label for="email" class="font-semibold text-sm text-gray-600 pb-1 block">E-mail</label>

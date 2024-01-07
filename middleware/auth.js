@@ -33,7 +33,6 @@ export async function registerUser(req, res, next) {
 export async function login(req, res, next) {
     passport.authenticate('local', {
         successRedirect: '/admin',
-        failureMessage: true,
         failureFlash: true,
         failureRedirect: '/login'
     })(req, res, next)
