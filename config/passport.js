@@ -5,17 +5,20 @@ import { compare } from 'bcrypt';
 
 const passportConfig = (app) => {
   passport.use(new LocalStrategy(
-    { usernameField: 'email' },
-    async function (email, password, done) {
+    {
+      usernameField: 'email',
+      passReqToCallback: true
+    },
+    async function (req, email, password, done) {
       console.info(`[AUTH] ${email} attempting login`.blue.bold)
       const user = await User.findOne({ email: { $eq: email } }).exec()
       if (!user) {
         console.log('No User Found')
-        return done(null, false, { message: 'That email is not registered' })
+        return done(null, false, req.flash('error', 'That email is not registered'))
       }
       if (user.active === false) {
         console.log('Disabled user');
-        return done(null, false, { message: 'That user has been disabled. Contact your manager' })
+        return done(null, false, req.flash('error', 'That user has been disabled. Contact your manager'))
       }
       compare(password, user.password, (err, isMatch) => {
         if (err) throw err;
@@ -24,7 +27,7 @@ const passportConfig = (app) => {
           return done(null, user)
         } else {
           console.log('bad password')
-          return done(null, false, { message: 'Password incorrect' })
+          return done(null, false, req.flash('error', 'Password incorrect'))
         }
       })
     })
