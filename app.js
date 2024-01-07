@@ -77,10 +77,6 @@ app.use('/', express.static('./public')); // Serve Static Files
 app.use(express.json()); // JSON Body Parser
 app.use(rateLimiter);
 app.use(flash())
-app.use(function (req, res, next) {
-  res.locals.message = req.flash();
-  next();
-});
 app.use(mw)
 // end express middleware
 // Routes (No User Context)
