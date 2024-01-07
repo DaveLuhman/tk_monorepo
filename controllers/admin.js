@@ -40,6 +40,7 @@ export async function GET_admin(req, res) {
     res.locals.pagination = { page, pageCount }
     res.locals.week = targetOrThisWeek
     res.locals.weeks = getPopulatedWeeks(timecards)
+    res.locals.totalTimecardCount = filteredTimecards.length
     res.locals.timecards = finalTimecards
     if(process.env.NODE_ENV == 'DEVELOPMENT'){
         writeFile('./private/locals.log ', JSON.stringify(res.locals), (err) => {
@@ -57,6 +58,7 @@ export async function GET_roster(req, res) {
         const { trimmedData: finalTimecards, targetPage: page, pageCount } = paginate(filteredTimecards, req.query.p || 1, 10)
         res.locals.pagination = { page, pageCount }
         res.locals.empName = req.query.empName
+        res.locals.totalTimecardCount = filteredTimecards.length
         res.locals.timecards = finalTimecards
     }
     const roster = new Set()

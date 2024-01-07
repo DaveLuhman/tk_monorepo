@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 {{#each timecard.timeEntries}}
-                    <div class="grid grid-cols-12 grid-rows-3 md:grid-rows-1 {{#ifEven @index}}sm:max-md:bg-base-200{{/ifEven}} mb-4">
+                    <div class="grid grid-cols-12 grid-rows-3 md:grid-rows-1 border-2 border-black border-collapse md:border-opacity-0 {{#ifEven @index}}sm:bg-base-200{{/ifEven}} py-4">
                         <div class="col-start-1 col-span-11 grid grid-cols-3 md:grid-cols-5 items-center justify-between  justify-items-stretch md:justify-items-center h-8 px-2 my-1 font-light"
                             id="te-{{@index}}">
                             <div class="row-start-2 md:row-start-1">
