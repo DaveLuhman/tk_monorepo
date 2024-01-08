@@ -47,6 +47,7 @@ async function checkEntriesCountAgainstPaymentTier(customer, hostname) {
             entriesLimit = 50
             break
         case 2:  // unlimited entries
+            entriesLimit = 100000
             //no limit, just here to catch this case
             break
     }
