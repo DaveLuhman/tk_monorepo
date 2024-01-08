@@ -29,7 +29,7 @@ const helmetCSP = helmet.contentSecurityPolicy({
         'form-action': ["'self'"],
         'default-src': ["'self'", 'ado.software'],
         'script-src': ["'self'", 'ajax.googleapis.com', 'cdn.jsdelivr.net'],
-        'connect-src': ["*.ado.software", "timekeeper.site"],
+        'connect-src': ["'self'","*.ado.software", "timekeeper.site"],
     }
 })
 const morganConfig = morgan('dev')
