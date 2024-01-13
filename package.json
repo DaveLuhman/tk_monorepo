@@ -39,6 +39,7 @@
     "express-rate-limit": "^7.1.5",
     "express-session": "^1.17.3",
     "flowbite": "^2.2.1",
+    "handlebars": "^4.7.8",
     "handlebars-helpers": "^0.10.0",
     "handlebars-paginate": "^0.1.0",
     "helmet": "^7.1.0",
