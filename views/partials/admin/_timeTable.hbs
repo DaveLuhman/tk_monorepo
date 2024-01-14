@@ -65,7 +65,10 @@
                 <span class="truncate ">{{empName}}</span>
                 <span class="hidden md:inline-grid truncate">{{hoursCount}}</span>
                 <span class="hidden md:inline-grid truncate">{{overtimeCount}}</span>
-                <span class="truncate grid grid-cols-2 gap-1">
+                <span class="truncate grid grid-cols-3 gap-1">
+                    <a class="mx-4" href="/admin/generate/{{this.id}}" target="_blank">
+                        <i class="fa-solid fa-download"></i>
+                    </a>
                     <a class="mx-4" href="/admin/edit/{{this.id}}">
                         <i class="fa-solid fa-pencil"></i>
                     </a>

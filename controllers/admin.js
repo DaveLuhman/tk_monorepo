@@ -2,7 +2,8 @@ import Timecard from '../models/timecard.js'
 import { paginate } from '../middleware/util.js'
 import moment from 'moment'
 import sanitizeSubmission, { titleCaseAndTrim } from './api/sanitizer.js'
-import {writeFile} from 'node:fs'
+import {readFileSync, writeFile} from 'node:fs'
+import Handlebars from 'handlebars'
 
 const adminController = {}
 export default adminController
@@ -118,8 +119,9 @@ export async function POST_deleteTimecard(req, res, next) {
 export async function POST_generateTimecard (req, res, next) {
     try {
         const timecard = await Timecard.findById(req.params.id).exec()
-        const email = req.user.email
-        }
+        res.locals.timecard = timecard
+        res.render('admin/timecard.hbs', {layout: 'timecard.hbs'})
+    }
     catch(error) {
         if (error) next(error)
     }
