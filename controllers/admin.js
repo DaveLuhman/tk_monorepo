@@ -2,9 +2,8 @@ import Timecard from '../models/timecard.js'
 import { paginate } from '../middleware/util.js'
 import moment from 'moment'
 import sanitizeSubmission, { titleCaseAndTrim } from './api/sanitizer.js'
-import {readFileSync, writeFile} from 'node:fs'
-import Handlebars from 'handlebars'
-
+import { writeFile } from 'node:fs'
+import { generateTimecardPDF } from '../helpers/html2pdf.js'
 const adminController = {}
 export default adminController
 
@@ -42,9 +41,9 @@ export async function GET_admin(req, res) {
     res.locals.weeks = getPopulatedWeeks(timecards)
     res.locals.totalTimecardCount = filteredTimecards.length
     res.locals.timecards = finalTimecards
-    if(process.env.NODE_ENV == 'DEVELOPMENT'){
+    if (process.env.NODE_ENV == 'DEVELOPMENT') {
         writeFile('./private/locals.log ', JSON.stringify(res.locals), (err) => {
-            if(err) throw new Error(err)
+            if (err) throw new Error(err)
         })
     }
     res.render('admin/dashboard')
@@ -116,13 +115,11 @@ export async function POST_deleteTimecard(req, res, next) {
     }
 }
 
-export async function POST_generateTimecard (req, res, next) {
+export async function GET_generateTimecard(req, res, next) {
     try {
-        const timecard = await Timecard.findById(req.params.id).exec()
-        res.locals.timecard = timecard
-        res.render('admin/timecard.hbs', {layout: 'timecard.hbs'})
-    }
-    catch(error) {
+        const timecardPDF = await generateTimecardPDF(req.params.id)
+        res.sendFile(timecardPDF)
+    } catch (error) {
         if (error) next(error)
     }
 }
