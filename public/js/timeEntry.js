@@ -143,9 +143,6 @@ function formDataToJSON() {
     empName,
     empEmail,
     timeEntries,
-    punchCount: activeEntries.length,
-    hoursCount: regHoursCounterEls[0].innerText,
-    overtimeCount: overtimeCounterEls[0].innerText,
     dateSubmitted: now,
     sourceURL: document.location.hostname,
   };
