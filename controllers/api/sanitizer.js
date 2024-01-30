@@ -37,8 +37,8 @@ export default function sanitizeSubmission(doc) {
             entry.jobName = titleCaseAndTrim(entry.jobName)
             entry.jobNum = entry.jobNum.toUpperCase()
             entry.date = moment(entry.date).format('MM-DD-yyyy')
-            doc.hoursCount += entry.hours
-            doc.overtimeCount  += entry.overtime
+            doc.hoursCount += Number(entry.hours)
+            doc.overtimeCount  += Number(entry.overtime)
         })
         return sortSubmission(doc)
     } catch (error) {
