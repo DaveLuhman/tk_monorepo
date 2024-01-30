@@ -253,7 +253,7 @@ plusButtons.forEach(function (button, i) {
 </div>`;
     this.parentElement.insertAdjacentHTML('afterend', timeEntryPlus);
     // add eventListener to new minusButton field
-    document.querySelector(`minus-button-${entriesCount}`).addEventListener('click', function(e) {
+    document.querySelector(`#minus-button-` + entriesCount).addEventListener('click', function (e) {
       e.preventDefault()
       removeEntry(e.target.parentElement)
       updateCounters()
