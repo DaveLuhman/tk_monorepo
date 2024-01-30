@@ -255,7 +255,7 @@ plusButtons.forEach(function (button, i) {
     // add eventListener to new minusButton field
     document.querySelector(`#minus-button-` + entriesCount).addEventListener('click', function (e) {
       e.preventDefault()
-      removeEntry(e.target.parentElement)
+      removeEntry(e.target)
       updateCounters()
     })
     // add eventListener to new te-name field
