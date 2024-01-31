@@ -26,13 +26,22 @@ function sortSubmission(doc) {
  * @return {*}
  */
 export default function sanitizeSubmission(doc) {
-    doc.empName = titleCaseAndTrim(doc.empName)    // empName to Title Case and trimmed for leading and trailing spaces
-    if (doc.empEmail !== '') { doc.empEmail = doc.empEmail.toLowerCase() }     // if exists, empEmail to lowercase and trimmed for leading and trailing spaces
-    doc.timeEntries = doc.timeEntries.filter((entry) => entry.jobName !== '') // remove empty job entries
-    doc.timeEntries.forEach((entry) => {
-        entry.jobName = titleCaseAndTrim(entry.jobName)
-        entry.jobNum = entry.jobNum.toUpperCase()
-        entry.date = moment(entry.date).format('MM-DD-yyyy')
-    })
-    return sortSubmission(doc)
+    try {
+        doc.hoursCount = 0;
+        doc.overtimeCount = 0;
+        doc.punchCount = doc.timeEntries?.length;
+        doc.empName = titleCaseAndTrim(doc.empName)    // empName to Title Case and trimmed for leading and trailing spaces
+        if (doc.empEmail !== '') { doc.empEmail = doc.empEmail.toLowerCase() }     // if exists, empEmail to lowercase and trimmed for leading and trailing spaces
+        doc.timeEntries = doc.timeEntries.filter((entry) => entry.jobName !== '') // remove empty job entries
+        doc.timeEntries.forEach((entry) => {
+            entry.jobName = titleCaseAndTrim(entry.jobName)
+            entry.jobNum = entry.jobNum.toUpperCase()
+            entry.date = moment(entry.date).format('MM-DD-yyyy')
+            doc.hoursCount += Number(entry.hours)
+            doc.overtimeCount  += Number(entry.overtime)
+        })
+        return sortSubmission(doc)
+    } catch (error) {
+        console.log(error)
+    }
 }

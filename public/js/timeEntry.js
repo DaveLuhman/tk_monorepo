@@ -143,9 +143,6 @@ function formDataToJSON() {
     empName,
     empEmail,
     timeEntries,
-    punchCount: activeEntries.length,
-    hoursCount: regHoursCounterEls[0].innerText,
-    overtimeCount: overtimeCounterEls[0].innerText,
     dateSubmitted: now,
     sourceURL: document.location.hostname,
   };
@@ -252,10 +249,15 @@ plusButtons.forEach(function (button, i) {
             class="appearance-none border-2 border-white rounded w-full py-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-white"
             type="number" name="te-overtime-${entriesCount}" id="te-overtime-${entriesCount}">
     </div>
-    <button onclick="removeEntry(this)" id="minusButton" class=" md:row-start-3 form-control btn btn-error"><div class="fa-solid fa-trash-can"></div></button>
+    <button  id="minus-button-${entriesCount}" class="md:row-start-3 form-control btn btn-error"><div class="fa-solid fa-trash-can"></div></button>
 </div>`;
     this.parentElement.insertAdjacentHTML('afterend', timeEntryPlus);
-
+    // add eventListener to new minusButton field
+    document.querySelector(`#minus-button-` + entriesCount).addEventListener('click', function (e) {
+      e.preventDefault()
+      removeEntry(e.target)
+      updateCounters()
+    })
     // add eventListener to new te-name field
     const newJobNameField = document.querySelector('#te-name-' + entriesCount);
     newJobNameField.addEventListener('input', function (e) {
