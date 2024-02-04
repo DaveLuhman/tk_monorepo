@@ -1,4 +1,4 @@
-import  sgMail from  '@sendgrid/mail'
+import sgMail from '@sendgrid/mail'
 sgMail.setApiKey(process.env.SG_API_KEY)
 import Timecard from '../../models/timecard.js'
 import { stringify } from 'csv-stringify/sync'

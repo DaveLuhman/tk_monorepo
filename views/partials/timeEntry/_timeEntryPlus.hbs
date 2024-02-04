@@ -1,29 +1,69 @@
-<div class="grid grid-cols-4 grid-rows-4 gap-4">
-    <input type="hidden" name="te-date-${entriesCount}" value="${parentDateInput.value}" id="te-date-${entriesCount}">
-    <div class="col-span-4 md:col-span-2 row-start-2 px-4 py-2 border-2 border-grey rounded relative">
-        <label class="absolute -my-4 -mx-2 bg-white px-2 text-gray-400" for="te-name-${entriesCount}">Job Name</label>
-        <input
-            class="appearance-none border-2 border-white rounded w-full py-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-white"
-            type="text" name="te-name-${entriesCount}" id="te-name-${entriesCount}">
-    </div>
-    <div class="col-span-4 md:col-span-2 md:col-start-3 md:row-start-2 px-4 py-2 border-2 border-grey rounded relative">
-        <label class="absolute -my-4 -mx-2 bg-white px-2 text-grey-darker" for="te-number-${entriesCount}">Job Number</label>
-        <input
-            class="appearance-none border-2 border-white rounded w-full py-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-white"
-            type="text" name="te-number-${entriesCount}" id="te-number-${entriesCount}">
-    </div>
-    <div class="col-span-4 md:col-span-2 md:row-start-3 px-4 py-2 border-2 border-grey rounded relative">
-        <label class="absolute -my-4 -mx-2 bg-white px-2 text-grey-darker" for="te-hours-${entriesCount}">Hours</label>
-        <input
-            class="appearance-none border-2 border-white rounded w-full py-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-white"
-            type="number" name="te-hours-${entriesCount}" id="te-hours-${entriesCount}">
-    </div>
-    <div class="col-span-4 md:col-span-2 md:col-start-3 md:row-start-3 px-4 py-2 border-2 border-grey rounded relative">
-        <label class="absolute -my-4 -mx-2 bg-white border-black px-2 text-grey-darker"
-            for="te-overtime-${entriesCount}">Overtime</label>
-        <input
-            class="appearance-none border-2 border-white rounded w-full py-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-white"
-            type="number" name="te-overtime-${entriesCount}" id="te-overtime-${entriesCount}">
-    </div>
-    <button onclick="" id="plusButton" class=" md:row-start-4 form-control btn btn-primary">+</button>
+<div class='grid grid-cols-4 grid-rows-4 gap-4'>
+  <input
+    type='hidden'
+    name='te-date-${entriesCount}'
+    value='${parentDateInput.value}'
+    id='te-date-${entriesCount}'
+  />
+  <div
+    class='col-span-4 md:col-span-2 row-start-2 px-4 py-2 border-2 border-grey rounded relative'
+  >
+    <label
+      class='absolute -my-4 -mx-2 bg-white px-2 text-gray-400'
+      for='te-name-${entriesCount}'
+    >Job Name</label>
+    <input
+      class='appearance-none border-2 border-white rounded w-full py-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-white'
+      type='text'
+      name='te-name-${entriesCount}'
+      id='te-name-${entriesCount}'
+    />
+  </div>
+  <div
+    class='col-span-4 md:col-span-2 md:col-start-3 md:row-start-2 px-4 py-2 border-2 border-grey rounded relative'
+  >
+    <label
+      class='absolute -my-4 -mx-2 bg-white px-2 text-grey-darker'
+      for='te-number-${entriesCount}'
+    >Job Number</label>
+    <input
+      class='appearance-none border-2 border-white rounded w-full py-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-white'
+      type='text'
+      name='te-number-${entriesCount}'
+      id='te-number-${entriesCount}'
+    />
+  </div>
+  <div
+    class='col-span-4 md:col-span-2 md:row-start-3 px-4 py-2 border-2 border-grey rounded relative'
+  >
+    <label
+      class='absolute -my-4 -mx-2 bg-white px-2 text-grey-darker'
+      for='te-hours-${entriesCount}'
+    >Hours</label>
+    <input
+      class='appearance-none border-2 border-white rounded w-full py-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-white'
+      type='number'
+      name='te-hours-${entriesCount}'
+      id='te-hours-${entriesCount}'
+    />
+  </div>
+  <div
+    class='col-span-4 md:col-span-2 md:col-start-3 md:row-start-3 px-4 py-2 border-2 border-grey rounded relative'
+  >
+    <label
+      class='absolute -my-4 -mx-2 bg-white border-black px-2 text-grey-darker'
+      for='te-overtime-${entriesCount}'
+    >Overtime</label>
+    <input
+      class='appearance-none border-2 border-white rounded w-full py-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-white'
+      type='number'
+      name='te-overtime-${entriesCount}'
+      id='te-overtime-${entriesCount}'
+    />
+  </div>
+  <button
+    onclick=''
+    id='plusButton'
+    class='md:row-start-4 form-control btn btn-primary'
+  >+</button>
 </div>

@@ -39,11 +39,11 @@ const timecardSchema = new Schema(
     toJSON: { virtuals: true },
     strict: false,
   }
-  )
-  timecardSchema.plugin(mongooseAutoPopulate)
+)
+timecardSchema.plugin(mongooseAutoPopulate)
 
-  timecardSchema.virtual('week').get(function () {
-    return moment(this.timeEntries[0].date).locale('US').week()
+timecardSchema.virtual('week').get(function () {
+  return moment(this.timeEntries[0].date).locale('US').week()
 })
 
 timecardSchema.static('getTodays', async function () {
@@ -57,7 +57,7 @@ timecardSchema.static('getThisWeeks', async function () {
   const thisYearsTimecards = await model('Timecard').find()
   const thisWeeksTimecards = []
   thisYearsTimecards.map((document) => {
-    if(document.week === thisWeek) thisWeeksTimecards.push(document)
+    if (document.week === thisWeek) thisWeeksTimecards.push(document)
   })
   return thisWeeksTimecards
 })
@@ -66,7 +66,7 @@ timecardSchema.static('getLastWeeks', async function () {
   const thisYearsTimecards = await model('Timecard').find()
   const lastWeeksTimecards = []
   thisYearsTimecards.map((document) => {
-    if(document.week === (thisWeek-1)) lastWeeksTimecards.push(document)
+    if (document.week === thisWeek - 1) lastWeeksTimecards.push(document)
   })
   return lastWeeksTimecards
 })
@@ -78,34 +78,40 @@ timecardSchema.static('getThisMonths', async function () {
   return timecards
 })
 timecardSchema.static('getThisYears', async function (user) {
-  if(user.role === 'Admin'){
-  const timecards = await model('Timecard')
-    .find({ createdAt: { $gte: moment().startOf('year') } })
-    .sort('empName')
-  return timecards}
-  else{
+  if (user.role === 'Admin') {
     const timecards = await model('Timecard')
       .find({ createdAt: { $gte: moment().startOf('year') } })
-      .where('sourceURL').equals(`time.${user.company.rootDomain}`)
       .sort('empName')
-    return timecards}
+    return timecards
+  } else {
+    const timecards = await model('Timecard')
+      .find({ createdAt: { $gte: moment().startOf('year') } })
+      .where('sourceURL')
+      .equals(`time.${user.company.rootDomain}`)
+      .sort('empName')
+    return timecards
+  }
 })
 timecardSchema.static('getLast12Mo', async function (user) {
-  if(user.role === 'Admin'){
-  const timecards = await model('Timecard')
-    .find({ createdAt: { $gte: moment().subtract('1','year') } })
-    .sort('empName')
-  return timecards}
-  else{
+  if (user.role === 'Admin') {
     const timecards = await model('Timecard')
-      .find({ createdAt: { $gte: moment().subtract('1','year') } })
-      .where('sourceURL').equals(`time.${user.company.rootDomain}`)
+      .find({ createdAt: { $gte: moment().subtract('1', 'year') } })
       .sort('empName')
-    return timecards}
+    return timecards
+  } else {
+    const timecards = await model('Timecard')
+      .find({ createdAt: { $gte: moment().subtract('1', 'year') } })
+      .where('sourceURL')
+      .equals(`time.${user.company.rootDomain}`)
+      .sort('empName')
+    return timecards
+  }
 })
-timecardSchema.static('deleteTestEntries', async function() {
-  await model('Timecard').deleteMany({empName: {$regex: /test/, $options: 'i'}})
+timecardSchema.static('deleteTestEntries', async function () {
+  await model('Timecard').deleteMany({
+    empName: { $regex: /test/, $options: 'i' },
+  })
 })
 
-const Timecard =  model('Timecard', timecardSchema, 'timecards')
+const Timecard = model('Timecard', timecardSchema, 'timecards')
 export default Timecard

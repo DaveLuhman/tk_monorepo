@@ -1,5 +1,5 @@
-import moment from "moment"
+import moment from 'moment'
 
 export function formatDate(date) {
-    return moment(date).format('MM-DD-YYYY')
+  return moment(date).format('MM-DD-YYYY')
 }

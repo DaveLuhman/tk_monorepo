@@ -3,8 +3,9 @@
         <!-- Tabs -->
         <ul id="tabs" class="flex pt-2 px-1 w-full border-b ">
             {{#each weeklyDayShift}}
-                <li class="flex-grow px-4 md:text-center font-semibold py-2 {{#is "Monday" day}}rounded-t border-t border-r border-l -mb-px {{/is}} "><a id="{{day}}-tab"
-                        href="#{{day}}">{{this.date}}</a></li>
+                <li
+                    class="flex-grow px-4 md:text-center font-semibold py-2 {{#is "Monday" day}}rounded-t border-t border-r border-l -mb-px {{/is}} ">
+                    <a id="{{day}}-tab" href="#{{day}}">{{this.date}}</a></li>
             {{/each}}
         </ul>
         <!-- Tab Contents -->

@@ -8,7 +8,8 @@ async function testEmail() {
     subject: 'Timekeeper Test Submission Inc.',
     text: 'This is your notice of a weekly test about to trigger. If you do not receive an timecard from Johnny Test, please contact product support.',
   }
-  sgMail.send(msg)
+  sgMail
+    .send(msg)
     .then(() =>
       console.info(
         'Weekly Test Notification sent successfully to ' + process.env.TO_EMAIL

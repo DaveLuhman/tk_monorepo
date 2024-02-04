@@ -9,7 +9,9 @@ function aggregateWeeklyData(documents) {
   for (let w = 1; w <= currentWeek; w++) {
     let regularHours = 0
     let overtimeHours = 0
-    let weeklyTimecards = documents.filter((document) => {document.createdAt > startDate})
+    let weeklyTimecards = documents.filter((document) => {
+      document.createdAt > startDate
+    })
     weeklyTimecards = documents.filter((document) => document.week === w)
     if (weeklyTimecards.length !== 0) {
       weeklyTimecards.forEach((timecard) => {

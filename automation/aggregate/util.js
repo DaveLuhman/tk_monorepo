@@ -36,19 +36,21 @@ async function sendWeeklyReportEmail(templateData) {
     from: 'donotreply@ado.software',
     templateId: process.env.SG_WEEKLY_REPORT_TEMPLATE_ID,
     to: [process.env.TO_EMAIL, 'reporting@ado.software'],
-    attachments: [{
-      content: aggregateReport,
-      filename: 'aggregateReport.csv',
-      type: 'text/csv',
-      disposition: 'attachment'
-    }]
+    attachments: [
+      {
+        content: aggregateReport,
+        filename: 'aggregateReport.csv',
+        type: 'text/csv',
+        disposition: 'attachment',
+      },
+    ],
   }
-  sgMail.send(msg)
+  sgMail
+    .send(msg)
     .then(() => {
       console.info('Report sent successfully to ' + process.env.TO_EMAIL)
       deleteWeeklyCSVFile()
-    }
-    )
+    })
     .catch((error) => {
       console.error(error)
     })
@@ -94,17 +96,9 @@ function createCSVReport(arrayData) {
     'Total Hours',
     'Average Hours Per Employee',
   ]
-  stringify(
-    arrayData,
-    { header: true, columns: columns },
-    (err, output) => {
-      writeFileSync(
-        './tempWeekly.csv',
-        Buffer.from(output),
-        'uft-8'
-      )
-    }
-  )
+  stringify(arrayData, { header: true, columns: columns }, (err, output) => {
+    writeFileSync('./tempWeekly.csv', Buffer.from(output), 'uft-8')
+  })
 }
 function createTemplateDataObject(weeklyData, ytdData) {
   const templateDataObject = {
