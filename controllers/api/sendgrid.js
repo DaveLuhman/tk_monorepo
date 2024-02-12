@@ -4,9 +4,8 @@ const Personalization = classes.Personalization
 sgMail.setApiKey(process.env.SG_API_KEY)
 
 function setEmailTarget(sourceURL) {
-  return process.env.TO_EMAIL === undefined
-    ? `time@${sourceURL.substring(5)}`
-    : process.env.TO_EMAIL
+
+    return process.env.TO_EMAIL === undefined ? `time@${sourceURL.substring(5)}` : process.env.TO_EMAIL;
 }
 async function sendgridTemplateAPICall(jsonDoc) {
   const msg = {

@@ -1,6 +1,6 @@
 {
   "name": "timekeeper-monorepo",
-  "version": "3.0",
+  "version": "3.0.2",
   "description": "The fullstack variety of Timekeeper",
   "private": true,
   "type": "module",

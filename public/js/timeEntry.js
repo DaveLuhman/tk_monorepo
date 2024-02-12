@@ -252,16 +252,14 @@ plusButtons.forEach(function (button, i) {
             type="number" name="te-overtime-${entriesCount}" id="te-overtime-${entriesCount}">
     </div>
     <button  id="minus-button-${entriesCount}" class="md:row-start-3 form-control btn btn-error"><div class="fa-solid fa-trash-can"></div></button>
-</div>`
-    this.parentElement.insertAdjacentHTML('afterend', timeEntryPlus)
+</div>`;
+    this.parentElement.insertAdjacentHTML('afterend', timeEntryPlus);
     // add eventListener to new minusButton field
-    document
-      .querySelector(`#minus-button-` + entriesCount)
-      .addEventListener('click', function (e) {
-        e.preventDefault()
-        removeEntry(e.target)
-        updateCounters()
-      })
+    document.querySelector(`#minus-button-` + entriesCount).addEventListener('click', function (e) {
+      e.preventDefault()
+      removeEntry(e.target)
+      updateCounters()
+    })
     // add eventListener to new te-name field
     const newJobNameField = document.querySelector('#te-name-' + entriesCount)
     newJobNameField.addEventListener('input', function (e) {
