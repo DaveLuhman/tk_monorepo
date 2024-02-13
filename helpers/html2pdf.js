@@ -20,7 +20,7 @@ export async function generateTimecardPDF(timecardID) {
       const html = compiledTemplate({ timecard })
       console.log(html)
       const converter = new HtmlConverter()
-      await converter.convert(html).then((buffer) => {
+      await converter.convert({html}).then((buffer) => {
         PDFEngine.generate(buffer, filename)
       })
       console.log(`PDF Timecard generated - ${filename}`)
