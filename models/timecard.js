@@ -43,7 +43,7 @@ const timecardSchema = new Schema(
 timecardSchema.plugin(mongooseAutoPopulate)
 
 timecardSchema.virtual('week').get(function () {
-  return moment(this.timeEntries[0].date).locale('US').week()
+  return this.timeEntries[0]?.date ? moment(this.timeEntries[0].date).locale('US').week() : 0
 })
 
 timecardSchema.static('getTodays', async function () {
