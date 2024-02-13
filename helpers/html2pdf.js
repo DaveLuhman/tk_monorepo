@@ -17,10 +17,13 @@ export async function generateTimecardPDF(timecardID) {
           allowProtoMethodsByDefault: true,
         },
       })
-      const html = compiledTemplate({ timecard })
+      const html = compiledTemplate(
+        { timecard },
+        { allowedProtoProperties: true }
+      )
       console.log(html)
       const converter = new HtmlConverter()
-      await converter.convert({html}).then((buffer) => {
+      await converter.convert({ html }).then((buffer) => {
         PDFEngine.generate(filename, buffer)
       })
       console.log(`PDF Timecard generated - ${filename}`)
