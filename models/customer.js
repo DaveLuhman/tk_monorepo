@@ -35,11 +35,15 @@ const customerSchema = new Schema(
 )
 
 customerSchema.static('register', async function (companyName, email) {
-    return await model('Customer').create({
-        companyName,
-        rootDomain: email.substring(email.indexOf('@') + 1),
-        preferredEmailRecipient: 'time' + email.substring(email.indexOf('@'))
-    })
+    const existingCompany = Customer.exists({ businessName: { $eq: companyName } })
+    if (existingCompany !== null) return existingCompany;
+    else {
+        return await model('Customer').create({
+            companyName,
+            rootDomain: email.substring(email.indexOf('@') + 1),
+            preferredEmailRecipient: 'time' + email.substring(email.indexOf('@'))
+        })
+    }
 })
 const Customer = model('Customer', customerSchema, 'customers')
 export default Customer
