@@ -5,6 +5,6 @@ import apiController from '../../controllers/api/index.js'
 import validator from '../../middleware/validator.js'
 import rateLimiter from '../../middleware/rateLimiter.js'
 
-apiRouter.post('/timeEntry', rateLimiter, validator, apiController.submit)
+apiRouter.post('/timeEntry', validator, apiController.submit)
 
 
