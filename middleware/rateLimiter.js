@@ -38,7 +38,7 @@ async function identifyOrCreateCustomer(hostname) {  // gets customer record fro
 async function checkEntriesCountAgainstPaymentTier(customer, hostname) {
     let entriesLimit = new Number() //TODO: Fix this long-term problem-causing bullshit
     let entries = await getThisMonthsEntriesBySourceURL(hostname)
-    console.log(`${customer.businessName} has submitted ${entries.length} time entries this month.`)
+    console.log(`${JSON.stringify(customer)} has submitted ${entries.length} time entries this month.`)
     switch (customer.paymentTier) {
         case 0:  // limit to 10 reports per month
             entriesLimit = 10
