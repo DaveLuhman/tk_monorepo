@@ -1,3 +1,10 @@
+/**
+ * @file This file contains the JavaScript code for the timeEntry functionality.
+ * It includes event listeners, functions for manipulating the DOM, and form submission logic.
+ * The code handles adding and removing time entry fields, updating counters, and submitting form data.
+ * The code also includes utility functions for calculating totals and converting form data to JSON.
+ * @see {@link https://github.com/DaveLuhman/tk_monorepo/blob/main/public/js/timeEntry.js|GitHub Repository}
+ */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 const tabsContainer = document.querySelector('#tabs');
@@ -54,6 +61,9 @@ for (let i = 0; i < tabContents.children.length; i++) { // sets 'tabs of the wee
 
 /** --------------   Functions   ----------- */
 
+/**
+ * Updates the field nodelists by selecting specific elements from the DOM.
+ */
 function updateFieldNodelists() {
   dateFields = document.querySelectorAll('[id^="te-date"]'); // array of all date elements
   jobNameFields = document.querySelectorAll('[id^="te-name"]'); // array of all jobName elements

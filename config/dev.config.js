@@ -8,6 +8,11 @@ const sessionConfig = session({
     saveUninitialized: false,
     cookie: { secure: false, httpOnly: false, maxAge: 1000 * 60 * 60 * 24 },
 })
+/**
+ * Content Security Policy configuration for Helmet middleware.
+ *
+ * @type {Object}
+ */
 const helmetCSP = helmet.contentSecurityPolicy({
     directives: {
         'form-action': ["'self'"],

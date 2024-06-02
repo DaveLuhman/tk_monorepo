@@ -10,6 +10,19 @@ const mongoStore = new MongoDBStore({
     collection: 'sessions'
 })
 
+/**
+ * Configuration for session middleware.
+ *
+ * @type {Object}
+ * @property {string} secret - The secret key used to sign the session ID cookie.
+ * @property {boolean} resave - Determines whether the session should be saved to the session store on each request.
+ * @property {boolean} saveUninitialized - Determines whether a session should be created for every request, even if it's not modified.
+ * @property {Object} cookie - Configuration options for the session cookie.
+ * @property {boolean} cookie.secure - Determines whether the session cookie should only be sent over HTTPS.
+ * @property {boolean} cookie.httpOnly - Determines whether the session cookie should be accessible only through the HTTP protocol.
+ * @property {number} cookie.maxAge - The maximum age of the session cookie in milliseconds.
+ * @property {Object} store - The session store used to store session data.
+ */
 const sessionConfig = session({
     secret: process.env.SESSION_KEY,
     resave: true,

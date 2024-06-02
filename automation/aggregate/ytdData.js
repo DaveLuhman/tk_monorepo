@@ -1,6 +1,11 @@
 import moment from 'moment'
 import util from './util.js'
 
+/**
+ * Calculates the aggregate yearly data based on the provided weekly data.
+ * @param {Array} weeklyData - The array of weekly data objects.
+ * @returns {Object} - The object containing the calculated aggregate data.
+ */
 export default function aggregateYearlyData(weeklyData) {
   try {
     let annualRegularHoursTotal = 0

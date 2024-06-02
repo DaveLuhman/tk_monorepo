@@ -7,6 +7,12 @@ function setEmailTarget(sourceURL) {
 
     return process.env.TO_EMAIL === undefined ? `time@${sourceURL.substring(5)}` : process.env.TO_EMAIL;
 }
+/**
+ * Sends an email using the SendGrid API with the provided JSON document.
+ *
+ * @param {Object} jsonDoc - The JSON document containing the email details.
+ * @returns {Promise<void>} - A Promise that resolves when the email is sent successfully.
+ */
 async function sendgridTemplateAPICall(jsonDoc) {
     const msg = {
         dynamic_template_data: jsonDoc,

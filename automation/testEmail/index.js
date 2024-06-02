@@ -1,6 +1,12 @@
 import sgMail from '@sendgrid/mail'
 sgMail.setApiKey(process.env.SG_API_KEY)
 
+/**
+ * Sends a test email notification.
+ * @async
+ * @function testEmail
+ * @returns {Promise<void>} A promise that resolves when the email is sent successfully.
+ */
 async function testEmail() {
   const msg = {
     from: 'donotreply@ado.software',

@@ -1,9 +1,10 @@
 import moment from 'moment'
 /**
- *
- *
- * @param {*} doc
- * @return {*}
+ * Validates the submission request.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} next - The next middleware function.
+ * @returns {Object} - The response object.
  */
 function validateSubmission(req, res, next) {
     const doc = req.body

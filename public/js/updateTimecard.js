@@ -1,3 +1,9 @@
+/**
+ * This script handles the functionality of updating the timecard form.
+ * It includes event listeners for input fields, counters, and buttons.
+ * The script also performs validation on user input and updates the form accordingly.
+ * @file FILEPATH: /c:/Users/DaveLuhman/githubRepos/tk_monorepo/public/js/updateTimecard.js
+ */
 document.addEventListener('DOMContentLoaded', function () {
     let hourInputs = document.querySelectorAll('[id^="te-hours"]');
     let hoursCounters = document.querySelectorAll('[id^="hours-counter"]');

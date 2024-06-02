@@ -6,6 +6,15 @@ import { hash } from 'bcrypt'
 sgMail.setApiKey(process.env.SG_API_KEY)
 
 
+/**
+ * Middleware function to check if the user is authenticated.
+ * If the user is authenticated, it sets the user object in the response locals and calls the next middleware.
+ * If the user is not authenticated, it redirects to the login page.
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} next - The next middleware function.
+ */
 export function checkAuth(req, res, next) {
     if (req.isAuthenticated()) {
         console.log('bypassing ')
@@ -15,6 +24,14 @@ export function checkAuth(req, res, next) {
     console.log('Unauthenticated. Redirecting to login page.')
     res.redirect('/auth/login')
 }
+/**
+ * Registers a new user and associates them with a company.
+ * 
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} next - The next middleware function.
+ * @returns {Promise<void>} - A promise that resolves when the user is registered.
+ */
 export async function registerUser(req, res, next) {
     const { email, password, companyName } = req.body
     const newUser = await User.register(email, password)
@@ -30,12 +47,26 @@ export async function registerUser(req, res, next) {
     next()
 }
 
+/**
+ * Authenticates the user using the 'local' strategy.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} next - The next middleware function.
+ * @returns {Promise<void>} - A promise that resolves when the authentication is complete.
+ */
 export async function login(req, res, next) {
     passport.authenticate('local', {
         failureFlash: true,
     })(req, res, next)
 }
 
+/**
+ * Logs out the user.
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} next - The next middleware function.
+ */
 export function logout(req, res, next) {
     req.logout(function (err) {
         if (err) {
@@ -45,6 +76,14 @@ export function logout(req, res, next) {
     })
 }
 
+/**
+ * Submits a reset password request.
+ * 
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} next - The next middleware function.
+ * @returns {Promise<void>} - A Promise that resolves when the reset password request is submitted.
+ */
 export async function submitResetPasswordRequest(req, res, next) {
     const { email } = req.body
     const user = await User.findByEmail(email)
@@ -59,10 +98,22 @@ export async function submitResetPasswordRequest(req, res, next) {
     }
 }
 
+/**
+ * Generates a random token.
+ *
+ * @returns {string} The generated token.
+ */
 function createToken() {
     return Math.random().toString(36).slice(-8)
 }
 
+/**
+ * Sends a password reset email to the specified email address.
+ *
+ * @param {string} email - The email address to send the reset email to.
+ * @param {string} token - The password reset token.
+ * @returns {Promise<void>} - A promise that resolves when the email is sent successfully.
+ */
 async function sendResetPwEmail(email, token) {
     const resetEmail = {
         to: email,
@@ -78,6 +129,13 @@ async function sendResetPwEmail(email, token) {
 
     await sgMail.send(resetEmail);
 }
+/**
+ * Verifies the reset password request.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} next - The next middleware function.
+ * @returns {Promise<void>} - A Promise that resolves when the verification is complete.
+ */
 export async function verifyResetPasswordRequest(req, res, next) {
     const token = req.params.token
     const user = await User.findByToken(token)
@@ -88,6 +146,14 @@ export async function verifyResetPasswordRequest(req, res, next) {
         res.render('auth/forgotPassword')
     }
 }
+/**
+ * Executes a reset password request.
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} next - The next middleware function.
+ * @returns {Promise<void>} - A promise that resolves when the password reset is complete.
+ */
 export async function executeResetPasswordRequest(req, res, next) {
     const token = req.params.token
     const user = await User.findByToken(token)

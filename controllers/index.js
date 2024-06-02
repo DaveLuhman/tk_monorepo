@@ -1,3 +1,8 @@
+/**
+ * Controller for handling root route requests.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 const indexController = {}
 
 indexController.getRoot = (req, res) => {

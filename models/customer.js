@@ -1,4 +1,21 @@
-import { Schema, model } from 'mongoose'
+import { Schema, model } from 'mongoose';
+
+/**
+ * Represents a customer in the system.
+ * @typedef {Object} Customer
+ * @property {boolean} active - Indicates if the customer is active.
+ * @property {string} businessName - The name of the customer's business.
+ * @property {number} paymentTier - The payment tier of the customer. Can be 0 (free tier), 1 (basic tier), or 2 (premium tier).
+ * @property {string} rootDomain - The root domain of the customer.
+ * @property {string} preferredEmailRecipient - The preferred email recipient for the customer.
+ * @property {Date} createdAt - The date and time when the customer was created.
+ * @property {Date} updatedAt - The date and time when the customer was last updated.
+ */
+
+/**
+ * Represents the customer schema.
+ * @type {Schema<Customer>}
+ */
 const customerSchema = new Schema(
     {
         active: {
@@ -32,18 +49,25 @@ const customerSchema = new Schema(
         toJSON: { virtuals: true },
         strict: false, // [deny]/allow insertion of key/value pairs that aren't part of this schema
     }
-)
+);
 
+/**
+ * Registers a new customer in the system.
+ * @param {string} companyName - The name of the company.
+ * @param {string} email - The email address of the customer.
+ * @returns {Promise<Customer>} - A promise that resolves to the newly created customer.
+ */
 customerSchema.static('register', async function (companyName, email) {
-    const existingCompany = Customer.exists({ businessName: { $eq: companyName } })
+    const existingCompany = Customer.exists({ businessName: { $eq: companyName } });
     if (existingCompany !== null) return existingCompany;
     else {
         return await model('Customer').create({
             companyName,
             rootDomain: email.substring(email.indexOf('@') + 1),
             preferredEmailRecipient: 'time' + email.substring(email.indexOf('@'))
-        })
+        });
     }
-})
-const Customer = model('Customer', customerSchema, 'customers')
-export default Customer
+});
+
+const Customer = model('Customer', customerSchema, 'customers');
+export default Customer;

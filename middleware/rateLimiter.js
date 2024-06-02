@@ -13,6 +13,13 @@ function confirmTimeSubdomain(hostname) {
         return err.message
     }
 }
+/**
+ * Retrieves this month's entries and filters them by the hostname.
+ *
+ * @param {string} hostname - The hostname to filter the entries by.
+ * @returns {Promise<Array>} - A promise that resolves to an array of entries.
+ * @throws {Error} - If an error occurs while retrieving the entries.
+ */
 async function getThisMonthsEntriesBySourceURL(hostname) {  // gets this months entries and filters them by the hostname
     try {
         const entries = await Timecard.getThisMonthsEntries()
@@ -23,6 +30,14 @@ async function getThisMonthsEntriesBySourceURL(hostname) {  // gets this months 
     }
 }
 
+/**
+ * Gets the customer record from MongoDB based on the provided hostname,
+ * or creates a new customer record if none exists.
+ *
+ * @param {string} hostname - The hostname from which the request is made.
+ * @returns {Promise<Object|string>} - A promise that resolves to the customer record if found or created,
+ *                                    or an error message if an error occurs.
+ */
 async function identifyOrCreateCustomer(hostname) {  // gets customer record from MongoDB or creates one if none exists
     try {
         let customer = undefined //init customer variable mutably
@@ -36,6 +51,13 @@ async function identifyOrCreateCustomer(hostname) {  // gets customer record fro
         return err.message
     }
 }
+/**
+ * Checks the number of entries against the payment tier limit for a customer.
+ * @param {Object} customer - The customer object.
+ * @param {string} hostname - The hostname.
+ * @throws {Error} Throws an error if the entry limit is exceeded.
+ * @returns {Promise<void>} A promise that resolves with no value.
+ */
 async function checkEntriesCountAgainstPaymentTier(customer, hostname) {
     let entriesLimit = new Number() 
     let entries = await getThisMonthsEntriesBySourceURL(hostname)
@@ -55,6 +77,15 @@ async function checkEntriesCountAgainstPaymentTier(customer, hostname) {
     if (entriesLimit <= entries.length) throw new Error('You have exceeded your entry limit for this calendar month.')
     return
 }
+
+/**
+ * Middleware function for rate limiting requests.
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} next - The next middleware function.
+ * @returns {Promise<void>} - A Promise that resolves when the middleware is complete.
+ */
 const rateLimiter = async function rateLimiterWrapper(req, res, next) {
     try {
         const hostname = req.body.sourceURL

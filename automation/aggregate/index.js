@@ -27,7 +27,9 @@ async function weeklyReport() {
   const templateData = utilities.createTemplateDataObject(weeklyData, ytdData)
   try {
     const response = await utilities.sendWeeklyReportEmail(templateData)
-    console.info('The Weekly Aggregate Report Has Been Sent: ' + moment().toString())
+    console.info(
+      'The Weekly Aggregate Report Has Been Sent: ' + moment().toString()
+    )
     return response
   } catch (error) {
     console.error(error)
