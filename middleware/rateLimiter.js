@@ -26,11 +26,11 @@ function confirmTimeSubdomain(hostname) {
 async function getThisMonthsEntriesBySourceURL(hostname) {
   // gets this months entries and filters them by the hostname
   try {
-    const entries = await Timecard.getThisMonthsEntries()
-    entries.filter((entry) => {
-      entry.sourceURL != hostname
+    const entries = await Timecard.getThisMonths()
+    const filteredEntries = entries.filter((entry) => {
+      return entry.sourceURL == hostname
     })
-    return entries
+    return filteredEntries
   } catch (err) {
     return err.message
   }
