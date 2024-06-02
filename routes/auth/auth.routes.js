@@ -33,12 +33,13 @@ authRouter.get('/login', GET_authLogin)
  */
 authRouter.post(
   '/login',
-  passport.authenticate('local', {
+  passport. authenticate('local', {
     failureRedirect: '/auth/login',
     failureMessage: true,
     failureFlash: true,
   }),
   function (req, res) {
+    res.user = req.user
     res.redirect('/admin')
   }
 )

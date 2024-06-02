@@ -15,8 +15,8 @@ sgMail.setApiKey(process.env.SG_API_KEY)
  * @param {Function} next - The next middleware function.
  */
 export function checkAuth(req, res, next) {
+  console.log('Request authenticated? ' + req.isAuthenticated())
   if (req.isAuthenticated()) {
-    console.log('bypassing ')
     res.locals.user = req.user
     return next()
   }
