@@ -132,3 +132,4 @@ dist
 private
 *.pem
 /public/css/style.css
+.patch
