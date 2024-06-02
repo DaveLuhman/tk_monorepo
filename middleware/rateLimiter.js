@@ -1,5 +1,6 @@
 import Customer from '../models/customer.js'
 import Timecard from '../models/timecard.js'
+import { Error } from 'mongoose' // Add the missing import statement for the Error class
 
 function getRootDomain(url) {
     return String(url.substring(5))
@@ -36,7 +37,7 @@ async function identifyOrCreateCustomer(hostname) {  // gets customer record fro
     }
 }
 async function checkEntriesCountAgainstPaymentTier(customer, hostname) {
-    let entriesLimit = new Number() //TODO: Fix this long-term problem-causing bullshit
+    let entriesLimit = new Number() 
     let entries = await getThisMonthsEntriesBySourceURL(hostname)
     console.log(`${JSON.stringify(customer)} has submitted ${entries.length} time entries this month.`)
     switch (customer.paymentTier) {
