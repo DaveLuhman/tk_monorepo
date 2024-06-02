@@ -1,6 +1,13 @@
 import { GET_authLogin, GET_authRegister } from '../../controllers/auth.js'
 import { Router } from 'express'
-import { login, registerUser, logout, submitResetPasswordRequest, executeResetPasswordRequest, verifyResetPasswordRequest } from '../../middleware/auth.js'
+import {
+  login,
+  registerUser,
+  logout,
+  submitResetPasswordRequest,
+  executeResetPasswordRequest,
+  verifyResetPasswordRequest,
+} from '../../middleware/auth.js'
 import passport from 'passport'
 
 /**
@@ -24,13 +31,17 @@ authRouter.get('/login', GET_authLogin)
  * @param {Object} req - The request object.
  * @param {Object} res - The response object.
  */
-authRouter.post('/login', passport.authenticate('local', { 
-    failureRedirect: '/auth/login', 
-    failureMessage: true, 
-    failureFlash: true, 
-}), function (req, res) {
+authRouter.post(
+  '/login',
+  passport.authenticate('local', {
+    failureRedirect: '/auth/login',
+    failureMessage: true,
+    failureFlash: true,
+  }),
+  function (req, res) {
     res.redirect('/admin')
-})
+  }
+)
 
 /**
  * Route for handling GET requests to '/register'.
@@ -48,7 +59,7 @@ authRouter.get('/register', GET_authRegister)
  * @param {Object} res - The response object.
  */
 authRouter.post('/register', registerUser, login, (_req, res) => {
-    res.redirect('/admin/')
+  res.redirect('/admin/')
 })
 
 /**
@@ -57,7 +68,7 @@ authRouter.post('/register', registerUser, login, (_req, res) => {
  * @name POST /auth/logout
  * @function
  */
-authRouter.post('/logout', logout);
+authRouter.post('/logout', logout)
 
 /**
  * Route for handling POST requests to '/forgotPassword'.

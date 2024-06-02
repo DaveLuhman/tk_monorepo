@@ -1,34 +1,81 @@
-<div id='te-{{@index}}' class="grid md:grid-cols-4 grid-rows-4  gap-4 mb-5 pb-5">
-    <input data-theme="light"
-        class="col-span-4 appearance-none border-2 border-white rounded w-full py-2 text-gray-500  leading-tight focus:outline-none focus:bg-white focus:border-white"
-        type="date" name="te-date-{{@index}}" value="{{this.date}}" id="te-date-{{@index}}">
-    <div class="col-span-4 md:col-span-2 row-start-2 px-4 py-2 border-2 border-grey rounded relative">
-        <label class="absolute -my-4 -mx-2 bg-white px-2 text-gray-500 rounded-md drop-shadow-xl"
-            for="te-name-{{@index}}">Job Name</label>
-        <input
-            class="appearance-none border-2 border-white rounded w-full py-2 text-gray-500  leading-none focus:outline-none focus:bg-gray-300 focus:border-white"
-            type="text" name="te-name-{{@index}}" id="te-name-{{@index}}" validate>
-    </div>
-    <div class="col-span-4 md:col-span-2 md:col-start-3 md:row-start-2 px-4 py-2 border-2 border-grey rounded relative">
-        <label class="absolute -my-4 -mx-2 bg-white px-2 text-gray-500 rounded-md drop-shadow-xl"
-            for="te-number-{{@index}}">Job Number</label>
-        <input
-            class="appearance-none border-2 border-white rounded w-full py-2 text-gray-500  leading-tight focus:outline-none focus:bg-white focus:border-white"
-            type="text" name="te-number-{{@index}}" id="te-number-{{@index}}">
-    </div>
-    <div class="col-span-4 md:col-span-2 md:row-start-3 px-4 py-2 border-2 border-grey rounded relative">
-        <label class="absolute -my-4 -mx-2 bg-white px-2 text-gray-500 rounded-md drop-shadow-xl"
-            for="te-hours-{{@index}}">Hours</label>
-        <input
-            class="appearance-none border-2 border-white rounded w-full py-2 text-gray-500  leading-tight focus:outline-none focus:bg-white focus:border-white"
-            type="number" name="te-hours-{{@index}}" id="te-hours-{{@index}}">
-    </div>
-    <div class="col-span-4 md:col-span-2 md:col-start-3 md:row-start-3 px-4 py-2 border-2 border-grey rounded relative">
-        <label class="absolute -my-4 -mx-2 bg-white border-black px-2 text-gray-500 rounded-md drop-shadow-xl"
-            for="te-overtime-{{@index}}">Overtime</label>
-        <input
-            class="appearance-none border-2 border-white rounded w-full py-2 text-gray-500  leading-tight focus:outline-none focus:bg-white focus:border-white"
-            type="number" name="te-overtime-{{@index}}" id="te-overtime-{{@index}}">
-    </div>
-    <button id="plusButton" class=" md:row-start-4 form-control btn btn-primary">+</button>
+<div
+  id='te-{{@index}}'
+  class='grid md:grid-cols-4 grid-rows-4  gap-4 mb-5 pb-5'
+>
+  <input
+    data-theme='light'
+    class='col-span-4 appearance-none border-2 border-white rounded w-full py-2 text-gray-500  leading-tight focus:outline-none focus:bg-white focus:border-white'
+    type='date'
+    name='te-date-{{@index}}'
+    value='{{this.date}}'
+    id='te-date-{{@index}}'
+  />
+  <div
+    class='col-span-4 md:col-span-2 row-start-2 px-4 py-2 border-2 border-grey rounded relative'
+  >
+    <label
+      class='absolute -my-4 -mx-2 bg-white px-2 text-gray-500 rounded-md drop-shadow-xl'
+      for='te-name-{{@index}}'
+    >
+      Job Name
+    </label>
+    <input
+      class='appearance-none border-2 border-white rounded w-full py-2 text-gray-500  leading-none focus:outline-none focus:bg-gray-300 focus:border-white'
+      type='text'
+      name='te-name-{{@index}}'
+      id='te-name-{{@index}}'
+      validate
+    />
+  </div>
+  <div
+    class='col-span-4 md:col-span-2 md:col-start-3 md:row-start-2 px-4 py-2 border-2 border-grey rounded relative'
+  >
+    <label
+      class='absolute -my-4 -mx-2 bg-white px-2 text-gray-500 rounded-md drop-shadow-xl'
+      for='te-number-{{@index}}'
+    >
+      Job Number
+    </label>
+    <input
+      class='appearance-none border-2 border-white rounded w-full py-2 text-gray-500  leading-tight focus:outline-none focus:bg-white focus:border-white'
+      type='text'
+      name='te-number-{{@index}}'
+      id='te-number-{{@index}}'
+    />
+  </div>
+  <div
+    class='col-span-4 md:col-span-2 md:row-start-3 px-4 py-2 border-2 border-grey rounded relative'
+  >
+    <label
+      class='absolute -my-4 -mx-2 bg-white px-2 text-gray-500 rounded-md drop-shadow-xl'
+      for='te-hours-{{@index}}'
+    >
+      Hours
+    </label>
+    <input
+      class='appearance-none border-2 border-white rounded w-full py-2 text-gray-500  leading-tight focus:outline-none focus:bg-white focus:border-white'
+      type='number'
+      name='te-hours-{{@index}}'
+      id='te-hours-{{@index}}'
+    />
+  </div>
+  <div
+    class='col-span-4 md:col-span-2 md:col-start-3 md:row-start-3 px-4 py-2 border-2 border-grey rounded relative'
+  >
+    <label
+      class='absolute -my-4 -mx-2 bg-white border-black px-2 text-gray-500 rounded-md drop-shadow-xl'
+      for='te-overtime-{{@index}}'
+    >
+      Overtime
+    </label>
+    <input
+      class='appearance-none border-2 border-white rounded w-full py-2 text-gray-500  leading-tight focus:outline-none focus:bg-white focus:border-white'
+      type='number'
+      name='te-overtime-{{@index}}'
+      id='te-overtime-{{@index}}'
+    />
+  </div>
+  <button id='plusButton' class='md:row-start-4 form-control btn btn-primary'>
+    +
+  </button>
 </div>

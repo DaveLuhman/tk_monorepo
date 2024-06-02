@@ -5,8 +5,8 @@ List of Functions in order (* at beginning means exported)
 *weeklyDayShift
 */
 
-import rateLimit from 'express-rate-limit';
-import moment from 'moment';
+import rateLimit from 'express-rate-limit'
+import moment from 'moment'
 
 /**
  *
@@ -23,7 +23,7 @@ import moment from 'moment';
  * @param {number} perPage - The number of items per page.
  * @returns {Object} - An object containing the trimmed data, target page number, and total page count.
  */
-export function paginate (data, targetPage, perPage) {
+export function paginate(data, targetPage, perPage) {
   perPage = perPage || 10
   targetPage = targetPage || 1
   const pageCount = Math.ceil(data.length / perPage) // number of pages
@@ -49,7 +49,7 @@ export const rateLimiter = rateLimit({
   max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-});
+})
 
 /**
  * Middleware function to get environment variables and store them in response locals.
@@ -70,7 +70,7 @@ export function getEnvironment(_req, res, next) {
  * @param {Object} res - The response object.
  * @param {Function} next - The next middleware function.
  */
-export function exposeUserObject (req, res, next){
+export function exposeUserObject(req, res, next) {
   res.locals.user = req.user ? req.user : 'noUser'
   next()
 }
@@ -81,30 +81,100 @@ export function exposeUserObject (req, res, next){
  * @param {Function} next - The next middleware function.
  * @returns {Function} - The next middleware function.
  */
-export function weeklyDayShift (_req, res, next) {
+export function weeklyDayShift(_req, res, next) {
   let days = {}
-  let now = new Date
+  let now = new Date()
   now = moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').utcOffset(-5)
   const today = moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day()
   if (today === 0) {
     days = [
-      { day: 'Sunday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(-7).format('YYYY-MM-DD') },
-      { day: 'Monday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(-6).format('YYYY-MM-DD') },
-      { day: 'Tuesday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(-5).format('YYYY-MM-DD') },
-      { day: 'Wednesday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(-4).format('YYYY-MM-DD') },
-      { day: 'Thursday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(-3).format('YYYY-MM-DD') },
-      { day: 'Friday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(-2).format('YYYY-MM-DD') },
-      { day: 'Saturday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(-1).format('YYYY-MM-DD') }
+      {
+        day: 'Sunday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(-7)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Monday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(-6)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Tuesday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(-5)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Wednesday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(-4)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Thursday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(-3)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Friday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(-2)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Saturday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(-1)
+          .format('YYYY-MM-DD'),
+      },
     ]
   } else {
     days = [
-      { day: 'Sunday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(0).format('YYYY-MM-DD') },
-      { day: 'Monday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(1).format('YYYY-MM-DD') },
-      { day: 'Tuesday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(2).format('YYYY-MM-DD') },
-      { day: 'Wednesday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(3).format('YYYY-MM-DD') },
-      { day: 'Thursday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(4).format('YYYY-MM-DD') },
-      { day: 'Friday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(5).format('YYYY-MM-DD') },
-      { day: 'Saturday', date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').day(6).format('YYYY-MM-DD') }
+      {
+        day: 'Sunday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(0)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Monday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(1)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Tuesday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(2)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Wednesday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(3)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Thursday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(4)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Friday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(5)
+          .format('YYYY-MM-DD'),
+      },
+      {
+        day: 'Saturday',
+        date: moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ')
+          .day(6)
+          .format('YYYY-MM-DD'),
+      },
     ]
   }
   res.locals.today = moment(now, 'ddd MMM D YYYY HH:mm:ss ZZ').format('dddd')
@@ -116,4 +186,4 @@ export function weeklyDayShift (_req, res, next) {
  * Middleware array.
  * @type {Array<Function>}
  */
-export const mw = [weeklyDayShift,getEnvironment,exposeUserObject]
+export const mw = [weeklyDayShift, getEnvironment, exposeUserObject]

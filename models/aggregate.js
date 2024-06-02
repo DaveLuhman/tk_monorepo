@@ -8,7 +8,7 @@ const aggregateSchema = new Schema(
     },
     year: {
       type: Number,
-      required: true
+      required: true,
     },
     weekly: {
       totalRegHours: Number,

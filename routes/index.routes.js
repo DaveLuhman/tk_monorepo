@@ -28,7 +28,9 @@ indexRouter.get('/', weeklyDayShift, indexController.getRoot)
  * @param {import('express').Response} res - The response object.
  * @returns {void}
  */
-indexRouter.post('/timeEntry', (_req, res) => { res.redirect('/api/timeEntry') })
+indexRouter.post('/timeEntry', (_req, res) => {
+  res.redirect('/api/timeEntry')
+})
 
 /**
  * Route handler for the login path.
@@ -39,7 +41,9 @@ indexRouter.post('/timeEntry', (_req, res) => { res.redirect('/api/timeEntry') }
  * @param {import('express').Response} res - The response object.
  * @returns {void}
  */
-indexRouter.get('/login', (_req, res) => { res.redirect('/auth/login') })
+indexRouter.get('/login', (_req, res) => {
+  res.redirect('/auth/login')
+})
 
 /**
  * Route handler for the register path.
@@ -50,7 +54,9 @@ indexRouter.get('/login', (_req, res) => { res.redirect('/auth/login') })
  * @param {import('express').Response} res - The response object.
  * @returns {void}
  */
-indexRouter.get('/register', (_req, res) => { res.redirect('/auth/register') })
+indexRouter.get('/register', (_req, res) => {
+  res.redirect('/auth/register')
+})
 
 /**
  * Route handler for the logout path.
@@ -61,4 +67,6 @@ indexRouter.get('/register', (_req, res) => { res.redirect('/auth/register') })
  * @param {import('express').Response} res - The response object.
  * @returns {void}
  */
-indexRouter.post('/logout', (_req, res) => { res.redirect('/auth/logout') })
+indexRouter.post('/logout', (_req, res) => {
+  res.redirect('/auth/logout')
+})

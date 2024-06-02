@@ -1,47 +1,102 @@
 {{#if user}}
-    <nav id="header" class="bg-gradient-to-t from-transparent to-current">
-        <div class="flex items-center justify-between w-full px-6 py-2 mb-10">
-            <a href="/admin">
-                <img class="hidden md:flex" src="/img/timekeeper-logo-lg.webp" width="310px" height="auto">
-                <img class="flex md:hidden" src="/img/timekeeper-logo-sm.webp" width="115px" height="auto">
+  <nav id='header' class='bg-gradient-to-t from-transparent to-current'>
+    <div class='flex items-center justify-between w-full px-6 py-2 mb-10'>
+      <a href='/admin'>
+        <img
+          class='hidden md:flex'
+          src='/img/timekeeper-logo-lg.webp'
+          width='310px'
+          height='auto'
+        />
+        <img
+          class='flex md:hidden'
+          src='/img/timekeeper-logo-sm.webp'
+          width='115px'
+          height='auto'
+        />
+      </a>
+      <!-- Logout Button -->
+      <div
+        class='flex flex-wrap items-center justify-end order-3 mr-0 columns-2 md:mr-4'
+        id='authButtons'
+      >
+        <div class='flex items-center order-2 w-full md:w-full'>
+          <form method='POST' action='/auth/logout'>
+            <a>
+              <button
+                id='logout'
+                type='submit'
+                class='p-2 mr-4 bg-transparent border border-gray-300 rounded text-white-50 hover:bg-gray-100 hover:text-gray-700'
+              >
+                Logout
+              </button>
             </a>
-            <!-- Logout Button -->
-            <div class="flex flex-wrap items-center justify-end order-3 mr-0 columns-2 md:mr-4" id="authButtons">
-                <div class="flex items-center order-2 w-full md:w-full">
-                    <form method="POST" action="/auth/logout"><a><button id="logout" type="submit"
-                                class="p-2 mr-4 bg-transparent border border-gray-300 rounded text-white-50 hover:bg-gray-100 hover:text-gray-700">Logout</button></a>
-                    </form>
-                </div>
-            </div>
+          </form>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 {{else}}
-    <nav id="header">
-        <div class="flex items-center justify-between w-full px-6 py-2 mt-0">
-            <a href="/">
-                <img class="hidden md:flex" src="/img/timekeeper-logo-lg.webp" width="225px" height="auto">
-                <img class="flex md:hidden" src="/img/timekeeper-logo-sm.webp" width="115px" height="auto">
-            </a>
-            <div class="order-3 flex items-center w-auto md:order-1" id="menu">
-                <nav>
-                    <ul class="items-center justify-between pt-4 text-base flex md:pt-0">
-                        <li><a class="inline-block px-4 py-2 text-lg font-medium no-underline hover:text-black lg:-ml-2"
-                                href="#features">Features</a></li>
-                        <li><a class="inline-block px-4 py-2 text-lg font-medium no-underline hover:text-black lg:-ml-2"
-                                href="#pricing">Pricing</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- Login Button -->
-            <div class="flex flex-wrap items-center justify-end order-3 mr-0 columns-2 md:mr-4" id="authButtons">
-                <div class="flex items-center order-2 w-full md:w-full">
-                    <a href="/login"><button
-                            class="p-2 mr-4 bg-transparent border border-gray-300 rounded text-white-50 hover:bg-gray-100 hover:text-gray-700">Login</button></a>
-                    <a href="/register"><button
-                            class="p-2 mr-4 bg-transparent border border-gray-300 rounded text-white-50 hover:bg-gray-100 hover:text-gray-700">Register</button></a>
-                </div>
-            </div>
+  <nav id='header'>
+    <div class='flex items-center justify-between w-full px-6 py-2 mt-0'>
+      <a href='/'>
+        <img
+          class='hidden md:flex'
+          src='/img/timekeeper-logo-lg.webp'
+          width='225px'
+          height='auto'
+        />
+        <img
+          class='flex md:hidden'
+          src='/img/timekeeper-logo-sm.webp'
+          width='115px'
+          height='auto'
+        />
+      </a>
+      <div class='order-3 flex items-center w-auto md:order-1' id='menu'>
+        <nav>
+          <ul class='items-center justify-between pt-4 text-base flex md:pt-0'>
+            <li>
+              <a
+                class='inline-block px-4 py-2 text-lg font-medium no-underline hover:text-black lg:-ml-2'
+                href='#features'
+              >
+                Features
+              </a>
+            </li>
+            <li>
+              <a
+                class='inline-block px-4 py-2 text-lg font-medium no-underline hover:text-black lg:-ml-2'
+                href='#pricing'
+              >
+                Pricing
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Login Button -->
+      <div
+        class='flex flex-wrap items-center justify-end order-3 mr-0 columns-2 md:mr-4'
+        id='authButtons'
+      >
+        <div class='flex items-center order-2 w-full md:w-full'>
+          <a href='/login'>
+            <button
+              class='p-2 mr-4 bg-transparent border border-gray-300 rounded text-white-50 hover:bg-gray-100 hover:text-gray-700'
+            >
+              Login
+            </button>
+          </a>
+          <a href='/register'>
+            <button
+              class='p-2 mr-4 bg-transparent border border-gray-300 rounded text-white-50 hover:bg-gray-100 hover:text-gray-700'
+            >
+              Register
+            </button>
+          </a>
         </div>
-    </nav>
-
+      </div>
+    </div>
+  </nav>
 {{/if}}

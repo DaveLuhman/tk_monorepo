@@ -1,4 +1,4 @@
-import moment from "moment"
+import moment from 'moment'
 
 /**
  * Formats a date into the 'MM-DD-YYYY' format.
@@ -7,5 +7,5 @@ import moment from "moment"
  * @returns {string} The formatted date string.
  */
 export function formatDate(date) {
-    return moment(date).format('MM-DD-YYYY')
+  return moment(date).format('MM-DD-YYYY')
 }

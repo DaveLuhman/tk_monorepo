@@ -1,37 +1,69 @@
-<input type="checkbox" id="confirmModal" class="modal-toggle" />
-<div class="modal">
-  <div class="modal-box">
-    <div class="grid grid-cols-5 grid-rows-6 gap-4">
-      <h3 class="mb-5 col-span-3 col-start-2 font-medium  text-lg md:text-3xl"><u>Confirm Submission</u></h3>
-      <div class="col-span-3 row-start-2">
-        <div class="font-semibold text-lg md:text-3xl">Total Punches:</div>
+<input type='checkbox' id='confirmModal' class='modal-toggle' />
+<div class='modal'>
+  <div class='modal-box'>
+    <div class='grid grid-cols-5 grid-rows-6 gap-4'>
+      <h3 class='mb-5 col-span-3 col-start-2 font-medium  text-lg md:text-3xl'>
+        <u>
+          Confirm Submission
+        </u>
+      </h3>
+      <div class='col-span-3 row-start-2'>
+        <div class='font-semibold text-lg md:text-3xl'>
+          Total Punches:
+        </div>
       </div>
-      <div class="col-start-5 row-start-2">
-        <span class="text-lg md:text-3xl" id="punchCounter" display_value="0">0</span>
+      <div class='col-start-5 row-start-2'>
+        <span class='text-lg md:text-3xl' id='punchCounter' display_value='0'>
+          0
+        </span>
       </div>
-      <div class="col-span-3 row-start-3">
-        <p class="font-semibold text-lg md:text-3xl">Total Hours:</p>
+      <div class='col-span-3 row-start-3'>
+        <p class='font-semibold text-lg md:text-3xl'>
+          Total Hours:
+        </p>
       </div>
-      <div class="col-start-5 row-start-3">
-        <span class="text-lg md:text-3xl" display_value="0" id="hoursCounter">0</span>
+      <div class='col-start-5 row-start-3'>
+        <span class='text-lg md:text-3xl' display_value='0' id='hoursCounter'>
+          0
+        </span>
       </div>
-      <div class="col-span-3 row-start-4">
-        <p class="font-semibold text-lg md:text-3xl">Total Overtime:</p>
+      <div class='col-span-3 row-start-4'>
+        <p class='font-semibold text-lg md:text-3xl'>
+          Total Overtime:
+        </p>
       </div>
-      <div class="col-start-5 row-start-4">
-        <span class="text-lg md:text-3xl" display_value="0" id="overtimeCounter">0</span>
+      <div class='col-start-5 row-start-4'>
+        <span
+          class='text-lg md:text-3xl'
+          display_value='0'
+          id='overtimeCounter'
+        >
+          0
+        </span>
       </div>
-      <div class="col-span-5 col-start-1 row-start-5">
-        <div id="validationWarning" class="text-lg md:text-3xl text-warning">You must enter a name.</div>
+      <div class='col-span-5 col-start-1 row-start-5'>
+        <div id='validationWarning' class='text-lg md:text-3xl text-warning'>
+          You must enter a name.
+        </div>
       </div>
-      <div class="col-start-1 md:col-start-2 row-start-6">
-        <label for="confirmModal" class="text-lg btn-error btn-ghost btn">Go Back</label>
+      <div class='col-start-1 md:col-start-2 row-start-6'>
+        <label for='confirmModal' class='text-lg btn-error btn-ghost btn'>
+          Go Back
+        </label>
       </div>
-      <div class="col-start-4 row-start-6">
-        <button class="btn btn-glass btn-accent btn-disabled text-md" type="submit" id="submitBtn">Submit
-          Timesheet</button>
+      <div class='col-start-4 row-start-6'>
+        <button
+          class='btn btn-glass btn-accent btn-disabled text-md'
+          type='submit'
+          id='submitBtn'
+        >
+          Submit
+          Timesheet
+        </button>
       </div>
     </div>
   </div>
-  <label class="modal-backdrop" for="confirmModal">Close</label>
+  <label class='modal-backdrop' for='confirmModal'>
+    Close
+  </label>
 </div>

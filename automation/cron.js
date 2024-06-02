@@ -24,19 +24,19 @@ import automation from './index.js'
 // )
 
 const weeklyTestEmailNotificationJob = cron.schedule(
-    '00 08 * * 5',
-    function() {
-        automation.testEmail()
-    },
-    { scheduled: false, timezone: 'America/Chicago'}
+  '00 08 * * 5',
+  function () {
+    automation.testEmail()
+  },
+  { scheduled: false, timezone: 'America/Chicago' }
 )
 
-const allJobs = [ weeklyTestEmailNotificationJob]
+const allJobs = [weeklyTestEmailNotificationJob]
 export const scheduledTasks = () => {
-    console.info(`A total of ${allJobs.length} jobs are running automatically.`.blue.bold)
-    allJobs.forEach((job) => {
-        job.start()
-    })
+  console.info(
+    `A total of ${allJobs.length} jobs are running automatically.`.blue.bold
+  )
+  allJobs.forEach((job) => {
+    job.start()
+  })
 }
-
-

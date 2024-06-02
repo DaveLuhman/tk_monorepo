@@ -6,7 +6,13 @@ import { Router } from 'express'
  */
 export const adminRouter = Router()
 
-import { GET_admin, GET_roster, GET_updateTimecard, POST_updateTimecard, POST_deleteTimecard } from '../../controllers/admin.js'
+import {
+  GET_admin,
+  GET_roster,
+  GET_updateTimecard,
+  POST_updateTimecard,
+  POST_deleteTimecard,
+} from '../../controllers/admin.js'
 
 /**
  * Route for getting the admin page.

@@ -6,17 +6,17 @@
   @apply hover:underline hover:text-blue-300;
 }
 .update-input {
-  @apply justify-self-center rounded-lg px-2 outline-none border-none focus:outline ;
+  @apply justify-self-center rounded-lg px-2 outline-none border-none focus:outline;
 }
 .counter {
-@apply justify-self-stretch md:justify-self-end font-bold hover:cursor-not-allowed;
+  @apply justify-self-stretch md:justify-self-end font-bold hover:cursor-not-allowed;
 }
 .update-button {
-  @apply  py-2 pr-7 pl-4 bg-base-200 drop-shadow-lg border-2 border-transparent rounded-xl font-extrabold hover:bg-base-100 hover:border-white;
+  @apply py-2 pr-7 pl-4 bg-base-200 drop-shadow-lg border-2 border-transparent rounded-xl font-extrabold hover:bg-base-100 hover:border-white;
 }
 .minus-button {
-  @apply  py-2 pr-7 pl-4 bg-red-400 drop-shadow-lg rounded-xl font-extrabold hover:bg-red-600;
+  @apply py-2 pr-7 pl-4 bg-red-400 drop-shadow-lg rounded-xl font-extrabold hover:bg-red-600;
 }
 .plus-button {
-  @apply  py-2 pr-7 pl-4 bg-green-400 drop-shadow-lg rounded-xl font-extrabold hover:bg-green-600;
+  @apply py-2 pr-7 pl-4 bg-green-400 drop-shadow-lg rounded-xl font-extrabold hover:bg-green-600;
 }

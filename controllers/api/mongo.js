@@ -6,11 +6,11 @@ import Timecard from '../../models/timecard.js'
  * @returns
  */
 export default async function submitMongo(doc) {
-    try {
-        const document = await Timecard.create(doc)
-        console.info('Time Entry Document added to database :' + document)
-        return document
-    } catch (err) {
-        return console.error('Time Entry Document failed to save: ' + err.message)
-    }
+  try {
+    const document = await Timecard.create(doc)
+    console.info('Time Entry Document added to database :' + document)
+    return document
+  } catch (err) {
+    return console.error('Time Entry Document failed to save: ' + err.message)
+  }
 }

@@ -15,42 +15,42 @@ const UserSchema = new Schema(
   {
     _id: {
       type: Schema.Types.ObjectId,
-      auto: true
+      auto: true,
     },
     company: {
       type: Schema.Types.ObjectId,
       ref: 'Customer',
-      autopopulate: true
+      autopopulate: true,
     },
     email: {
       type: String,
       trim: true,
       unique: true,
       lowercase: true,
-      required: true
+      required: true,
     },
     password: {
-      type: String
+      type: String,
     },
     role: {
       type: String,
       default: 'User',
-      enum: ['User', 'Manager', 'Admin']
+      enum: ['User', 'Manager', 'Admin'],
     },
     active: {
       type: Boolean,
-      default: true
+      default: true,
     },
     last: {
-      type: Date
+      type: Date,
     },
     token: String,
-    tokenExpiry: Number
+    tokenExpiry: Number,
   },
   {
     toObject: { virtuals: true },
     toJSON: { virtuals: true },
-    timestamps: true
+    timestamps: true,
   }
 )
 
@@ -65,8 +65,11 @@ UserSchema.plugin(mongooseAutoPopulate)
  * @param {string} password - The password of the user.
  * @returns {Promise<User>} A promise that resolves to the newly created user.
  */
-UserSchema.static('register', async function(email, password) {
-  return await model('User').create({email, password: await hash(password, 10)})
+UserSchema.static('register', async function (email, password) {
+  return await model('User').create({
+    email,
+    password: await hash(password, 10),
+  })
 })
 
 /**
@@ -77,8 +80,8 @@ UserSchema.static('register', async function(email, password) {
  * @param {string} email - The email of the user to find.
  * @returns {Promise<User|null>} A promise that resolves to the found user, or null if not found.
  */
-UserSchema.static('findByEmail', async function(email) {
-  return await model('User').findOne({email: {$eq: email}}) || null
+UserSchema.static('findByEmail', async function (email) {
+  return (await model('User').findOne({ email: { $eq: email } })) || null
 })
 
 /**
@@ -89,8 +92,8 @@ UserSchema.static('findByEmail', async function(email) {
  * @param {string} token - The token of the user to find.
  * @returns {Promise<User|null>} A promise that resolves to the found user, or null if not found.
  */
-UserSchema.static('findByToken', async function(token) {
-  return await model('User').findOne({token: {$eq: token}}) || null
+UserSchema.static('findByToken', async function (token) {
+  return (await model('User').findOne({ token: { $eq: token } })) || null
 })
 
 /**

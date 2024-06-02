@@ -6,9 +6,9 @@
  * @returns {Promise<void>} - A promise that resolves when the rendering is complete.
  */
 export async function GET_authLogin(req, res) {
-    res.locals.message = req.flash('error')
-    console.log(res.locals.message)
-    res.render('auth/login.hbs', { layout: 'main'  })
+  res.locals.message = req.flash('error')
+  console.log(res.locals.message)
+  res.render('auth/login.hbs', { layout: 'main' })
 }
 
 /**
@@ -19,6 +19,9 @@ export async function GET_authLogin(req, res) {
  * @returns {Promise<void>} - A promise that resolves when the rendering is complete.
  */
 export async function GET_authRegister(req, res) {
-    res.render('auth/register.hbs', { layout: 'main', user: req.user, message: req.flash('error') })
+  res.render('auth/register.hbs', {
+    layout: 'main',
+    user: req.user,
+    message: req.flash('error'),
+  })
 }
-

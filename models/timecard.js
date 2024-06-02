@@ -186,7 +186,9 @@ timecardSchema.static('getLast12Mo', async function (user) {
  * @returns {Promise<void>} - A promise that resolves when the deletion is complete.
  */
 timecardSchema.static('deleteTestEntries', async function () {
-  await model('Timecard').deleteMany({ empName: { $regex: /test/, $options: 'i' } })
+  await model('Timecard').deleteMany({
+    empName: { $regex: /test/, $options: 'i' },
+  })
 })
 
 const Timecard = model('Timecard', timecardSchema, 'timecards')
