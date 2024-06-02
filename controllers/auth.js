@@ -1,6 +1,6 @@
 export async function GET_authLogin(req, res) {
     res.locals.message = req.flash('error')
-    console.log('this is the flash value '+ res.locals.message)
+    console.log(res.locals.message)
     res.render('auth/login.hbs', { layout: 'main'  })
 }
 
