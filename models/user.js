@@ -1,68 +1,105 @@
+/**
+ * @fileoverview This file contains the User model schema and methods for user registration and retrieval.
+ * @module User
+ */
+
 import { Schema, model } from 'mongoose'
 import { hash } from 'bcrypt'
 import mongooseAutoPopulate from 'mongoose-autopopulate'
 
-  // This code creates a new schema that is used to define the User model
-// The schema contains the fields for a user, as well as the timestamps
-// that are automatically added when the user is created and updated
+/**
+ * Represents the User model schema.
+ * @class
+ */
 const UserSchema = new Schema(
   {
     _id: {
       type: Schema.Types.ObjectId,
-      auto: true
+      auto: true,
     },
     company: {
       type: Schema.Types.ObjectId,
       ref: 'Customer',
-      autopopulate: true
+      autopopulate: true,
     },
     email: {
       type: String,
       trim: true,
       unique: true,
       lowercase: true,
-      required: true
+      required: true,
     },
     password: {
-      type: String
+      type: String,
     },
     role: {
       type: String,
       default: 'User',
-      enum: ['User', 'Manager', 'Admin']
+      enum: ['User', 'Manager', 'Admin'],
     },
     active: {
       type: Boolean,
-      default: true
+      default: true,
     },
     last: {
-      type: Date
+      type: Date,
     },
     token: String,
-    tokenExpiry: Number
+    tokenExpiry: Number,
   },
   {
     toObject: { virtuals: true },
     toJSON: { virtuals: true },
-    timestamps: true
+    timestamps: true,
   }
 )
+
 UserSchema.plugin(mongooseAutoPopulate)
 
-// This code creates a static method on the UserSchema called register
-// that is used to register a new user in the database
-// The method takes an email and a password as its arguments
-// and creates a new user with the hashed password
-// The method is used in the register controller
-UserSchema.static('register',  async function(email, password) {
-  return await model('User').create({email, password: await hash(password, 10)})
-})
-UserSchema.static('findByEmail', async function(email) {
-  return await model('User').findOne({email: {$eq: email}}) || false
-})
-UserSchema.static('findByToken', async function(token) {
-  return await model('User').findOne({token: {$eq: token}}) || false
+/**
+ * Registers a new user in the database.
+ * @static
+ * @async
+ * @function register
+ * @param {string} email - The email of the user.
+ * @param {string} password - The password of the user.
+ * @returns {Promise<User>} A promise that resolves to the newly created user.
+ */
+UserSchema.static('register', async function (email, password) {
+  return await model('User').create({
+    email,
+    password: await hash(password, 10),
+  })
 })
 
+/**
+ * Finds a user by email.
+ * @static
+ * @async
+ * @function findByEmail
+ * @param {string} email - The email of the user to find.
+ * @returns {Promise<User|null>} A promise that resolves to the found user, or null if not found.
+ */
+UserSchema.static('findByEmail', async function (email) {
+  return (await model('User').findOne({ email: { $eq: email } })) || null
+})
+
+/**
+ * Finds a user by token.
+ * @static
+ * @async
+ * @function findByToken
+ * @param {string} token - The token of the user to find.
+ * @returns {Promise<User|null>} A promise that resolves to the found user, or null if not found.
+ */
+UserSchema.static('findByToken', async function (token) {
+  return (await model('User').findOne({ token: { $eq: token } })) || null
+})
+
+/**
+ * Represents the User model.
+ * @class
+ */
 const User = model('User', UserSchema, 'users')
+
 export default User

@@ -1,10 +1,17 @@
-import  sgMail from  '@sendgrid/mail'
+import sgMail from '@sendgrid/mail'
 sgMail.setApiKey(process.env.SG_API_KEY)
 import Timecard from '../../models/timecard.js'
 import { stringify } from 'csv-stringify/sync'
 import { readFileSync, unlinkSync, writeFileSync } from 'node:fs'
 import moment from 'moment'
 
+/**
+ * Compares two weekly employee lists and returns the names of employees missing in the current week.
+ *
+ * @param {Array<string>} lastWeek - The list of employee names from the last week.
+ * @param {Array<string>} thisWeek - The list of employee names from the current week.
+ * @returns {Array<string>} - The names of employees missing in the current week.
+ */
 function compareWeeklyEmpLists(lastWeek, thisWeek) {
   const missingEmpNames = []
   for (let i = 0; i < lastWeek.length; i++) {
@@ -14,6 +21,10 @@ function compareWeeklyEmpLists(lastWeek, thisWeek) {
   }
   return missingEmpNames
 }
+/**
+ * Collects data for the timecard CSV.
+ * @returns {Array<Array<string>>} The nested array containing the timecard data.
+ */
 async function collectDataForTimecardCSV() {
   const nestedArray = []
   const timecards = await Timecard.getThisWeeksEntries()

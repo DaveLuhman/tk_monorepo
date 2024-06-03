@@ -19,6 +19,7 @@
 | SG_TOKEN_TEMPLATE_ID       | null               | Sendgrid dynamic template ID for sending users their login token            |
 | TO_EMAIL                   | dave@ado.software  | The primary target email address that your output should be sent to.        |
 | FRONTEND_URL               | null               | The public facing URL for the front end form. Allows index route redirection|
+| SESSION_KEY                | null               | Seed value for calculating session keys. Allow persistent login sessions for the backend|
 
 
 
